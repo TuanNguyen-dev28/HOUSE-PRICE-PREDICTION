@@ -1,42 +1,87 @@
 import joblib
-from sklearn.model_selection import train_test_split
-from sklearn.metrics import mean_absolute_error, r2_score
-from sklearn.linear_model import LinearRegression
-from sklearn.ensemble import RandomForestRegressor
-from xgboost import XGBRegressor
+import numpy as np
+import pandas as pd
 
-from data_processing import load_data, preprocess_data, split_features_target
+from sklearn.model_selection import train_test_split, GridSearchCV
+from sklearn.pipeline import Pipeline
+from sklearn.compose import ColumnTransformer
+from sklearn.preprocessing import StandardScaler
+from sklearn.impute import SimpleImputer
+from sklearn.metrics import mean_absolute_error, r2_score, mean_squared_error
+from sklearn.ensemble import RandomForestRegressor
 
 # Load data
-df = load_data("data/house_data.csv")
-df = preprocess_data(df)
-X, y = split_features_target(df)
+df = pd.read_csv("data/house_data.csv")
 
+# Target
+y = df["SalePrice"]
+X = df.drop(columns=["SalePrice"])
+
+# All numeric features
+numeric_features = X.columns
+
+# Preprocessing
+preprocessor = ColumnTransformer(
+    transformers=[
+        ("num",
+         Pipeline([
+             ("imputer", SimpleImputer(strategy="median")),
+             ("scaler", StandardScaler())
+         ]),
+         numeric_features)
+    ]
+)
+
+# Base pipeline
+pipeline = Pipeline(
+    steps=[
+        ("preprocessing", preprocessor),
+        ("regressor", RandomForestRegressor(random_state=42))
+    ]
+)
+
+# 🔥 Hyperparameter grid
+param_grid = {
+    "regressor__n_estimators": [200, 300, 500],
+    "regressor__max_depth": [None, 10, 20],
+    "regressor__min_samples_split": [2, 5],
+}
+
+# GridSearch
+grid_search = GridSearchCV(
+    pipeline,
+    param_grid,
+    cv=5,
+    scoring="r2",
+    n_jobs=-1
+)
+
+# Split
 X_train, X_test, y_train, y_test = train_test_split(
     X, y, test_size=0.2, random_state=42
 )
 
-models = {
-    "LinearRegression": LinearRegression(),
-    "RandomForest": RandomForestRegressor(),
-    "XGBoost": XGBRegressor()
-}
+# Train with tuning
+grid_search.fit(X_train, y_train)
 
-best_model = None
-best_score = 0
+print("Best Parameters:", grid_search.best_params_)
+print("Best CV R2:", grid_search.best_score_)
 
-for name, model in models.items():
-    model.fit(X_train, y_train)
-    preds = model.predict(X_test)
+# Best model
+best_model = grid_search.best_estimator_
 
-    mae = mean_absolute_error(y_test, preds)
-    r2 = r2_score(y_test, preds)
+# Predict
+preds = best_model.predict(X_test)
 
-    print(f"{name} - MAE: {mae:.2f}, R2: {r2:.3f}")
+mae = mean_absolute_error(y_test, preds)
+rmse = np.sqrt(mean_squared_error(y_test, preds))
+r2 = r2_score(y_test, preds)
 
-    if r2 > best_score:
-        best_score = r2
-        best_model = model
+print("MAE:", mae)
+print("RMSE:", rmse)
+print("Test R2:", r2)
 
+# Save model
 joblib.dump(best_model, "models/best_model.pkl")
-print("Best model saved.")
+
+print("Tuned model saved successfully.")
