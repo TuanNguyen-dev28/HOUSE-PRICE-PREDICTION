@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Dự đoán giá nhà bằng AI cho thị trường bất động sản Việt Nam. Định giá tài sản tức thì bằng Machine Learning.">
+    <title>Giá Nhà AI — Dự Đoán Bất Động Sản Việt Nam</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
+</head>
+<body>
+    <!-- Animated Background -->
+    <div class="bg-animation">
+        <div class="bg-orb bg-orb-1"></div>
+        <div class="bg-orb bg-orb-2"></div>
+        <div class="bg-orb bg-orb-3"></div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-brand">
+            <span class="nav-icon">🏠</span>
+            <span class="nav-title">GiáNhà<span class="accent">AI</span></span>
+        </div>
+        <div class="nav-links">
+            <a href="#predict" class="nav-link">Dự Đoán</a>
+            <a href="#locations" class="nav-link">Khu Vực</a>
+            <a href="#dashboard" class="nav-link">Thống Kê</a>
+            <a href="#about" class="nav-link">Giới Thiệu</a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="hero">
+        <div class="hero-content">
+            <div class="hero-badge">🤖 Ứng dụng Machine Learning</div>
+            <h1 class="hero-title">
+                Dự Đoán Giá Nhà<br>
+                <span class="gradient-text">Chính Xác Bằng AI</span>
+            </h1>
+            <p class="hero-subtitle">
+                Huấn luyện trên <strong>30,000+</strong> tin đăng bất động sản từ batdongsan.vn.
+                Định giá nhanh chóng và chính xác bằng mô hình XGBoost.
+            </p>
+            <div class="hero-stats">
+                <div class="hero-stat">
+                    <span class="hero-stat-value" id="stat-properties">30,229</span>
+                    <span class="hero-stat-label">Bất Động Sản Phân Tích</span>
+                </div>
+                <div class="hero-stat">
+                    <span class="hero-stat-value">12</span>
+                    <span class="hero-stat-label">Đặc Trưng Sử Dụng</span>
+                </div>
+                <div class="hero-stat">
+                    <span class="hero-stat-value">XGB</span>
+                    <span class="hero-stat-label">Mô Hình XGBoost</span>
+                </div>
+            </div>
+            <a href="#predict" class="hero-cta">
+                <span>Bắt Đầu Dự Đoán</span>
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </a>
+        </div>
+    </section>
+
+    <!-- Prediction Section -->
+    <section class="section" id="predict">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Dự Đoán <span class="gradient-text">Giá Nhà</span></h2>
+                <p class="section-subtitle">Nhập thông tin bất động sản để nhận kết quả định giá bằng AI</p>
+            </div>
+
+            <div class="predict-layout">
+                <!-- Input Form -->
+                <div class="glass-card form-card">
+                    <div class="card-header">
+                        <span class="card-icon">📝</span>
+                        <h3>Thông Tin Bất Động Sản</h3>
+                    </div>
+                    <form id="predict-form">
+                        <!-- Numeric Inputs Row -->
+                        <div class="form-grid">
+                            <div class="form-group">
+                                <label for="area">Diện tích (m²) *</label>
+                                <input type="number" id="area" name="area" placeholder="VD: 80" step="0.1" min="1" required>
+                                <span class="input-hint">Tổng diện tích</span>
+                            </div>
+                            <div class="form-group">
+                                <label for="frontage">Mặt tiền (m)</label>
+                                <input type="number" id="frontage" name="frontage" placeholder="VD: 5" step="0.1" min="0">
+                                <span class="input-hint">Chiều rộng mặt tiền</span>
+                            </div>
+                            <div class="form-group">
+                                <label for="access_road">Đường vào (m)</label>
+                                <input type="number" id="access_road" name="access_road" placeholder="VD: 6" step="0.1" min="0">
+                                <span class="input-hint">Chiều rộng đường</span>
+                            </div>
+                            <div class="form-group">
+                                <label for="floors">Số tầng *</label>
+                                <input type="number" id="floors" name="floors" placeholder="VD: 3" min="1" required>
+                                <span class="input-hint">Số tầng nhà</span>
+                            </div>
+                            <div class="form-group">
+                                <label for="bedrooms">Phòng ngủ *</label>
+                                <input type="number" id="bedrooms" name="bedrooms" placeholder="VD: 3" min="0" required>
+                                <span class="input-hint">Số phòng ngủ</span>
+                            </div>
+                            <div class="form-group">
+                                <label for="bathrooms">Phòng tắm *</label>
+                                <input type="number" id="bathrooms" name="bathrooms" placeholder="VD: 2" min="0" required>
+                                <span class="input-hint">Số phòng tắm</span>
+                            </div>
+                        </div>
+
+                        <!-- Categorical Inputs -->
+                        <div class="form-grid form-grid-2">
+                            <div class="form-group">
+                                <label for="house_direction">Hướng nhà</label>
+                                <select id="house_direction" name="house_direction">
+                                    <option value="Unknown">— Chưa xác định —</option>
+                                    <option value="Đông">Đông</option>
+                                    <option value="Tây">Tây</option>
+                                    <option value="Nam">Nam</option>
+                                    <option value="Bắc">Bắc</option>
+                                    <option value="Đông - Bắc">Đông - Bắc</option>
+                                    <option value="Đông - Nam">Đông - Nam</option>
+                                    <option value="Tây - Bắc">Tây - Bắc</option>
+                                    <option value="Tây - Nam">Tây - Nam</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="balcony_direction">Hướng ban công</label>
+                                <select id="balcony_direction" name="balcony_direction">
+                                    <option value="Unknown">— Chưa xác định —</option>
+                                    <option value="Đông">Đông</option>
+                                    <option value="Tây">Tây</option>
+                                    <option value="Nam">Nam</option>
+                                    <option value="Bắc">Bắc</option>
+                                    <option value="Đông - Bắc">Đông - Bắc</option>
+                                    <option value="Đông - Nam">Đông - Nam</option>
+                                    <option value="Tây - Bắc">Tây - Bắc</option>
+                                    <option value="Tây - Nam">Tây - Nam</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="legal_status">Pháp lý</label>
+                                <select id="legal_status" name="legal_status">
+                                    <option value="Unknown">— Chưa xác định —</option>
+                                    <option value="Have certificate">Sổ đỏ / Sổ hồng</option>
+                                    <option value="Sale contract">Hợp đồng mua bán</option>
+                                    <option value="In progress">Đang chờ cấp</option>
+                                    <option value="Pending">Đang xử lý</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="furniture_state">Nội thất</label>
+                                <select id="furniture_state" name="furniture_state">
+                                    <option value="Unknown">— Chưa xác định —</option>
+                                    <option value="Full">Đầy đủ</option>
+                                    <option value="Basic">Cơ bản</option>
+                                    <option value="Empty">Không nội thất</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <!-- Location Selector -->
+                        <div class="form-grid form-grid-1">
+                            <div class="form-group form-group-full">
+                                <label for="location_select">📍 Vị trí (Quận/Huyện, Tỉnh/TP)</label>
+                                <div class="location-select-wrapper">
+                                    <input type="text" id="location_search_input" placeholder="Tìm kiếm... VD: Quận 2, Hà Nội" autocomplete="off">
+                                    <div class="location-dropdown" id="location_dropdown"></div>
+                                </div>
+                                <input type="hidden" id="location_select" name="location_select" value="">
+                                <span class="input-hint" id="location-hint">Chọn vị trí để dự đoán chính xác hơn</span>
+                            </div>
+                        </div>
+
+                        <button type="submit" class="btn-predict" id="btn-predict">
+                            <span class="btn-text">🔮 Dự Đoán Giá</span>
+                            <span class="btn-loading" style="display:none;">
+                                <span class="spinner"></span> Đang phân tích...
+                            </span>
+                        </button>
+                    </form>
+                </div>
+
+                <!-- Result Card -->
+                <div class="glass-card result-card" id="result-card">
+                    <div class="result-placeholder" id="result-placeholder">
+                        <div class="placeholder-icon">🏡</div>
+                        <p>Nhập thông tin bất động sản và nhấn <strong>Dự Đoán Giá</strong> để xem kết quả định giá</p>
+                    </div>
+                    <div class="result-content" id="result-content" style="display:none;">
+                        <div class="result-header">
+                            <span class="result-badge">Dự Đoán AI</span>
+                            <h3>Giá Dự Đoán</h3>
+                        </div>
+                        <div class="price-display">
+                            <span class="price-value" id="price-value">0.00</span>
+                            <span class="price-unit">tỷ VNĐ</span>
+                        </div>
+                        <div class="price-vnd" id="price-vnd"></div>
+                        <div class="result-divider"></div>
+                        <div class="result-summary" id="result-summary"></div>
+                        <div class="result-note">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4M12 8h.01"/></svg>
+                            <span>Đây là kết quả dự đoán bằng AI dựa trên 30,000+ tin đăng bất động sản. Giá thực tế có thể thay đổi theo điều kiện thị trường.</span>
+                        </div>
+                    </div>
+                    <!-- Error display -->
+                    <div class="result-error" id="result-error" style="display:none;">
+                        <div class="error-icon">⚠️</div>
+                        <p id="error-message">Đã xảy ra lỗi</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Location Explorer Section -->
+    <section class="section section-dark" id="locations">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Khám Phá <span class="gradient-text">Khu Vực</span></h2>
+                <p class="section-subtitle">Tìm hiểu giá nhà tại các quận/huyện và tỉnh/thành phố trên toàn Việt Nam</p>
+            </div>
+
+            <!-- Location Search -->
+            <div class="location-search-container">
+                <div class="glass-card location-search-card">
+                    <div class="location-search-bar">
+                        <svg class="search-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
+                        <input type="text" id="location-explorer-search" placeholder="Tìm kiếm theo quận/huyện hoặc tỉnh/thành phố... VD: Quận 2, Hà Nội, Bình Dương" autocomplete="off">
+                        <button class="search-clear-btn" id="search-clear-btn" style="display:none;">✕</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Location Results -->
+            <div class="location-results" id="location-results">
+                <!-- Populated dynamically -->
+            </div>
+
+            <!-- Location Detail Modal -->
+            <div class="location-detail-overlay" id="location-detail-overlay" style="display:none;">
+                <div class="glass-card location-detail-card">
+                    <button class="detail-close-btn" id="detail-close-btn">✕</button>
+                    <div id="location-detail-content"></div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Dashboard Section -->
+    <section class="section section-dark" id="dashboard">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Bảng <span class="gradient-text">Thống Kê</span></h2>
+                <p class="section-subtitle">Phân tích từ 30,000+ tin đăng bất động sản Việt Nam</p>
+            </div>
+
+            <!-- Stats Cards -->
+            <div class="stats-grid" id="stats-grid">
+                <div class="stat-card">
+                    <div class="stat-icon">📊</div>
+                    <div class="stat-value" id="dash-total">—</div>
+                    <div class="stat-label">Tổng Số BĐS</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon">💰</div>
+                    <div class="stat-value" id="dash-avg-price">—</div>
+                    <div class="stat-label">Giá TB (tỷ VNĐ)</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon">📐</div>
+                    <div class="stat-value" id="dash-avg-area">—</div>
+                    <div class="stat-label">DT TB (m²)</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon">📈</div>
+                    <div class="stat-value" id="dash-max-price">—</div>
+                    <div class="stat-label">Giá Cao Nhất (tỷ)</div>
+                </div>
+            </div>
+
+            <!-- Charts -->
+            <div class="charts-grid">
+                <div class="glass-card chart-card">
+                    <h3 class="chart-title">🏆 Độ Quan Trọng Đặc Trưng (Top 10)</h3>
+                    <p class="chart-desc">Những đặc trưng nào ảnh hưởng nhiều nhất đến giá nhà?</p>
+                    <div class="chart-wrapper">
+                        <canvas id="chart-features"></canvas>
+                    </div>
+                </div>
+                <div class="glass-card chart-card">
+                    <h3 class="chart-title">💵 Phân Bố Giá</h3>
+                    <p class="chart-desc">Phân bố giá bất động sản trong tập dữ liệu</p>
+                    <div class="chart-wrapper">
+                        <canvas id="chart-price"></canvas>
+                    </div>
+                </div>
+                <div class="glass-card chart-card">
+                    <h3 class="chart-title">📐 Phân Bố Diện Tích</h3>
+                    <p class="chart-desc">Kích thước bất động sản trong tập dữ liệu (mét vuông)</p>
+                    <div class="chart-wrapper">
+                        <canvas id="chart-area"></canvas>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="section" id="about">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Giới Thiệu <span class="gradient-text">Mô Hình</span></h2>
+                <p class="section-subtitle">Chi tiết kỹ thuật về hệ thống dự đoán AI</p>
+            </div>
+            <div class="about-grid">
+                <div class="glass-card about-card">
+                    <div class="about-icon">🗂️</div>
+                    <h3>Dữ Liệu</h3>
+                    <p>30,229 tin đăng bất động sản thu thập từ <strong>batdongsan.vn</strong>, nền tảng BĐS lớn nhất Việt Nam. Bao gồm 12 đặc trưng về vị trí, diện tích và thuộc tính nhà.</p>
+                </div>
+                <div class="glass-card about-card">
+                    <div class="about-icon">⚙️</div>
+                    <h3>Tiền Xử Lý</h3>
+                    <p>Các đặc trưng phân loại (hướng, pháp lý, nội thất) được mã hóa one-hot. Giá trị thiếu được điền bằng trung vị. Quận/Huyện và Tỉnh/TP được mã hóa bằng Target Encoding (giá trung bình theo khu vực).</p>
+                </div>
+                <div class="glass-card about-card">
+                    <div class="about-icon">🚀</div>
+                    <h3>Mô Hình</h3>
+                    <p>XGBoost Regressor với 300 cây, huấn luyện trên 80% dữ liệu. Vượt trội hơn Random Forest và Linear Regression trên mọi chỉ số (R² = 0.6566, MAE = 0.97 tỷ).</p>
+                </div>
+                <div class="glass-card about-card">
+                    <div class="about-icon">🎯</div>
+                    <h3>Độ Chính Xác</h3>
+                    <p>Mô hình nắm bắt các mối quan hệ phi tuyến phức tạp giữa đặc trưng và giá. Yếu tố quan trọng nhất: Địa chỉ, Diện tích, Phòng tắm và Số tầng.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>🏠 GiáNhà<span class="accent">AI</span> — Xây dựng với XGBoost & Flask</p>
+            <p class="footer-sub">Nguồn dữ liệu: batdongsan.vn • Mô hình: XGBoost Regressor</p>
+        </div>
+    </footer>
+
+    <script src="app.js"></script>
+</body>
+</html>

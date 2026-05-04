@@ -1,0 +1,27 @@
+feature,importance
+District_Encoded,0.3404536605800327
+Area,0.13824316602130152
+Floors,0.09947197631758152
+Bedrooms,0.07226005319869215
+Access Road,0.06519098421980561
+Frontage,0.06428908567886475
+City_Encoded,0.05138863793833768
+House direction_Đông - Nam,0.04895501105435341
+Bathrooms,0.041706931749009135
+Balcony direction_Đông - Nam,0.019411955096331097
+House direction_Bắc,0.010168427465574717
+Furniture_state_ordinal,0.008299789800726645
+House direction_Đông,0.005163352885125097
+House direction_Nam,0.004528215808357478
+Legal_status_ordinal,0.003646154858849935
+Balcony direction_Tây - Bắc,0.0036376277580528068
+Balcony direction_Bắc,0.003371415741192234
+House direction_Đông - Bắc,0.003317918023858999
+House direction_Tây - Bắc,0.0029249865111630607
+House direction_Tây - Nam,0.0025828737169931748
+House direction_Tây,0.002462101652450221
+Balcony direction_Đông - Bắc,0.0021534360675929203
+Balcony direction_Tây,0.0019522266759400826
+Balcony direction_Tây - Nam,0.0018542347221453869
+Balcony direction_Đông,0.001538334100554472
+Balcony direction_Nam,0.0010274423571131673

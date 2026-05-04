@@ -1,2 +1,0 @@
-Miêu tả giá nhà 
-address, ban công, Legal status, furniture state, house-direction là chữ nên chuyển qua 
