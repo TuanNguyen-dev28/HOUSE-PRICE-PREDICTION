@@ -18,6 +18,11 @@ import sys
 import io
 import json
 
+# Thêm thư mục gốc vào sys.path để Python có thể tìm thấy module 'src'
+BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+if BASE_DIR not in sys.path:
+    sys.path.insert(0, BASE_DIR)
+
 # ─── Logging ──────────────────────────────────────────────────────────────
 from src.logger import setup_logger
 log = setup_logger("train")
