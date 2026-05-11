@@ -31,3 +31,7 @@ models/*.pkl
 
 # Jupyter
 .ipynb_checkpoints/
+
+# Logging & MLflow
+logs/
+mlruns/

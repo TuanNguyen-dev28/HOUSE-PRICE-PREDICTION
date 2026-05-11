@@ -29,6 +29,7 @@
             <a href="#predict" class="nav-link">Dự Đoán</a>
             <a href="#locations" class="nav-link">Khu Vực</a>
             <a href="#dashboard" class="nav-link">Thống Kê</a>
+            <a href="#explain" class="nav-link">Giải Thích AI</a>
             <a href="#about" class="nav-link">Giới Thiệu</a>
         </div>
     </nav>
@@ -43,7 +44,7 @@
             </h1>
             <p class="hero-subtitle">
                 Huấn luyện trên <strong>30,000+</strong> tin đăng bất động sản từ batdongsan.vn.
-                Định giá nhanh chóng và chính xác bằng mô hình XGBoost.
+                Định giá nhanh chóng và chính xác bằng thuật toán <strong>Stacking Ensemble (XGBoost + Random Forest)</strong> kết hợp <strong>Log Transform</strong>.
             </p>
             <div class="hero-stats">
                 <div class="hero-stat">
@@ -55,8 +56,8 @@
                     <span class="hero-stat-label">Đặc Trưng Sử Dụng</span>
                 </div>
                 <div class="hero-stat">
-                    <span class="hero-stat-value">XGB</span>
-                    <span class="hero-stat-label">Mô Hình XGBoost</span>
+                    <span class="hero-stat-value">Stacking</span>
+                    <span class="hero-stat-label">Mô Hình Đa Tầng</span>
                 </div>
             </div>
             <a href="#predict" class="hero-cta">
@@ -316,6 +317,32 @@
         </div>
     </section>
 
+    <!-- Explainable AI (SHAP) Section -->
+    <section class="section" id="explain">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Giải Thích Mô Hình <span class="gradient-text">(Explainable AI)</span></h2>
+                <p class="section-subtitle">Tại sao AI lại đưa ra mức giá đó? Trực quan hóa cách mô hình suy luận bằng công nghệ SHAP.</p>
+            </div>
+            <div class="shap-grid">
+                <div class="glass-card shap-card">
+                    <h3 class="chart-title">Mức Độ Quan Trọng Đặc Trưng</h3>
+                    <p class="chart-desc">Trung bình các tính năng nào ảnh hưởng lớn nhất đến kết quả dự đoán giá nhà.</p>
+                    <div class="shap-img-wrapper">
+                        <img src="/api/shap/shap_feature_importance.png" alt="SHAP Feature Importance" style="width:100%; border-radius: 8px;">
+                    </div>
+                </div>
+                <div class="glass-card shap-card">
+                    <h3 class="chart-title">Chiều Tác Động Đặc Trưng</h3>
+                    <p class="chart-desc">Điểm màu đỏ (giá trị cao) hoặc màu xanh (giá trị thấp) làm tăng hay giảm giá nhà.</p>
+                    <div class="shap-img-wrapper">
+                        <img src="/api/shap/shap_beeswarm.png" alt="SHAP Beeswarm Plot" style="width:100%; border-radius: 8px;">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- About Section -->
     <section class="section" id="about">
         <div class="container">
@@ -336,13 +363,13 @@
                 </div>
                 <div class="glass-card about-card">
                     <div class="about-icon">🚀</div>
-                    <h3>Mô Hình</h3>
-                    <p>XGBoost Regressor với 300 cây, huấn luyện trên 80% dữ liệu. Vượt trội hơn Random Forest và Linear Regression trên mọi chỉ số (R² = 0.6566, MAE = 0.97 tỷ).</p>
+                    <h3>Mô Hình Stacking</h3>
+                    <p>Sử dụng <strong>Stacking Ensemble</strong> kết hợp mô hình XGBoost và Random Forest ở tầng cơ sở, và dùng Ridge Regression làm Meta-model. Áp dụng <strong>Log Transform</strong> để xử lý dữ liệu giá bị lệch chuẩn.</p>
                 </div>
                 <div class="glass-card about-card">
                     <div class="about-icon">🎯</div>
-                    <h3>Độ Chính Xác</h3>
-                    <p>Mô hình nắm bắt các mối quan hệ phi tuyến phức tạp giữa đặc trưng và giá. Yếu tố quan trọng nhất: Địa chỉ, Diện tích, Phòng tắm và Số tầng.</p>
+                    <h3>Tối Ưu & MLOps</h3>
+                    <p>Các siêu tham số được dò tìm tự động bằng thuật toán Bayesian Optimization (Optuna). Quá trình huấn luyện được quản lý và tracking thông qua MLflow.</p>
                 </div>
             </div>
         </div>

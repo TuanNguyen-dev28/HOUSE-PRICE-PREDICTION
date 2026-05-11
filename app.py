@@ -16,18 +16,19 @@ import numpy as np
 import pandas as pd
 from flask import Flask, request, jsonify, send_from_directory
 
-from src.predict import EnsemblePredictor, HousePricePredictor
+from src.predict import HousePricePredictor
 
 # ─── Cấu hình ────────────────────────────────────────────────────────────
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 
 # Đường dẫn models cho ensemble
+STACKING_MODEL_PATH = os.path.join(BASE_DIR, 'models', 'stacking_ensemble_model.pkl')
 XGBOOST_MODEL_PATH = os.path.join(BASE_DIR, 'models', 'xgboost_model.pkl')
 RANDOM_FOREST_MODEL_PATH = os.path.join(BASE_DIR, 'models', 'random_forest_model.pkl')
 LOCATION_ENCODINGS_PATH = os.path.join(BASE_DIR, 'models', 'location_encodings.json')
 
 # Fallback model (single model)
-FALLBACK_MODEL_PATH = os.path.join(BASE_DIR, 'models', 'random_forest_model.pkl')
+FALLBACK_MODEL_PATH = os.path.join(BASE_DIR, 'models', 'xgboost_model.pkl')
 
 RAW_DATA_PATH = os.path.join(BASE_DIR, 'data', 'raw', 'house_data.csv')
 FEATURE_IMP_PATH = os.path.join(BASE_DIR, 'models', 'feature_importances.csv')
@@ -43,61 +44,35 @@ VALIDATION_LIMITS = {
     'bathrooms': {'min': 0, 'max': 20, 'default': 1},
 }
 
-ENSEMBLE_WEIGHTS_PATH = os.path.join(BASE_DIR, 'models', 'ensemble_weights.json')
-
-# Load optimal weights nếu có
-def load_optimal_weights():
-    """Đọc trọng số tối ưu từ file JSON."""
-    if os.path.exists(ENSEMBLE_WEIGHTS_PATH):
-        with open(ENSEMBLE_WEIGHTS_PATH, 'r') as f:
-            weights_data = json.load(f)
-        return weights_data.get('xgboost_weight', 0.6), weights_data.get('random_forest_weight', 0.4)
-    return 0.6, 0.4
-
 # ─── Thiết lập App ────────────────────────────────────────────────────────────────
 app = Flask(__name__, static_folder=STATIC_DIR)
 
-# Khởi tạo predictor - Thử ensemble trước, fallback sang single model
+# Khởi tạo predictor
 print("=" * 60)
 print("  DỰ ĐOÁN GIÁ NHÀ AI — Đang khởi động...")
 print("=" * 60)
 
-# Load optimal weights
-xgb_w, rf_w = load_optimal_weights()
-print(f"\n📊 Optimal weights: XGBoost={xgb_w:.0%}, RF={rf_w:.0%}")
-
 predictor = None
 using_ensemble = False
 
-# Thử khởi tạo Ensemble (XGBoost + Random Forest)
-if os.path.exists(XGBOOST_MODEL_PATH) and os.path.exists(RANDOM_FOREST_MODEL_PATH):
+# Thử khởi tạo Stacking Ensemble
+if os.path.exists(STACKING_MODEL_PATH):
     try:
-        print("\n🔄 Đang khởi tạo Ensemble Predictor (XGBoost + Random Forest)...")
-        predictor = EnsemblePredictor(
-            xgboost_model_path=XGBOOST_MODEL_PATH,
-            random_forest_model_path=RANDOM_FOREST_MODEL_PATH,
-            location_encodings_path=LOCATION_ENCODINGS_PATH,
-            xgboost_weight=xgb_w,
-            rf_weight=rf_w
-        )
+        print("\n🔄 Đang khởi tạo Stacking Ensemble Predictor...")
+        predictor = HousePricePredictor(STACKING_MODEL_PATH, LOCATION_ENCODINGS_PATH)
         using_ensemble = True
-        print("  ✓ Ensemble Predictor khởi tạo thành công!")
+        print("  ✓ Stacking Ensemble Predictor khởi tạo thành công!")
     except Exception as e:
         print(f"  ⚠️ Lỗi khởi tạo Ensemble: {e}")
         predictor = None
 
-# Fallback sang single model (Random Forest)
+# Fallback sang single model (XGBoost)
 if predictor is None:
     if os.path.exists(FALLBACK_MODEL_PATH):
         print(f"\n🔄 Sử dụng single model: {FALLBACK_MODEL_PATH}")
         predictor = HousePricePredictor(FALLBACK_MODEL_PATH, LOCATION_ENCODINGS_PATH)
-        using_ensemble = False
     else:
-        raise FileNotFoundError(
-            "Không tìm thấy model! Chạy 'python -m src.train' trước."
-        )
-
-print(f"\n📊 Chế độ: {'ENSEMBLE (XGBoost + Random Forest)' if using_ensemble else 'SINGLE MODEL'}")
+        print("⚠️ Không tìm thấy model! Chạy 'python -m src.train' trước.")
 
 # Tải sẵn thống kê dataset
 print("\nĐang tải thống kê dataset...")
@@ -498,6 +473,14 @@ def _get_area_distribution():
     labels = [f"{int(edges[i])}-{int(edges[i+1])}" for i in range(len(counts))]
     return {'labels': labels, 'counts': counts.tolist()}
 
+
+@app.route('/api/shap/<filename>')
+def get_shap_plot(filename):
+    """Cung cấp các biểu đồ SHAP đã được tạo trong quá trình training."""
+    shap_dir = os.path.join(BASE_DIR, 'models', 'shap_plots')
+    if not os.path.exists(os.path.join(shap_dir, filename)):
+        return jsonify({'error': 'Image not found'}), 404
+    return send_from_directory(shap_dir, filename)
 
 # ─── Main ─────────────────────────────────────────────────────────────────────
 if __name__ == '__main__':
