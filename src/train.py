@@ -9,7 +9,7 @@ import numpy as np
 import pandas as pd
 from sklearn.model_selection import train_test_split, cross_val_score, KFold
 from sklearn.linear_model import LinearRegression, Ridge
-from sklearn.ensemble import RandomForestRegressor, StackingRegressor
+from sklearn.ensemble import RandomForestRegressor, StackingRegressor, HistGradientBoostingRegressor
 from sklearn.compose import TransformedTargetRegressor
 from sklearn.metrics import mean_squared_error, r2_score, mean_absolute_error
 import pickle
@@ -62,7 +62,17 @@ MODELS_DIR = os.path.join(BASE_DIR, "models")
 PRICE_MAX = 250.0       # Loại bỏ bất động sản > 250 tỷ VNĐ
 AREA_MAX = 500.0        # Loại bỏ bất động sản > 500 m²
 
-# Tham số Random Forest
+# Tham số HistGradientBoostingRegressor (Thay thế RF để hỗ trợ monotone constraints)
+HGBR_PARAMS = {
+    'max_iter': 200,
+    'max_depth': 15,
+    'learning_rate': 0.1,
+    'min_samples_leaf': 20,
+    'random_state': 42,
+    'monotonic_cst': None, # Sẽ được gán động dựa trên danh sách features
+}
+
+# Tham số Random Forest (Giữ lại để tham khảo hoặc dùng nếu không cần monotone)
 RF_PARAMS = {
     'n_estimators': 200,
     'max_depth': 20,
@@ -158,9 +168,19 @@ def train_model(X_train, y_train, model_type='linear', X_val=None, y_val=None):
         log.info(f"  ✓ Mô hình {model_type} đã được huấn luyện thành công!")
 
     elif model_type == 'random_forest':
-        base_model = RandomForestRegressor(**RF_PARAMS)
+        # Sử dụng HistGradientBoostingRegressor để áp dụng monotone constraints
+        # Tạo mảng monotonic_cst dựa trên vị trí cột
+        monotonic_cst = []
+        constraints_dict = XGB_PARAMS.get('monotone_constraints', {})
+        for col in X_train.columns:
+            monotonic_cst.append(constraints_dict.get(col, 0))
+        
+        params = HGBR_PARAMS.copy()
+        params['monotonic_cst'] = monotonic_cst
+        
+        base_model = HistGradientBoostingRegressor(**params)
         model = TransformedTargetRegressor(regressor=base_model, func=np.log1p, inverse_func=np.expm1)
-        log.info(f"Đang huấn luyện mô hình {model_type} (với Log Transform)...")
+        log.info(f"Đang huấn luyện mô hình {model_type} (Sử dụng HistGradientBoosting với Monotone Constraints)...")
         model.fit(X_train, y_train)
         log.info(f"  ✓ Mô hình {model_type} đã được huấn luyện thành công!")
 
