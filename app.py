@@ -16,7 +16,7 @@ import numpy as np
 import pandas as pd
 from flask import Flask, request, jsonify, send_from_directory
 
-from src.predict import HousePricePredictor
+from src.predict import HousePricePredictor, EnsemblePredictor
 
 # ─── Cấu hình ────────────────────────────────────────────────────────────
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
@@ -55,13 +55,29 @@ print("=" * 60)
 predictor = None
 using_ensemble = False
 
-# Thử khởi tạo Stacking Ensemble
-if os.path.exists(STACKING_MODEL_PATH):
+# Thử khởi tạo Weighted Ensemble (60% XGBoost + 40% Random Forest)
+if os.path.exists(XGBOOST_MODEL_PATH) and os.path.exists(RANDOM_FOREST_MODEL_PATH):
     try:
-        print("\n🔄 Đang khởi tạo Stacking Ensemble Predictor...")
-        predictor = HousePricePredictor(STACKING_MODEL_PATH, LOCATION_ENCODINGS_PATH)
+        # Đọc trọng số từ file nếu có
+        ensemble_weights_path = os.path.join(BASE_DIR, 'models', 'ensemble_weights.json')
+        xgb_weight, rf_weight = 0.6, 0.4  # Mặc định
+        if os.path.exists(ensemble_weights_path):
+            with open(ensemble_weights_path, 'r') as f:
+                weights_data = json.load(f)
+            xgb_weight = weights_data.get('xgboost_weight', 0.6)
+            rf_weight = weights_data.get('random_forest_weight', 0.4)
+            print(f"  Đã tải trọng số từ ensemble_weights.json: XGB={xgb_weight:.0%}, RF={rf_weight:.0%}")
+
+        print(f"\n🔄 Đang khởi tạo Weighted Ensemble (XGB={xgb_weight:.0%} + RF={rf_weight:.0%})...")
+        predictor = EnsemblePredictor(
+            xgboost_model_path=XGBOOST_MODEL_PATH,
+            random_forest_model_path=RANDOM_FOREST_MODEL_PATH,
+            location_encodings_path=LOCATION_ENCODINGS_PATH,
+            xgboost_weight=xgb_weight,
+            rf_weight=rf_weight,
+        )
         using_ensemble = True
-        print("  ✓ Stacking Ensemble Predictor khởi tạo thành công!")
+        print("  ✓ Weighted Ensemble Predictor khởi tạo thành công!")
     except Exception as e:
         print(f"  ⚠️ Lỗi khởi tạo Ensemble: {e}")
         predictor = None

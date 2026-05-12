@@ -598,25 +598,40 @@ def main():
     log.info(f"  Tốt nhất theo CV R²: {best_model[0]} (CV R² = {best_model[3]:.4f}, Test R² = {best_model[1]:.4f})")
     log.info(f"  File model: {best_model[0].lower().replace(' ', '_')}_model.pkl")
 
-    # ── Bước 7: Stacking Ensemble ───────────────────────────────
-    if HAS_XGBOOST:
-        log.info("-" * 55 + " Stacking Ensemble " + "-" * 10)
-        stacking_model = train_model(X_train, y_train, model_type='stacking')
-        stacking_results = evaluate_model(stacking_model, X_train, y_train, X_test, y_test, "Stacking Ensemble")
-        save_model(stacking_model, os.path.join(MODELS_DIR, "stacking_ensemble_model.pkl"))
-        
-        stacking_cv_results = cross_validate_model(X, y, model_type='stacking')
-        
-        models.append(('Stacking Ensemble', stacking_results['test_r2'], stacking_results['test_mae'], stacking_cv_results['cv_r2_mean']))
-        
-        best_model = max(models, key=lambda x: x[3])  # Theo CV R²
+    # ── Bước 7: Weighted Ensemble (XGBoost + Random Forest) ────────────────
+    if HAS_XGBOOST and xgb_model:
+        log.info("-" * 55 + " Weighted Ensemble " + "-" * 10)
+
+        # 7a. Tìm trọng số tối ưu trên test set
+        optimal_weights = optimize_ensemble_weights(
+            xgb_model, rf_model, X_test, y_test, n_steps=11
+        )
+
+        # 7b. Đánh giá ensemble với trọng số tối ưu
+        ensemble_results = evaluate_ensemble(
+            xgb_model, rf_model, X_train, y_train, X_test, y_test,
+            weights=optimal_weights
+        )
+
+        # 7c. Lưu trọng số vào file JSON
+        weights_path = os.path.join(MODELS_DIR, "ensemble_weights.json")
+        weights_data = {
+            "xgboost_weight": optimal_weights['xgboost'],
+            "random_forest_weight": optimal_weights['random_forest'],
+            "ensemble_test_r2": ensemble_results['ensemble']['test_r2'],
+        }
+        with open(weights_path, 'w', encoding='utf-8') as f:
+            json.dump(weights_data, f, indent=2)
+        log.info(f"  → Trọng số ensemble được lưu tại {weights_path}")
+
         log.info("=" * 65)
-        log.info("  KẾT QUẢ FINAL ENSEMBLE (STACKING)")
+        log.info("  KẾT QUẢ FINAL ENSEMBLE (WEIGHTED)")
         log.info("=" * 65)
-        log.info(f"  Stacking Test R²: {stacking_results['test_r2']:.4f}")
-        log.info(f"  Stacking CV R²:   {stacking_cv_results['cv_r2_mean']:.4f}")
-        log.info(f"\n  💡 Stacking model đã được tự động huấn luyện và tối ưu!")
-        log.info(f"     File model: stacking_ensemble_model.pkl")
+        log.info(f"  Optimal Weights: XGBoost={optimal_weights['xgboost']:.0%}, RF={optimal_weights['random_forest']:.0%}")
+        log.info(f"  Ensemble Test R²: {ensemble_results['ensemble']['test_r2']:.4f}")
+        log.info(f"  Ensemble Test MAE: {ensemble_results['ensemble']['test_mae']:.4f}")
+        log.info(f"\n  💡 Weighted Ensemble đã được tối ưu và lưu!")
+        log.info(f"     File weights: ensemble_weights.json")
     
     # Lưu feature importances (lấy từ base estimator của random forest hoặc rf meta)
     rf_base = rf_model.regressor_ if hasattr(rf_model, 'regressor_') else rf_model
