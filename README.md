@@ -1,179 +1,162 @@
-# House Price Prediction AI
+# House Price Prediction AI (Ensemble Model)
 
-An AI-powered house price prediction system for Vietnamese real estate, trained on **44,448** property listings. 
+Hệ thống AI dự đoán giá bất động sản tại Việt Nam, sử dụng mô hình kết hợp (Ensemble) giữa **XGBoost** và **Random Forest** được tối ưu hóa, huấn luyện trên tập dữ liệu hơn **44,000** bản ghi.
 
 ![Python](https://img.shields.io/badge/Python-3.10+-blue?logo=python&logoColor=white)
 ![scikit-learn](https://img.shields.io/badge/scikit--learn-1.3-orange?logo=scikit-learn&logoColor=white)
 ![XGBoost](https://img.shields.io/badge/XGBoost-2.0-red?logo=xgboost&logoColor=white)
+![Optuna](https://img.shields.io/badge/Optuna-Hyperparameter--Tuning-blueviolet)
+![SHAP](https://img.shields.io/badge/SHAP-Explainability-brightgreen)
 ![Flask](https://img.shields.io/badge/Flask-3.0-lightgrey?logo=flask&logoColor=white)
-![pytest](https://img.shields.io/badge/pytest-9.0-green?logo=pytest&logoColor=white)
-
-## ✨ Technical Highlights (What makes this project special)
-
-- **Domain Knowledge Enforcement**: Uses **XGBoost Monotone Constraints** to force the AI to strictly obey real estate logic (e.g., *Price must increase if Area/Floors increase* or *Price must be higher if it has a Legal Certificate*).
-- **Data Leakage Prevention**: Uses **Target Encoding with Out-of-Fold (OOF)** technique to encode high-cardinality location features (District, City) without leaking test data into training.
-- **Ordinal Feature Encoding**: Carefully mapped categorical features like `Legal_status` (Have certificate > Sale contract > In progress > Pending) and `Furniture_state` (Full > Basic > Empty) to numerical ranks.
-- **Data Augmentation**: Synthetically generated >15k realistic records to cover edge cases (e.g., houses > 100m², sparse properties in central districts).
-- **Ensemble Model**: Combines XGBoost + Random Forest with optimized weights (60% XGB + 40% RF) for maximum stability.
 
 ---
 
-## 🚀 Quick Start
+## ✨ Điểm nhấn kỹ thuật (Technical Highlights)
 
-### 1. Clone the repository
-```bash
-git clone https://github.com/TuanNguyen-dev28/HOUSE-PRICE-PREDICTION.git
-cd HOUSE-PRICE-PREDICTION
-```
+Dự án này vượt xa các mô hình hồi quy thông thường bằng cách tích hợp các kỹ thuật tiên tiến nhất để đảm bảo tính **chính xác** và **logic kinh doanh**:
 
-### 2. Create virtual environment
-```bash
-python -m venv .venv
-# Windows
-.venv\Scripts\activate
-# Linux/Mac
-source .venv/bin/activate
-```
-
-### 3. Install dependencies
-```bash
-pip install -r requirements.txt
-```
-
-### 4. Run the Web Application
-```bash
-python app.py
-```
-Open **http://localhost:5000** in your browser.
+- **Weighted Ensemble Architecture**: Kết hợp dự đoán từ **XGBoost** và **Random Forest** theo trọng số tối ưu (ví dụ: 60% XGB + 40% RF). Việc kết hợp này giúp giảm variance và tăng tính ổn định cho các phân khúc giá khác nhau.
+- **Strict Monotone Constraints**: Áp dụng ràng buộc đơn điệu cho **cả hai mô hình**. 
+    - **XGBoost**: Sử dụng `monotone_constraints` nguyên bản.
+    - **Random Forest**: Chuyển sang sử dụng `HistGradientBoostingRegressor` để hỗ trợ ràng buộc đơn điệu.
+    - *Kết quả*: Đảm bảo các quy luật bất biến (Ví dụ: Diện tích tăng thì giá không được giảm).
+- **Log-Target Transformation**: Áp dụng phép biến đổi $y' = \log(1+y)$ cho biến mục tiêu (Giá) để xử lý dữ liệu bị lệch (skewed data) và cải thiện hiệu suất dự đoán cho các bất động sản giá trị cực cao hoặc cực thấp.
+- **SHAP Explainability**: Tích hợp phân tích **SHAP (SHapley Additive exPlanations)** để giải thích tại sao mô hình đưa ra mức giá đó. Người dùng có thể hiểu được trọng số của từng yếu tố (Diện tích, Vị trí, Pháp lý) tác động thế nào đến kết quả cuối cùng.
+- **Optuna Hyperparameter Optimization**: Sử dụng framework **Optuna** để tự động tìm kiếm bộ tham số tốt nhất cho cả XGBoost và Random Forest thông qua quá trình thử nghiệm hàng trăm phiên bản khác nhau.
+- **Target Encoding with OOF (Out-Of-Fold)**: Mã hóa các đặc trưng vị trí (Quận, Thành phố) có độ đa dạng cao mà không gây hiện tượng rò rỉ dữ liệu (data leakage).
 
 ---
 
-## 📂 Project Structure
+## 📂 Cấu trúc dự án (Project Structure)
 
 ```text
 E:\AI\House-price-regression\
-├── data\                       # Dataset directory
-│   ├── processed\              # Preprocessed data ready for training
-│   └── raw\                    # Raw dataset (house_data.csv)
+├── data\                       # Thư mục dữ liệu
+│   ├── processed\              # Dữ liệu đã tiền xử lý, sẵn sàng training
+│   └── raw\                    # Dữ liệu thô (house_data.csv)
 │
-├── models\                     # Saved Models & Weights
-│   ├── xgboost_model.pkl
-│   ├── random_forest_model.pkl
-│   ├── ensemble_weights.json
-│   ├── feature_importances.csv
-│   └── location_encodings.json
+├── models\                     # Model & Trọng số đã lưu
+│   ├── xgboost_model.pkl       # Mô hình XGBoost (với constraints)
+│   ├── random_forest_model.pkl  # Mô hình RF (HistGradientBoosting)
+│   ├── ensemble_weights.json   # Trọng số tối ưu cho Ensemble
+│   ├── optuna_best_params.json # Tham số tốt nhất tìm được bởi Optuna
+│   ├── location_encodings.json # Encodings cho Quận/Huyện/Thành phố
+│   └── shap_plots\             # Các biểu đồ giải thích mô hình SHAP
 │
-├── notebooks\                  # EDA & Visualizations
-│   ├── eda.ipynb
-│   └── data_evaluation_plots.png
+├── src\                        # ML Pipeline cốt lõi
+│   ├── train.py                # Pipeline huấn luyện, CV & Ensemble logic
+│   ├── predict.py              # Module dự đoán & Confidence Interval
+│   ├── preprocess.py           # Tiền xử lý (OOF Target & Ordinal Encoding)
+│   ├── shap_analysis.py        # Phân tích độ quan trọng bằng SHAP
+│   ├── optuna_tuning.py        # Tự động tối ưu tham số (Hyperparameter Tuning)
+│   ├── logger.py               # Hệ thống ghi log tập trung
+│   └── utils.py                # Các hàm hỗ trợ chung
 │
-├── scripts\                    # Utilities & Testing Scripts
-│   ├── data_evaluation.py
-│   ├── evaluate_model.py       # Comprehensive edge case testing
-│   ├── update_encodings.py
-│   └── data_generation\        # Synthetic data generation & augmentation
-│       ├── augment_edge_cases.py
-│       └── clean_data.py
+├── static\                     # Web Frontend (UI/UX cao cấp)
+│   ├── app.js                  # Logic tương tác & gọi API
+│   ├── index.html              # Giao diện chính
+│   └── style.css               # Styling (Modern Glassmorphism)
 │
-├── src\                        # Core ML Pipeline
-│   ├── predict.py              # Prediction & Ensemble logic
-│   ├── preprocess.py           # Preprocessing (OOF Target & Ordinal Encoding)
-│   ├── train.py                # Model training (CV & Monotone constraints)
-│   └── utils.py                
-│
-├── static\                     # Web Frontend
-│   ├── app.js
-│   ├── index.html
-│   └── style.css
-│
-├── tests\                      # Pytest unit tests
+├── tests\                      # Kiểm thử tự động (Pytest)
 │   ├── test_predict.py
 │   └── test_preprocess.py
 │
-└── app.py                      # Flask Application
+└── app.py                      # Flask Application (Production Server)
 ```
 
 ---
 
 ## 📊 Dataset & Features
 
-**Total Records**: 44,448 (After augmentation and cleaning)
+**Tổng số bản ghi**: ~44,400 (Sau khi làm sạch và tăng cường dữ liệu)
 
-| Feature | Description | Type / Encoding |
-|--------|-------------|-----------------|
-| **Area** | Property area in m² | Numeric (Monotonic ⬆️) |
-| **Floors** | Number of floors | Numeric (Monotonic ⬆️) |
-| **District/City** | Location | Target Encoding (OOF) |
-| **Legal Status** | Certificate state | Ordinal Encoding (Monotonic ⬆️) |
-| **Furniture State** | Furnishing level | Ordinal Encoding (Monotonic ⬆️) |
-| **Bedrooms / Bathrooms** | Room counts | Numeric |
-| **Frontage / Access Road** | Widths in meters | Numeric |
-| **Price** | Price in billions VND | **Target Variable** |
-
----
-
-## 🧠 Model Performance
-
-| Model | Test R² | Test MAE | Test RMSE |
-|-------|---------|----------|-----------|
-| Random Forest | 0.6155 | 3.85 tỷ | 10.71 tỷ |
-| XGBoost (with constraints)| 0.6318 | 4.39 tỷ | 10.48 tỷ |
-| **Ensemble (60% XGB + 40% RF)** | **0.6402** | **4.00 tỷ** | **10.36 tỷ** |
-
-> **Note**: While R² is ~0.64, the model's logical consistency is **100% perfect** across all edge cases (tested via `scripts/evaluate_model.py`) thanks to XGBoost's Monotone Constraints. It never predicts a 100m² house to be cheaper than an identical 50m² house.
+| Đặc trưng | Mô tả | Kiểu / Encoding | Ràng buộc |
+|:--- |:--- |:--- |:--- |
+| **Area** | Diện tích (m²) | Numeric | **Đơn điệu tăng** (⬆️) |
+| **Floors** | Số tầng | Numeric | **Đơn điệu tăng** (⬆️) |
+| **District/City** | Vị trí địa lý | Target Encoding (OOF) | **Đơn điệu tăng** (⬆️) |
+| **Legal Status** | Trình trạng pháp lý | Ordinal Encoding | **Đơn điệu tăng** (⬆️) |
+| **Furniture** | Tình trạng nội thất | Ordinal Encoding | **Đơn điệu tăng** (⬆️) |
+| **Beds/Baths** | Số phòng ngủ/vệ sinh | Numeric | Tự do |
+| **Price** | Giá (Tỷ VNĐ) | **Biến mục tiêu** | (Log Transformed) |
 
 ---
 
-## ✅ Project Checklist
+## 🧠 Hiệu suất & Độ tin cậy (Performance & Reliability)
 
-This checklist tracks the completed and upcoming features for this project.
+Mô hình không chỉ tối ưu về mặt sai số mà còn được thiết kế để cung cấp **Khoảng tin cậy (Confidence Interval)**:
 
-### Phase 1: Data Collection & Cleaning
-- [x] Crawl/Collect real estate data.
-- [x] Handle Missing Values (Imputation).
-- [x] Remove Outliers (Winsorization) & Duplicates.
-- [x] Data augmentation to solve sparse segments (e.g. Area > 100m²).
+- **Ensemble Result**: Kết hợp sức mạnh của Gradient Boosting (XGBoost) và Histogram-based Trees (Random Forest).
+- **Agreement Metric**: Hệ thống đo lường độ đồng thuận giữa 2 mô hình. Nếu 2 mô hình đưa ra kết quả gần nhau, độ tin cậy của dự đoán sẽ cao hơn.
+- **Outlier Handling**: Loại bỏ các bất động sản có giá trị phi thực tế (>250 tỷ) hoặc diện tích quá lớn (>500m²) để tránh nhiễu mô hình.
 
-### Phase 2: Feature Engineering
-- [x] Target Encoding for categorical locations (`District`, `City`).
-- [x] **Out-Of-Fold (OOF)** implementation to prevent data leakage.
-- [x] Ordinal Encoding for ordered categorical features (`Legal_status`, `Furniture_state`).
+---
 
-### Phase 3: Modeling & Optimization
-- [x] Train baseline models (Linear Regression).
-- [x] Train advanced models (Random Forest, XGBoost).
-- [x] Implement **Monotone Constraints** in XGBoost for business logic enforcement.
-- [x] Create Weighted Ensemble predictor.
-- [x] Optimize Ensemble Weights via Grid Search.
-- [x] 5-Fold Cross Validation.
+## ✅ Lộ trình phát triển (Project Checklist)
 
-### Phase 4: MLOps & Production
-- [x] Modularize codebase (`src/`, `scripts/`, `models/`).
-- [x] Unit Testing with Pytest (`tests/`).
-- [x] Edge-case scenario testing (`evaluate_model.py`).
-- [x] Develop REST API with Flask (`app.py`).
-- [x] Build Interactive Web UI (HTML/CSS/JS).
-- [ ] Implement CI/CD Pipeline (GitHub Actions).
-- [ ] Dockerize the application.
-- [ ] Experiment Tracking (MLflow or Weights & Biases).
+### Phase 1: Data Infrastructure
+- [x] Crawl/Thu thập dữ liệu BĐS thực tế.
+- [x] Xử lý giá trị thiếu (Imputation) & Outliers.
+- [x] Data Augmentation (Tăng cường dữ liệu cho các phân khúc hiếm).
+
+### Phase 2: Advanced Feature Engineering
+- [x] Target Encoding (OOF) cho Quận/Huyện/Thành phố.
+- [x] Phân loại Ordinal cho Pháp lý & Nội thất.
+- [x] **Log Transformation** cho biến mục tiêu.
+
+### Phase 3: Modeling & AI Science
+- [x] Triển khai **XGBoost Monotone Constraints**.
+- [x] Triển khai **Random Forest Monotone** (via HistGBR).
+- [x] Tối ưu hóa tham số bằng **Optuna**.
+- [x] Tích hợp giải thích mô hình bằng **SHAP**.
+- [x] Xây dựng Weighted Ensemble tự động tối ưu trọng số.
+
+### Phase 4: MLOps & Deployment
+- [x] Xây dựng REST API bằng Flask.
+- [x] Giao diện Web Interactive cao cấp.
+- [x] Ước lượng khoảng tin cậy (Confidence Interval) cho dự đoán.
+- [ ] Dockerize ứng dụng.
+- [ ] CI/CD Pipeline với GitHub Actions.
+
+---
+
+## 🚀 Khởi chạy nhanh
+
+1. **Cài đặt môi trường**:
+   ```bash
+   python -m venv .venv
+   source .venv/bin/activate  # Hoặc .venv\Scripts\activate trên Windows
+   pip install -r requirements.txt
+   ```
+
+2. **Huấn luyện mô hình**:
+   ```bash
+   python -m src.train
+   ```
+
+3. **Chạy Web App**:
+   ```bash
+   python app.py
+   ```
+   Truy cập **http://localhost:5000** để sử dụng.
 
 ---
 
 ## 📄 API Endpoints
 
 ### `POST /api/predict`
-Predicts house price using the ensemble model.
+Dự đoán giá nhà sử dụng Ensemble model. Trả về giá dự đoán, khoảng tin cậy và độ đồng thuận giữa các mô hình.
 
-**Payload**:
+**Dữ liệu mẫu**:
 ```json
 {
-  "area": 80,
-  "floors": 4,
-  "bedrooms": 4,
-  "bathrooms": 3,
+  "area": 75,
+  "floors": 3,
+  "bedrooms": 3,
   "legal_status": "Have certificate",
-  "furniture_state": "Full",
-  "address": "123 Đường Nguyễn Huệ, Phường Bến Nghé, Quận 1, Hồ Chí Minh"
+  "address": "Phường Bến Nghé, Quận 1, Hồ Chí Minh"
 }
 ```
-*Note: Refer to `app.py` for all accepted parameters.*
+
+---
+*Phát triển bởi [TuanNguyen-dev28](https://github.com/TuanNguyen-dev28)*
