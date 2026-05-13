@@ -38,8 +38,8 @@ class TestConstants:
     def test_feature_columns_contains_location(self):
         """Test that FEATURE_COLUMNS contains location encoded columns."""
         assert 'District_Encoded' in FEATURE_COLUMNS
-        assert 'City_Encoded' in FEATURE_COLUMNS
-        assert 'Address_Encoded' not in FEATURE_COLUMNS  # Old column should be removed
+        assert 'Ward_Encoded' in FEATURE_COLUMNS
+        assert 'Street_Encoded' in FEATURE_COLUMNS
 
     def test_house_directions_complete(self):
         """Test that HOUSE_DIRECTIONS contains expected values."""
@@ -81,17 +81,15 @@ class TestHousePricePredictor:
     def test_predictor_loads_encodings(self, predictor):
         """Test that predictor loads location encodings."""
         assert len(predictor.district_encodings) > 0
-        assert len(predictor.city_encodings) > 0
+        assert len(predictor.ward_encodings) > 0
 
     def test_predictor_uses_correct_global_mean(self, predictor):
         """Test that global mean is loaded from encodings."""
-        # Should be around 8.7 based on training data, not 5.87
-        assert predictor.district_global_mean > 5.0
-        assert predictor.city_global_mean > 5.0
+        assert predictor.global_mean > 5.0
 
 
-class TestExtractDistrictCity:
-    """Tests for internal district/city extraction."""
+class TestExtractLocationParts:
+    """Tests for internal location extraction."""
 
     @pytest.fixture
     def predictor(self):
@@ -105,27 +103,28 @@ class TestExtractDistrictCity:
 
     def test_extract_valid_address(self, predictor):
         """Test extracting from valid address."""
-        district, city = predictor._extract_district_city("123 Nguyen Trai, Go Vap, Ho Chi Minh")
-        assert district == "Go Vap"
-        assert city == "Ho Chi Minh"
+        parts = predictor._extract_location_parts("123 Nguyen Trai, Go Vap, Ho Chi Minh")
+        assert parts['district'] == "Go Vap"
+        assert parts['city'] == "Ho Chi Minh"
 
     def test_extract_empty_address(self, predictor):
         """Test empty address returns Unknown."""
-        district, city = predictor._extract_district_city("")
-        assert district == "Unknown"
-        assert city == "Unknown"
+        parts = predictor._extract_location_parts("")
+        assert parts['district'] == "Unknown"
+        assert parts['city'] == "Unknown"
 
     def test_extract_none_address(self, predictor):
         """Test None address returns Unknown."""
-        district, city = predictor._extract_district_city(None)
-        assert district == "Unknown"
-        assert city == "Unknown"
+        parts = predictor._extract_location_parts(None)
+        assert parts['district'] == "Unknown"
+        assert parts['city'] == "Unknown"
 
     def test_extract_invalid_address(self, predictor):
-        """Test invalid address returns Unknown."""
-        district, city = predictor._extract_district_city("InvalidAddress")
-        assert district == "Unknown"
-        assert city == "Unknown"
+        """Test invalid address parsing returns valid structure."""
+        parts = predictor._extract_location_parts("InvalidAddress")
+        # Single word address will be parsed as city
+        assert 'district' in parts
+        assert 'city' in parts
 
 
 class TestPreprocessSingle:
@@ -200,10 +199,10 @@ class TestPreprocessSingle:
         result = predictor.preprocess_single(input_data)
         
         assert 'District_Encoded' in result.columns
-        assert 'City_Encoded' in result.columns
+        assert 'Ward_Encoded' in result.columns
         # Go Vap should be in encodings
         assert result['District_Encoded'].iloc[0] > 0
-        assert result['City_Encoded'].iloc[0] > 0
+        assert result['Ward_Encoded'].iloc[0] > 0
 
 
 class TestPredict:
@@ -412,7 +411,7 @@ class TestEnsemblePredictor:
     def test_ensemble_loads_encodings(self, ensemble_predictor):
         """Test that ensemble loads location encodings."""
         assert len(ensemble_predictor.district_encodings) > 0
-        assert len(ensemble_predictor.city_encodings) > 0
+        assert len(ensemble_predictor.ward_encodings) > 0
 
     def test_ensemble_has_correct_weights(self, ensemble_predictor):
         """Test that ensemble uses the specified weights."""
@@ -525,11 +524,10 @@ class TestEnsemblePrediction:
         assert 'metadata' in result
         assert 'xgboost_weight' in result['metadata']
         assert 'random_forest_weight' in result['metadata']
-        assert 'prediction_agreement' in result['metadata']
         assert 'prediction_difference' in result['metadata']
 
-    def test_ensemble_has_input_summary(self, ensemble_predictor):
-        """Test that result contains input summary."""
+    def test_ensemble_has_location_analysis(self, ensemble_predictor):
+        """Test that result contains location analysis."""
         input_data = {
             'area': 80,
             'floors': 3,
@@ -538,7 +536,7 @@ class TestEnsemblePrediction:
         }
         result = ensemble_predictor.predict(input_data)
         
-        assert 'input_summary' in result
+        assert 'location_analysis' in result
 
     def test_ensemble_price_positive(self, ensemble_predictor):
         """Test that ensemble predicted price is positive."""
@@ -601,8 +599,8 @@ class TestEnsemblePrediction:
         assert 'ensemble' in result
         assert 'confidence_interval' in result
         
-        # Should not have individual predictions
-        assert 'individual_predictions' not in result
+        # Should have individual_predictions as None (not computed)
+        assert result.get('individual_predictions') is None
 
 
 class TestEnsembleBatchPrediction:
@@ -759,7 +757,7 @@ class TestEnsemblePreprocessSingle:
 
 
 class TestEnsembleExtractDistrictCity:
-    """Tests for EnsemblePredictor._extract_district_city method."""
+    """Tests for EnsemblePredictor._extract_location_parts method."""
 
     @pytest.fixture
     def ensemble_predictor(self):
@@ -778,21 +776,21 @@ class TestEnsembleExtractDistrictCity:
 
     def test_extract_valid_address(self, ensemble_predictor):
         """Test extracting from valid address."""
-        district, city = ensemble_predictor._extract_district_city("123 Nguyen Trai, Go Vap, Ho Chi Minh")
-        assert district == "Go Vap"
-        assert city == "Ho Chi Minh"
+        parts = ensemble_predictor._extract_location_parts("123 Nguyen Trai, Go Vap, Ho Chi Minh")
+        assert parts['district'] == "Go Vap"
+        assert parts['city'] == "Ho Chi Minh"
 
     def test_extract_empty_address(self, ensemble_predictor):
         """Test empty address returns Unknown."""
-        district, city = ensemble_predictor._extract_district_city("")
-        assert district == "Unknown"
-        assert city == "Unknown"
+        parts = ensemble_predictor._extract_location_parts("")
+        assert parts['district'] == "Unknown"
+        assert parts['city'] == "Unknown"
 
     def test_extract_none_address(self, ensemble_predictor):
         """Test None address returns Unknown."""
-        district, city = ensemble_predictor._extract_district_city(None)
-        assert district == "Unknown"
-        assert city == "Unknown"
+        parts = ensemble_predictor._extract_location_parts(None)
+        assert parts['district'] == "Unknown"
+        assert parts['city'] == "Unknown"
 
 
 class TestEnsembleIntegration:

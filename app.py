@@ -17,6 +17,50 @@ import pandas as pd
 from flask import Flask, request, jsonify, send_from_directory
 
 from src.predict import HousePricePredictor, EnsemblePredictor
+from src.preprocess import normalize_district_name  # Import district normalization
+import unicodedata
+
+# City name normalization
+CITY_ALIASES = {
+    'HCM': 'TP.HCM',
+    'TpHCM': 'TP.HCM',
+    'TP.HCM': 'TP.HCM',
+    'TPHCM': 'TP.HCM',
+    'Ho Chi Minh': 'TP.HCM',
+    'TP. Ho Chi Minh': 'TP.HCM',
+}
+
+def remove_diacritics(text):
+    """Remove Vietnamese diacritics for comparison."""
+    if not text:
+        return text
+    nfkd = unicodedata.normalize('NFD', text)
+    return ''.join(c for c in nfkd if not unicodedata.combining(c))
+
+def normalize_city_name(city):
+    """Normalize city name to TP.HCM."""
+    if not city or city == 'Unknown':
+        return 'TP.HCM'
+    city = city.strip()
+    
+    # Remove diacritics for matching
+    city_flat = remove_diacritics(city).lower()
+    
+    # Direct match
+    if city in CITY_ALIASES:
+        return CITY_ALIASES[city]
+    
+    # Case-insensitive match (with diacritics removed)
+    for alias, normalized in CITY_ALIASES.items():
+        alias_flat = remove_diacritics(alias).lower()
+        if alias_flat == city_flat:
+            return normalized
+    
+    # If contains HCM-related keywords, normalize
+    if 'hcm' in city_flat or 'ho chi minh' in city_flat:
+        return 'TP.HCM'
+    
+    return city
 
 # ─── Cấu hình ────────────────────────────────────────────────────────────
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
@@ -30,7 +74,7 @@ LOCATION_ENCODINGS_PATH = os.path.join(BASE_DIR, 'models', 'location_encodings.j
 # Fallback model (single model)
 FALLBACK_MODEL_PATH = os.path.join(BASE_DIR, 'models', 'xgboost_model.pkl')
 
-RAW_DATA_PATH = os.path.join(BASE_DIR, 'data', 'raw', 'house_data.csv')
+RAW_DATA_PATH = os.path.join(BASE_DIR, 'data', 'raw', 'house_data_hcm.csv')  # Chỉ TP.HCM
 FEATURE_IMP_PATH = os.path.join(BASE_DIR, 'models', 'feature_importances.csv')
 STATIC_DIR = os.path.join(BASE_DIR, 'static')
 
@@ -95,16 +139,16 @@ print("\nĐang tải thống kê dataset...")
 raw_df = pd.read_csv(RAW_DATA_PATH)
 
 def _parse_address(addr):
-    """Trích xuất 'Quận/Huyện, Thành phố' từ chuỗi địa chỉ."""
+    """Trích xuất 'Quận/Huyện, Thành phố' từ chuỗi địa chỉ và normalize."""
     if not isinstance(addr, str):
-        return 'Unknown, Unknown'
+        return 'Unknown, TP.HCM'
     parts = addr.split(',')
     if len(parts) >= 2:
-        city = parts[-1].strip()
-        district = parts[-2].strip()
+        city = normalize_city_name(parts[-1].strip())
+        district = normalize_district_name(parts[-2].strip())
     else:
         district = 'Unknown'
-        city = 'Unknown'
+        city = 'TP.HCM'
     return f"{district}, {city}"
 
 raw_df['_district_city'] = raw_df['Address'].apply(_parse_address)
@@ -282,8 +326,8 @@ def predict_single():
             return jsonify({'error': f'Model {model_type} không tồn tại'}), 404
         
         # Predict với single model
-        features_df = predictor.preprocess_single(validated_data)
-        pred = float(model.predict(features_df)[0])
+        features_raw_df = predictor.preprocess_single(validated_data)
+        pred = float(model.predict(features_raw_df)[0])
         pred = max(0.1, pred)
         
         return jsonify({
@@ -324,16 +368,16 @@ def compare_models():
         if os.path.exists(xgb_model_path):
             with open(xgb_model_path, 'rb') as f:
                 xgb_model = pickle.load(f)
-            features_df = predictor.preprocess_single(validated_data)
-            xgb_pred = float(xgb_model.predict(features_df)[0])
+            features_raw_df = predictor.preprocess_single(validated_data)
+            xgb_pred = float(xgb_model.predict(features_raw_df)[0])
             xgb_pred = max(0.1, xgb_pred)
         
         # Random Forest prediction
         if os.path.exists(rf_model_path):
             with open(rf_model_path, 'rb') as f:
                 rf_model = pickle.load(f)
-            features_df = predictor.preprocess_single(validated_data)
-            rf_pred = float(rf_model.predict(features_df)[0])
+            features_raw_df = predictor.preprocess_single(validated_data)
+            rf_pred = float(rf_model.predict(features_raw_df)[0])
             rf_pred = max(0.1, rf_pred)
         
         # Ensemble prediction (weighted average)
@@ -402,10 +446,10 @@ def stats():
         }
 
         if os.path.exists(FEATURE_IMP_PATH):
-            fi_df = pd.read_csv(FEATURE_IMP_PATH)
+            fi_raw_df = pd.read_csv(FEATURE_IMP_PATH)
             stats_data['feature_importances'] = {
-                'features': fi_df['feature'].tolist()[:15],
-                'importances': [round(x, 4) for x in fi_df['importance'].tolist()[:15]],
+                'features': fi_raw_df['feature'].tolist()[:15],
+                'importances': [round(x, 4) for x in fi_raw_df['importance'].tolist()[:15]],
             }
 
         return jsonify(stats_data)
@@ -453,9 +497,9 @@ def location_detail(location):
         if not match:
             return jsonify({'error': f'Không tìm thấy vị trí: {location}'}), 404
 
-        loc_df = raw_df[raw_df['_district_city'] == location]
+        loc_raw_df = raw_df[raw_df['_district_city'] == location]
         bins = np.arange(0, 13, 1)
-        counts, edges = np.histogram(loc_df['Price'].dropna(), bins=bins)
+        counts, edges = np.histogram(loc_raw_df['Price'].dropna(), bins=bins)
         price_dist = {
             'labels': [f"{int(edges[i])}-{int(edges[i+1])}" for i in range(len(counts))],
             'counts': counts.tolist(),
@@ -497,6 +541,167 @@ def get_shap_plot(filename):
     if not os.path.exists(os.path.join(shap_dir, filename)):
         return jsonify({'error': 'Image not found'}), 404
     return send_from_directory(shap_dir, filename)
+
+
+@app.route('/api/location-data', methods=['GET'])
+def get_location_data():
+    """
+    Trả về danh sách tất cả các quận, phường, đường cho autocomplete.
+    """
+    try:
+        # Define all HCMC districts (with normalized names for deduplication)
+        ALL_HCMC_DISTRICTS = {
+            # Quận nội thành (theo số)
+            'Quận 1': 'Quận 1', 'Quận 3': 'Quận 3', 'Quận 4': 'Quận 4',
+            'Quận 5': 'Quận 5', 'Quận 6': 'Quận 6', 'Quận 7': 'Quận 7',
+            'Quận 8': 'Quận 8', 'Quận 10': 'Quận 10', 'Quận 11': 'Quận 11',
+            'Quận 12': 'Quận 12',
+            # Quận nội thành (theo tên)
+            'Tân Bình': 'Quận Tân Bình', 'Quận Tân Bình': 'Quận Tân Bình',
+            'Tân Phú': 'Quận Tân Phú', 'Quận Tân Phú': 'Quận Tân Phú',
+            'Bình Tân': 'Quận Bình Tân', 'Quận Bình Tân': 'Quận Bình Tân',
+            'Bình Thạnh': 'Quận Bình Thạnh', 'Quận Bình Thạnh': 'Quận Bình Thạnh',
+            'Phú Nhuận': 'Quận Phú Nhuận', 'Quận Phú Nhuận': 'Quận Phú Nhuận',
+            'Gò Vấp': 'Quận Gò Vấp', 'Quận Gò Vấp': 'Quận Gò Vấp',
+            # Quận 2, 9 cũ → Thành phố Thủ Đức (sáp nhập 2021)
+            'Quận 2': 'Thành phố Thủ Đức', 'Quận 2 (Thủ Đức)': 'Thành phố Thủ Đức',
+            'Quận 9': 'Thành phố Thủ Đức', 'Quận 9 (Thủ Đức)': 'Thành phố Thủ Đức',
+            'Thủ Đức': 'Thành phố Thủ Đức',
+            # Huyện ngoại thành
+            'Bình Chánh': 'Huyện Bình Chánh', 'Huyện Bình Chánh': 'Huyện Bình Chánh',
+            'Cần Giờ': 'Huyện Cần Giờ', 'Huyện Cần Giờ': 'Huyện Cần Giờ',
+            'Nhà Bè': 'Huyện Nhà Bè', 'Huyện Nhà Bè': 'Huyện Nhà Bè',
+            'Hóc Môn': 'Huyện Hóc Môn', 'Huyện Hóc Môn': 'Huyện Hóc Môn',
+            'Củ Chi': 'Huyện Củ Chi', 'Huyện Củ Chi': 'Huyện Củ Chi',
+        }
+        
+        # All valid districts to ensure completeness
+        ALL_VALID_DISTRICTS = [
+            'Quận 1', 'Quận 3', 'Quận 4', 'Quận 5', 'Quận 6', 'Quận 7', 'Quận 8',
+            'Quận 10', 'Quận 11', 'Quận 12',
+            'Quận Tân Bình', 'Quận Tân Phú', 'Quận Bình Tân',
+            'Quận Bình Thạnh', 'Quận Phú Nhuận', 'Quận Gò Vấp',
+            'Thành phố Thủ Đức',
+            'Huyện Bình Chánh', 'Huyện Cần Giờ', 'Huyện Nhà Bè',
+            'Huyện Hóc Môn', 'Huyện Củ Chi',
+        ]
+        
+        # Get districts from data and normalize
+        districts_from_data = raw_df['District'].dropna().unique().tolist()
+        
+        seen = set()
+        districts = []
+        for d in districts_from_data:
+            normalized = ALL_HCMC_DISTRICTS.get(d, d)
+            if normalized not in seen:
+                seen.add(normalized)
+                districts.append(normalized)
+        
+        # Ensure ALL valid districts are included even if not in data
+        for d in ALL_VALID_DISTRICTS:
+            if d not in seen:
+                seen.add(d)
+                districts.append(d)
+        
+        # Sort: Quận 1, 2, 3... first, then others alphabetically
+        def district_sort_key(x):
+            if x.startswith('Quận '):
+                parts = x.split()
+                if len(parts) >= 2 and parts[1].isdigit():
+                    return (0, int(parts[1]), x)
+            elif x == 'Thành phố Thủ Đức':
+                return (1, 0, x)  # After numbered districts
+            return (2, 0, x)  # Huyện last
+        
+        districts.sort(key=district_sort_key)
+        
+        # Extract wards from Address
+        wards = set()
+        for addr in raw_df['Address'].dropna():
+            parts = addr.split(',')
+            if len(parts) >= 3:
+                ward = parts[-3].strip()
+                if ward and len(ward) > 2:
+                    wards.add(ward)
+        wards = sorted(list(wards))
+        
+        # Extract streets from Address
+        streets = set()
+        for addr in raw_df['Address'].dropna():
+            parts = addr.split(',')
+            if len(parts) >= 1:
+                first_part = parts[0].strip()
+                # Remove house number prefix
+                import re
+                street = re.sub(r'^\d+[\/\d\w]*\s*', '', first_part)
+                street = re.sub(r'^\d+[A-Za-z]?\s*', '', street)
+                street = street.strip()
+                if street and len(street) > 2:
+                    streets.add(street)
+        streets = sorted(list(streets))
+        
+        return jsonify({
+            'districts': districts,
+            'wards': wards,
+            'streets': streets,
+            'counts': {
+                'districts': len(districts),
+                'wards': len(wards),
+                'streets': len(streets),
+            }
+        })
+    except Exception as e:
+        return jsonify({'error': str(e)}), 500
+
+
+@app.route('/api/search-streets', methods=['GET'])
+def search_streets():
+    """
+    Tìm kiếm đường theo query string.
+    """
+    try:
+        query = request.args.get('q', '').strip().lower()
+        if len(query) < 2:
+            return jsonify({'streets': []})
+        
+        import re
+        streets = set()
+        for addr in raw_df['Address'].dropna():
+            parts = addr.split(',')
+            if len(parts) >= 1:
+                first_part = parts[0].strip()
+                street = re.sub(r'^\d+[\/\d\w]*\s*', '', first_part)
+                street = re.sub(r'^\d+[A-Za-z]?\s*', '', street)
+                street = street.strip()
+                if street and len(street) > 2:
+                    # Check if matches query
+                    if query in street.lower() or query in _remove_accents(street.lower()):
+                        streets.add(street)
+        
+        # Sort by relevance (exact match first, then starts with)
+        streets_list = sorted(list(streets))
+        streets_list.sort(key=lambda x: (
+            0 if x.lower() == query else 
+            1 if x.lower().startswith(query) else 
+            2
+        ))
+        
+        return jsonify({
+            'streets': streets_list[:30],
+            'query': query,
+        })
+    except Exception as e:
+        return jsonify({'error': str(e)}), 500
+
+
+def _remove_accents(text):
+    """Remove Vietnamese accents from text."""
+    import unicodedata
+    text = unicodedata.normalize('NFD', text)
+    text = ''.join(c for c in text if unicodedata.category(c) != 'Mn')
+    text = text.replace('đ', 'd').replace('Đ', 'D')
+    return text
+
 
 # ─── Main ─────────────────────────────────────────────────────────────────────
 if __name__ == '__main__':

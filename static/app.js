@@ -5,10 +5,9 @@
 document.addEventListener('DOMContentLoaded', () => {
     initPredictionForm();
     loadDashboardStats();
-    initScrollAnimations();
-    initNavbarScroll();
     initLocationSelector();
     initLocationExplorer();
+    initNavbarScroll();
 });
 
 /* ─── Prediction Form ────────────────────────────────────────── */
@@ -39,26 +38,16 @@ async function makePrediction() {
     const bedroomsVal = document.getElementById('bedrooms').value;
     const bathroomsVal = document.getElementById('bathrooms').value;
 
-    // Client-side validation for required fields
+    // Client-side validation
     const missingFields = [];
-    if (!areaVal || areaVal === '') missingFields.push('Diện tích');
-    if (!floorsVal || floorsVal === '') missingFields.push('Số tầng');
-    if (!bedroomsVal || bedroomsVal === '') missingFields.push('Phòng ngủ');
-    if (!bathroomsVal || bathroomsVal === '') missingFields.push('Phòng tắm');
+    if (!areaVal) missingFields.push('Diện tích');
+    if (!floorsVal) missingFields.push('Số tầng');
+    if (!bedroomsVal) missingFields.push('Phòng ngủ');
+    if (!bathroomsVal) missingFields.push('Phòng tắm');
 
     if (missingFields.length > 0) {
         resultError.style.display = 'block';
-        document.getElementById('error-message').textContent =
-            `Vui lòng nhập: ${missingFields.join(', ')}`;
-        return;
-    }
-
-    // Validate numeric ranges
-    const area = parseFloat(areaVal);
-    if (isNaN(area) || area < 1 || area > 1000) {
-        resultError.style.display = 'block';
-        document.getElementById('error-message').textContent =
-            'Diện tích phải từ 1 đến 1000 m²';
+        document.getElementById('error-message').textContent = `Vui lòng nhập: ${missingFields.join(', ')}`;
         return;
     }
 
@@ -66,7 +55,6 @@ async function makePrediction() {
     btnText.style.display = 'none';
     btnLoading.style.display = 'inline-flex';
 
-    const hiddenLocation = document.getElementById('location_select').value;
     const formData = {
         area: parseFloat(areaVal),
         frontage: parseFloat(document.getElementById('frontage').value) || 0,
@@ -78,7 +66,7 @@ async function makePrediction() {
         balcony_direction: document.getElementById('balcony_direction').value,
         legal_status: document.getElementById('legal_status').value,
         furniture_state: document.getElementById('furniture_state').value,
-        address: hiddenLocation || document.getElementById('location_search_input').value || ''
+        address: document.getElementById('location_select').value || ''
     };
 
     try {
@@ -91,19 +79,12 @@ async function makePrediction() {
         const data = await response.json();
 
         if (!response.ok || data.error) {
-            // Show detailed validation errors from server
-            let errorMsg = data.error || 'Dự đoán thất bại';
-            if (data.details && Array.isArray(data.details)) {
-                errorMsg = data.details.join('; ');
-            }
-            throw new Error(errorMsg);
+            throw new Error(data.error || data.details?.join('; ') || 'Dự đoán thất bại');
         }
 
-        // Show result with animation
         displayResult(data, formData);
 
     } catch (error) {
-        console.error('Prediction error:', error);
         resultError.style.display = 'block';
         document.getElementById('error-message').textContent = error.message;
     } finally {
@@ -116,9 +97,8 @@ function displayResult(data, formData) {
     const resultContent = document.getElementById('result-content');
     resultContent.style.display = 'block';
 
-    // Support both single model (price_billion_vnd) and ensemble (ensemble.price_billion_vnd)
-    const priceValue = data.ensemble ? data.ensemble.price_billion_vnd : data.price_billion_vnd;
-    const vndValue = data.ensemble ? data.ensemble.price_vnd : data.price_vnd;
+    const priceValue = data.price_billion_vnd || data.ensemble?.price_billion_vnd || 0;
+    const vndValue = data.price_vnd || data.ensemble?.price_vnd || 0;
 
     // Animate price counter
     const priceEl = document.getElementById('price-value');
@@ -126,44 +106,31 @@ function displayResult(data, formData) {
 
     // Show VND value
     const vndEl = document.getElementById('price-vnd');
-    const vndFormatted = new Intl.NumberFormat('vi-VN').format(vndValue);
-    vndEl.textContent = `≈ ${vndFormatted} VNĐ`;
+    vndEl.textContent = `≈ ${new Intl.NumberFormat('vi-VN').format(vndValue)} VNĐ`;
 
     // Build summary
     const summaryEl = document.getElementById('result-summary');
     summaryEl.innerHTML = `
         <div class="summary-item">
-            <span class="summary-label">Area</span>
+            <span class="summary-label">Diện tích</span>
             <span class="summary-value">${formData.area} m²</span>
         </div>
         <div class="summary-item">
-            <span class="summary-label">Floors</span>
+            <span class="summary-label">Số tầng</span>
             <span class="summary-value">${formData.floors}</span>
         </div>
         <div class="summary-item">
-            <span class="summary-label">Bedrooms</span>
+            <span class="summary-label">Phòng ngủ</span>
             <span class="summary-value">${formData.bedrooms}</span>
         </div>
         <div class="summary-item">
-            <span class="summary-label">Bathrooms</span>
+            <span class="summary-label">Phòng tắm</span>
             <span class="summary-value">${formData.bathrooms}</span>
         </div>
     `;
 
-    // Show model mode if ensemble
-    if (data.ensemble && data.mode) {
-        const modeEl = document.getElementById('result-mode');
-        if (modeEl) {
-            modeEl.textContent = `Mode: ${data.mode}`;
-            modeEl.style.display = 'block';
-        }
-    }
-
-    // Scroll result into view
     document.getElementById('result-card').scrollIntoView({ behavior: 'smooth', block: 'center' });
 }
-
-/* ─── Animated Counter ───────────────────────────────────────── */
 
 function animateCounter(element, start, end, duration) {
     const startTime = performance.now();
@@ -172,18 +139,10 @@ function animateCounter(element, start, end, duration) {
     function update(currentTime) {
         const elapsed = currentTime - startTime;
         const progress = Math.min(elapsed / duration, 1);
-
-        // Ease out cubic
         const eased = 1 - Math.pow(1 - progress, 3);
-        const current = start + diff * eased;
-
-        element.textContent = current.toFixed(2);
-
-        if (progress < 1) {
-            requestAnimationFrame(update);
-        }
+        element.textContent = (start + diff * eased).toFixed(2);
+        if (progress < 1) requestAnimationFrame(update);
     }
-
     requestAnimationFrame(update);
 }
 
@@ -194,45 +153,26 @@ async function loadDashboardStats() {
         const response = await fetch('/api/stats');
         const stats = await response.json();
 
-        if (stats.error) {
-            console.error('Stats error:', stats.error);
-            return;
-        }
+        if (stats.error) return;
 
-        // Update stat cards
         document.getElementById('dash-total').textContent = 
             new Intl.NumberFormat().format(stats.total_properties);
         document.getElementById('dash-avg-price').textContent = stats.price.mean;
         document.getElementById('dash-avg-area').textContent = stats.area.mean;
         document.getElementById('dash-max-price').textContent = stats.price.max;
 
-        // Render charts
-        if (stats.feature_importances) {
-            renderFeatureChart(stats.feature_importances);
-        }
-        if (stats.price_distribution) {
-            renderPriceChart(stats.price_distribution);
-        }
-        if (stats.area_distribution) {
-            renderAreaChart(stats.area_distribution);
-        }
+        if (stats.feature_importances) renderFeatureChart(stats.feature_importances);
+        if (stats.price_distribution) renderPriceChart(stats.price_distribution);
+        if (stats.area_distribution) renderAreaChart(stats.area_distribution);
 
     } catch (error) {
         console.error('Failed to load dashboard stats:', error);
     }
 }
 
-/* ─── Charts ─────────────────────────────────────────────────── */
-
 const chartColors = {
     indigo: 'rgba(99, 102, 241, 0.8)',
-    violet: 'rgba(139, 92, 246, 0.8)',
     cyan: 'rgba(6, 182, 212, 0.8)',
-    emerald: 'rgba(16, 185, 129, 0.8)',
-    amber: 'rgba(245, 158, 11, 0.8)',
-    indigoBg: 'rgba(99, 102, 241, 0.15)',
-    violetBg: 'rgba(139, 92, 246, 0.15)',
-    cyanBg: 'rgba(6, 182, 212, 0.15)',
 };
 
 const chartDefaults = {
@@ -242,22 +182,8 @@ const chartDefaults = {
 
 function renderFeatureChart(data) {
     const ctx = document.getElementById('chart-features').getContext('2d');
-
-    // Clean up feature names for display
-    const labels = data.features.slice(0, 10).map(f => {
-        return f.replace('_Encoded', '').replace('_', ': ');
-    });
-
+    const labels = data.features.slice(0, 10).map(f => f.replace('_Encoded', '').replace('_', ': '));
     const values = data.importances.slice(0, 10);
-
-    // Generate gradient colors
-    const colors = values.map((_, i) => {
-        const t = i / values.length;
-        const r = Math.round(99 + (6 - 99) * t);
-        const g = Math.round(102 + (182 - 102) * t);
-        const b = Math.round(241 + (212 - 241) * t);
-        return `rgba(${r}, ${g}, ${b}, 0.8)`;
-    });
 
     new Chart(ctx, {
         type: 'bar',
@@ -266,8 +192,8 @@ function renderFeatureChart(data) {
             datasets: [{
                 label: 'Importance Score',
                 data: values,
-                backgroundColor: colors,
-                borderColor: colors.map(c => c.replace('0.8', '1')),
+                backgroundColor: 'rgba(99, 102, 241, 0.8)',
+                borderColor: 'rgba(99, 102, 241, 1)',
                 borderWidth: 1,
                 borderRadius: 6,
             }]
@@ -287,32 +213,19 @@ function renderFeatureChart(data) {
                     padding: 12,
                     cornerRadius: 8,
                     displayColors: false,
-                    callbacks: {
-                        label: (ctx) => `Importance: ${(ctx.raw * 100).toFixed(1)}%`
-                    }
                 }
             },
             scales: {
-                x: {
-                    grid: { color: chartDefaults.borderColor },
-                    ticks: { color: chartDefaults.color, font: { size: 11 } },
-                },
-                y: {
-                    grid: { display: false },
-                    ticks: { color: chartDefaults.color, font: { size: 12, weight: '500' } },
-                }
+                x: { grid: { color: chartDefaults.borderColor }, ticks: { color: chartDefaults.color } },
+                y: { grid: { display: false }, ticks: { color: chartDefaults.color } }
             },
-            animation: {
-                duration: 1500,
-                easing: 'easeOutQuart'
-            }
+            animation: { duration: 1500, easing: 'easeOutQuart' }
         }
     });
 }
 
 function renderPriceChart(data) {
     const ctx = document.getElementById('chart-price').getContext('2d');
-
     const gradient = ctx.createLinearGradient(0, 0, 0, 300);
     gradient.addColorStop(0, 'rgba(99, 102, 241, 0.4)');
     gradient.addColorStop(1, 'rgba(99, 102, 241, 0.02)');
@@ -322,7 +235,7 @@ function renderPriceChart(data) {
         data: {
             labels: data.labels.map(l => l + ' tỷ'),
             datasets: [{
-                label: 'Number of Properties',
+                label: 'Số BĐS',
                 data: data.counts,
                 backgroundColor: gradient,
                 borderColor: chartColors.indigo,
@@ -344,20 +257,11 @@ function renderPriceChart(data) {
                     padding: 12,
                     cornerRadius: 8,
                     displayColors: false,
-                    callbacks: {
-                        label: (ctx) => `${ctx.raw.toLocaleString()} properties`
-                    }
                 }
             },
             scales: {
-                x: {
-                    grid: { display: false },
-                    ticks: { color: chartDefaults.color, font: { size: 11 } },
-                },
-                y: {
-                    grid: { color: chartDefaults.borderColor },
-                    ticks: { color: chartDefaults.color },
-                }
+                x: { grid: { display: false }, ticks: { color: chartDefaults.color } },
+                y: { grid: { color: chartDefaults.borderColor }, ticks: { color: chartDefaults.color } }
             },
             animation: { duration: 1500, easing: 'easeOutQuart' }
         }
@@ -366,7 +270,6 @@ function renderPriceChart(data) {
 
 function renderAreaChart(data) {
     const ctx = document.getElementById('chart-area').getContext('2d');
-
     const gradient = ctx.createLinearGradient(0, 0, 0, 300);
     gradient.addColorStop(0, 'rgba(6, 182, 212, 0.4)');
     gradient.addColorStop(1, 'rgba(6, 182, 212, 0.02)');
@@ -376,7 +279,7 @@ function renderAreaChart(data) {
         data: {
             labels: data.labels.map(l => l + ' m²'),
             datasets: [{
-                label: 'Number of Properties',
+                label: 'Số BĐS',
                 data: data.counts,
                 backgroundColor: gradient,
                 borderColor: chartColors.cyan,
@@ -398,142 +301,81 @@ function renderAreaChart(data) {
                     padding: 12,
                     cornerRadius: 8,
                     displayColors: false,
-                    callbacks: {
-                        label: (ctx) => `${ctx.raw.toLocaleString()} properties`
-                    }
                 }
             },
             scales: {
-                x: {
-                    grid: { display: false },
-                    ticks: { color: chartDefaults.color, font: { size: 11 } },
-                },
-                y: {
-                    grid: { color: chartDefaults.borderColor },
-                    ticks: { color: chartDefaults.color },
-                }
+                x: { grid: { display: false }, ticks: { color: chartDefaults.color } },
+                y: { grid: { color: chartDefaults.borderColor }, ticks: { color: chartDefaults.color } }
             },
             animation: { duration: 1500, easing: 'easeOutQuart' }
         }
     });
 }
 
-/* ─── Scroll Animations ──────────────────────────────────────── */
+/* ─── Location Selector (3 autocomplete fields) ──────────────── */
 
-function initScrollAnimations() {
-    const observerOptions = {
-        threshold: 0.1,
-        rootMargin: '0px 0px -50px 0px'
-    };
-
-    const observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                entry.target.classList.add('visible');
-            }
-        });
-    }, observerOptions);
-
-    // Add animation classes to elements
-    document.querySelectorAll('.glass-card, .stat-card, .about-card').forEach((el, i) => {
-        el.classList.add('animate-in');
-        el.style.transitionDelay = `${i * 0.08}s`;
-        observer.observe(el);
-    });
-}
-
-/* ─── Navbar Scroll Effect ───────────────────────────────────── */
-
-function initNavbarScroll() {
-    const navbar = document.getElementById('navbar');
-    let lastScroll = 0;
-
-    window.addEventListener('scroll', () => {
-        const currentScroll = window.scrollY;
-
-        if (currentScroll > 100) {
-            navbar.style.background = 'rgba(10, 14, 26, 0.95)';
-            navbar.style.boxShadow = '0 4px 20px rgba(0, 0, 0, 0.3)';
-        } else {
-            navbar.style.background = 'rgba(10, 14, 26, 0.8)';
-            navbar.style.boxShadow = 'none';
-        }
-
-        lastScroll = currentScroll;
-    });
-
-    // Smooth scroll for nav links
-    document.querySelectorAll('.nav-link').forEach(link => {
-        link.addEventListener('click', (e) => {
-            e.preventDefault();
-            const target = document.querySelector(link.getAttribute('href'));
-            if (target) {
-                target.scrollIntoView({ behavior: 'smooth' });
-            }
-        });
-    });
-}
-
-/* ─── Unaccent Helper ───────────────────────────────────────── */
-
-function removeAccents(str) {
-    return str.normalize('NFD').replace(/[\u0300-\u036f]/g, '')
-              .replace(/đ/g, 'd').replace(/Đ/g, 'D');
-}
-
-/* ─── Location Selector ─────────────────────────────────────── */
-
-let cachedLocations = [];
+let locationData = { streets: [], wards: [], districts: [] };
 
 async function initLocationSelector() {
-    const searchInput = document.getElementById('location_search_input');
-    const dropdown = document.getElementById('location_dropdown');
-    const hiddenInput = document.getElementById('location_select');
-    const hint = document.getElementById('location-hint');
-
-    // Load locations once
+    // Load location data from API
     try {
-        const response = await fetch('/api/locations');
+        const response = await fetch('/api/location-data');
         const data = await response.json();
-        cachedLocations = data.locations || [];
+        locationData = {
+            streets: data.streets || [],
+            wards: data.wards || [],
+            districts: data.districts || []
+        };
     } catch (error) {
-        console.error('Failed to load locations:', error);
+        console.error('Failed to load location data:', error);
     }
 
-    // Search input handler
-    searchInput.addEventListener('input', (e) => {
+    // Initialize each autocomplete input
+    initAutocomplete('street_input', 'street_dropdown', locationData.streets);
+    initAutocomplete('ward_input', 'ward_dropdown', locationData.wards);
+    initAutocomplete('district_input', 'district_dropdown', locationData.districts);
+
+    // Update hidden location field when any input changes
+    const inputs = ['street_input', 'ward_input', 'district_input'];
+    inputs.forEach(id => {
+        document.getElementById(id).addEventListener('input', updateHiddenLocation);
+        document.getElementById(id).addEventListener('change', updateHiddenLocation);
+    });
+}
+
+function initAutocomplete(inputId, dropdownId, dataList) {
+    const input = document.getElementById(inputId);
+    const dropdown = document.getElementById(dropdownId);
+
+    if (!input || !dropdown) return;
+
+    input.addEventListener('input', (e) => {
         const query = e.target.value.trim().toLowerCase();
-        const queryNoAccent = removeAccents(query);
-        
-        if (query.length < 2) {
+
+        if (query.length < 1) {
             dropdown.style.display = 'none';
             return;
         }
 
-        // Filter locations (supports both accented and unaccented search)
-        const filtered = cachedLocations.filter(loc => {
-            const locLower = loc.location.toLowerCase();
-            return locLower.includes(query) || removeAccents(locLower).includes(queryNoAccent);
+        // Filter data
+        const filtered = dataList.filter(item => {
+            const itemLower = item.toLowerCase();
+            return itemLower.includes(query) || removeAccents(itemLower).includes(removeAccents(query));
         }).slice(0, 10);
 
         if (filtered.length === 0) {
-            dropdown.innerHTML = '<div class="location-item">Không tìm thấy khu vực</div>';
+            dropdown.innerHTML = '<div class="no-results">Không tìm thấy</div>';
         } else {
-            dropdown.innerHTML = filtered.map(loc => `
-                <div class="location-item" data-location="${loc.location}">
-                    <span class="location-name">${loc.location}</span>
-                    <span class="location-count">${loc.count} tin đăng</span>
-                </div>
+            dropdown.innerHTML = filtered.map(item => `
+                <div class="autocomplete-item" data-value="${item}">${item}</div>
             `).join('');
 
-            // Add click handlers
-            dropdown.querySelectorAll('.location-item[data-location]').forEach(item => {
+            dropdown.querySelectorAll('.autocomplete-item').forEach(item => {
                 item.addEventListener('click', () => {
-                    const location = item.dataset.location;
-                    searchInput.value = location;
-                    hiddenInput.value = location;
+                    input.value = item.dataset.value;
                     dropdown.style.display = 'none';
-                    hint.textContent = `Đã chọn: ${location}`;
+                    updateHiddenLocation();
+                    updateLocationHint();
                 });
             });
         }
@@ -541,158 +383,390 @@ async function initLocationSelector() {
         dropdown.style.display = 'block';
     });
 
+    // Keyboard navigation
+    input.addEventListener('keydown', (e) => {
+        const items = dropdown.querySelectorAll('.autocomplete-item');
+        if (items.length === 0) return;
+
+        if (e.key === 'ArrowDown') {
+            e.preventDefault();
+            const selected = dropdown.querySelector('.autocomplete-item.selected');
+            items.forEach(i => i.classList.remove('selected'));
+            if (selected && selected.nextElementSibling) {
+                selected.nextElementSibling.classList.add('selected');
+            } else {
+                items[0].classList.add('selected');
+            }
+        } else if (e.key === 'ArrowUp') {
+            e.preventDefault();
+            const selected = dropdown.querySelector('.autocomplete-item.selected');
+            items.forEach(i => i.classList.remove('selected'));
+            if (selected && selected.previousElementSibling) {
+                selected.previousElementSibling.classList.add('selected');
+            } else {
+                items[items.length - 1].classList.add('selected');
+            }
+        } else if (e.key === 'Enter') {
+            const selected = dropdown.querySelector('.autocomplete-item.selected');
+            if (selected) {
+                e.preventDefault();
+                input.value = selected.dataset.value;
+                dropdown.style.display = 'none';
+                updateHiddenLocation();
+                updateLocationHint();
+            }
+        } else if (e.key === 'Escape') {
+            dropdown.style.display = 'none';
+        }
+    });
+
     // Close dropdown on outside click
     document.addEventListener('click', (e) => {
-        if (!searchInput.contains(e.target) && !dropdown.contains(e.target)) {
+        if (!input.contains(e.target) && !dropdown.contains(e.target)) {
             dropdown.style.display = 'none';
         }
     });
 }
 
-/* ─── Location Explorer ─────────────────────────────────────── */
+function updateHiddenLocation() {
+    const street = document.getElementById('street_input').value.trim();
+    const ward = document.getElementById('ward_input').value.trim();
+    const district = document.getElementById('district_input').value.trim();
+
+    // Build address string
+    let addressParts = [];
+    if (street) addressParts.push(street);
+    if (ward) addressParts.push(ward);
+    if (district) addressParts.push(district);
+    addressParts.push('TP.HCM');
+
+    const fullAddress = addressParts.join(', ');
+    document.getElementById('location_select').value = fullAddress;
+}
+
+function updateLocationHint() {
+    const street = document.getElementById('street_input').value.trim();
+    const ward = document.getElementById('ward_input').value.trim();
+    const district = document.getElementById('district_input').value.trim();
+
+    const hint = document.getElementById('location-hint');
+
+    if (district) {
+        hint.textContent = `Đã chọn: ${district}`;
+        if (ward) hint.textContent += `, ${ward}`;
+        if (street) hint.textContent += `, ${street}`;
+    } else {
+        hint.textContent = 'Chọn vị trí để dự đoán chính xác hơn';
+    }
+}
+
+function removeAccents(str) {
+    return str.normalize('NFD').replace(/[\u0300-\u036f]/g, '').replace(/đ/g, 'd').replace(/Đ/g, 'D');
+}
+
+/* ─── Location Explorer ──────────────────────────────────────── */
+
+let allLocations = [];
+let currentSort = 'count';
+let currentPage = 1;
+const ITEMS_PER_PAGE = 9;
 
 async function initLocationExplorer() {
-    const searchInput = document.getElementById('location-explorer-search');
-    const clearBtn = document.getElementById('search-clear-btn');
-    const resultsContainer = document.getElementById('location-results');
-    const detailOverlay = document.getElementById('location-detail-overlay');
-    const closeDetailBtn = document.getElementById('detail-close-btn');
+    const searchInput = document.getElementById('location-search');
+    const clearBtn = document.getElementById('clear-search');
+    const modal = document.getElementById('district-modal');
+    const modalClose = document.getElementById('modal-close');
+    const filterTabs = document.querySelectorAll('.filter-tab');
 
-    // Load initial locations
+    // Load initial data
     await loadLocations();
 
     // Search handler
     searchInput.addEventListener('input', async (e) => {
         const query = e.target.value.trim();
-        
-        if (query.length >= 2) {
-            clearBtn.style.display = 'block';
-            await loadLocations(query);
-        } else {
-            clearBtn.style.display = 'none';
-            await loadLocations();
-        }
+        clearBtn.style.display = query.length > 0 ? 'block' : 'none';
+        currentPage = 1;
+        await loadLocations(query);
     });
 
     // Clear search
     clearBtn.addEventListener('click', async () => {
         searchInput.value = '';
         clearBtn.style.display = 'none';
+        currentPage = 1;
         await loadLocations();
     });
 
-    // Close detail modal
-    closeDetailBtn.addEventListener('click', () => {
-        detailOverlay.style.display = 'none';
+    // Filter tabs
+    filterTabs.forEach(tab => {
+        tab.addEventListener('click', () => {
+            filterTabs.forEach(t => t.classList.remove('active'));
+            tab.classList.add('active');
+            currentSort = tab.dataset.sort;
+            currentPage = 1;
+            renderDistrictGrid(allLocations);
+        });
     });
 
-    detailOverlay.addEventListener('click', (e) => {
-        if (e.target === detailOverlay) {
-            detailOverlay.style.display = 'none';
+    // Pagination handlers
+    document.getElementById('prev-page').addEventListener('click', () => {
+        if (currentPage > 1) {
+            currentPage--;
+            renderDistrictGrid(allLocations);
         }
     });
 
-    async function loadLocations(query = '') {
-        try {
-            const url = query ? `/api/locations?q=${encodeURIComponent(query)}` : '/api/locations';
-            const response = await fetch(url);
-            const data = await response.json();
+    document.getElementById('next-page').addEventListener('click', () => {
+        const totalPages = Math.ceil(allLocations.length / ITEMS_PER_PAGE);
+        if (currentPage < totalPages) {
+            currentPage++;
+            renderDistrictGrid(allLocations);
+        }
+    });
+
+    // Close modal
+    modalClose.addEventListener('click', () => modal.classList.remove('active'));
+    modal.querySelector('.modal-backdrop').addEventListener('click', () => modal.classList.remove('active'));
+}
+
+async function loadLocations(query = '') {
+    try {
+        const url = query ? `/api/locations?q=${encodeURIComponent(query)}` : '/api/locations';
+        const response = await fetch(url);
+        const data = await response.json();
+
+        allLocations = data.locations || [];
+        currentPage = 1;
+
+        // Update summary
+        document.getElementById('total-districts').textContent = allLocations.length;
+
+        if (allLocations.length > 0) {
+            const avgPrice = (allLocations.reduce((sum, loc) => sum + loc.avg_price, 0) / allLocations.length).toFixed(1);
+            document.getElementById('avg-price-district').textContent = avgPrice;
+
+            const highest = allLocations.reduce((max, loc) => loc.avg_price > max.avg_price ? loc : max);
+            document.getElementById('highest-district').textContent = highest.location.split(',')[0];
+        }
+        
+        renderDistrictGrid(allLocations);
+    } catch (error) {
+        console.error('Failed to load locations:', error);
+    }
+}
+
+function renderDistrictGrid(locations) {
+    const grid = document.getElementById('district-grid');
+    const prevBtn = document.getElementById('prev-page');
+    const nextBtn = document.getElementById('next-page');
+    const paginationNumbers = document.getElementById('pagination-numbers');
+
+    // Sort locations
+    let sorted = [...locations];
+    if (currentSort === 'price') {
+        sorted.sort((a, b) => b.avg_price - a.avg_price);
+    } else if (currentSort === 'price_low') {
+        sorted.sort((a, b) => a.avg_price - b.avg_price);
+    } else {
+        sorted.sort((a, b) => b.count - a.count);
+    }
+
+    if (sorted.length === 0) {
+        grid.innerHTML = '<p style="text-align:center; color: var(--text-muted); grid-column: 1/-1; padding: 60px;">Không tìm thấy khu vực nào</p>';
+        paginationNumbers.innerHTML = '';
+        prevBtn.disabled = true;
+        nextBtn.disabled = true;
+        return;
+    }
+
+    // Calculate pagination
+    const totalPages = Math.ceil(sorted.length / ITEMS_PER_PAGE);
+    currentPage = Math.min(currentPage, totalPages);
+    const startIndex = (currentPage - 1) * ITEMS_PER_PAGE;
+    const endIndex = startIndex + ITEMS_PER_PAGE;
+    const pageItems = sorted.slice(startIndex, endIndex);
+
+    // Render grid items
+    grid.innerHTML = pageItems.map(loc => `
+        <div class="district-card" data-location="${loc.location}">
+            <div class="district-card-header">
+                <span class="district-name">${loc.location.split(',')[0]}</span>
+                <span class="district-count">${loc.count} tin</span>
+            </div>
+            <div class="district-price">
+                <span class="district-price-value">${loc.avg_price.toFixed(1)}</span>
+                <span class="district-price-unit">tỷ VNĐ</span>
+            </div>
+            <div class="district-stats">
+                <div class="district-stat">
+                    <span class="district-stat-value">${loc.median_price.toFixed(1)}</span>
+                    <span class="district-stat-label">Giá trung vị</span>
+                </div>
+                <div class="district-stat">
+                    <span class="district-stat-value">${loc.avg_area.toFixed(0)}</span>
+                    <span class="district-stat-label">DT TB (m²)</span>
+                </div>
+            </div>
+            <div class="district-card-footer">
+                <span class="district-range">${loc.min_price.toFixed(1)} - ${loc.max_price.toFixed(1)} tỷ</span>
+                <span class="district-view-btn">Chi tiết →</span>
+            </div>
+        </div>
+    `).join('');
+
+    // Add click handlers
+    grid.querySelectorAll('.district-card').forEach(card => {
+        card.addEventListener('click', () => showDistrictDetail(card.dataset.location));
+    });
+
+    // Update pagination buttons
+    prevBtn.disabled = currentPage === 1;
+    nextBtn.disabled = currentPage === totalPages;
+
+    // Render pagination numbers
+    renderPaginationNumbers(totalPages);
+}
+
+function renderPaginationNumbers(totalPages) {
+    const container = document.getElementById('pagination-numbers');
+    container.innerHTML = '';
+
+    if (totalPages <= 1) return;
+
+    const maxVisible = 5;
+    let startPage = Math.max(1, currentPage - Math.floor(maxVisible / 2));
+    let endPage = Math.min(totalPages, startPage + maxVisible - 1);
+
+    if (endPage - startPage < maxVisible - 1) {
+        startPage = Math.max(1, endPage - maxVisible + 1);
+    }
+
+    // First page
+    if (startPage > 1) {
+        container.innerHTML += `<button class="page-num" data-page="1">1</button>`;
+        if (startPage > 2) {
+            container.innerHTML += `<span class="page-ellipsis">...</span>`;
+        }
+    }
+
+    // Middle pages
+    for (let i = startPage; i <= endPage; i++) {
+        const activeClass = i === currentPage ? ' active' : '';
+        container.innerHTML += `<button class="page-num${activeClass}" data-page="${i}">${i}</button>`;
+    }
+
+    // Last page
+    if (endPage < totalPages) {
+        if (endPage < totalPages - 1) {
+            container.innerHTML += `<span class="page-ellipsis">...</span>`;
+        }
+        container.innerHTML += `<button class="page-num" data-page="${totalPages}">${totalPages}</button>`;
+    }
+
+    // Add click handlers
+    container.querySelectorAll('.page-num').forEach(btn => {
+        btn.addEventListener('click', () => {
+            currentPage = parseInt(btn.dataset.page);
+            renderDistrictGrid(allLocations);
+        });
+    });
+}
+
+async function showDistrictDetail(location) {
+    const modal = document.getElementById('district-modal');
+    const modalBody = document.getElementById('modal-body');
+    
+    modalBody.innerHTML = '<div style="text-align:center; padding:60px; color:var(--text-muted);">Đang tải...</div>';
+    modal.classList.add('active');
+
+    try {
+        const response = await fetch(`/api/location-detail/${encodeURIComponent(location)}`);
+        const data = await response.json();
+
+        const maxCount = Math.max(...data.price_distribution.counts);
+
+        modalBody.innerHTML = `
+            <div class="modal-header">
+                <h2 class="modal-title">${data.location.split(',')[0]}</h2>
+                <span class="modal-badge">${data.count} bất động sản</span>
+            </div>
             
-            resultsContainer.innerHTML = data.locations.slice(0, 20).map(loc => `
-                <div class="location-card glass-card" data-location="${loc.location}">
-                    <div class="location-card-header">
-                        <h4>${loc.location}</h4>
-                        <span class="location-badge">${loc.count} tin</span>
-                    </div>
-                    <div class="location-card-stats">
-                        <div class="loc-stat">
-                            <span class="loc-stat-value">${loc.avg_price.toFixed(1)} tỷ</span>
-                            <span class="loc-stat-label">Giá TB</span>
+            <div class="modal-price-hero">
+                <div class="modal-price-value">${data.avg_price.toFixed(2)}</div>
+                <div class="modal-price-unit">tỷ VNĐ</div>
+                <span class="modal-price-label">Giá trung bình</span>
+            </div>
+            
+            <div class="modal-stats-grid">
+                <div class="modal-stat">
+                    <span class="modal-stat-icon">📊</span>
+                    <span class="modal-stat-value">${data.median_price.toFixed(2)}</span>
+                    <span class="modal-stat-label">Giá trung vị</span>
+                </div>
+                <div class="modal-stat">
+                    <span class="modal-stat-icon">📉</span>
+                    <span class="modal-stat-value">${data.min_price.toFixed(1)}</span>
+                    <span class="modal-stat-label">Giá thấp nhất</span>
+                </div>
+                <div class="modal-stat">
+                    <span class="modal-stat-icon">📈</span>
+                    <span class="modal-stat-value">${data.max_price.toFixed(1)}</span>
+                    <span class="modal-stat-label">Giá cao nhất</span>
+                </div>
+                <div class="modal-stat">
+                    <span class="modal-stat-icon">📐</span>
+                    <span class="modal-stat-value">${data.avg_area.toFixed(0)}</span>
+                    <span class="modal-stat-label">DT TB (m²)</span>
+                </div>
+            </div>
+            
+            <div class="modal-chart-section">
+                <h4>Phân bố giá (tỷ VNĐ)</h4>
+                <div class="modal-bars">
+                    ${data.price_distribution.labels.map((label, i) => `
+                        <div class="modal-bar-row">
+                            <span class="modal-bar-label">${label}</span>
+                            <div class="modal-bar" style="width: ${(data.price_distribution.counts[i] / maxCount) * 100}%"></div>
+                            <span style="font-size:0.8rem; color:var(--text-muted);">${data.price_distribution.counts[i]}</span>
                         </div>
-                        <div class="loc-stat">
-                            <span class="loc-stat-value">${loc.avg_area.toFixed(0)} m²</span>
-                            <span class="loc-stat-label">DT TB</span>
-                        </div>
-                    </div>
-                    <button class="location-detail-btn" data-location="${loc.location}">Xem chi tiết</button>
+                    `).join('')}
                 </div>
-            `).join('');
+            </div>
+            
+            ${data.representative_address ? `
+            <div class="modal-address">
+                <h4>Địa chỉ mẫu</h4>
+                <p>${data.representative_address}</p>
+            </div>
+            ` : ''}
+        `;
 
-            // Add click handlers for detail buttons
-            resultsContainer.querySelectorAll('.location-detail-btn').forEach(btn => {
-                btn.addEventListener('click', async () => {
-                    const location = btn.dataset.location;
-                    await showLocationDetail(location);
-                });
-            });
-
-            // Add click handlers for location cards
-            resultsContainer.querySelectorAll('.location-card').forEach(card => {
-                card.addEventListener('click', async (e) => {
-                    if (e.target.classList.contains('location-detail-btn')) return;
-                    const location = card.dataset.location;
-                    await showLocationDetail(location);
-                });
-            });
-
-        } catch (error) {
-            console.error('Failed to load locations:', error);
-            resultsContainer.innerHTML = '<p class="error">Không thể tải dữ liệu khu vực</p>';
-        }
+    } catch (error) {
+        modalBody.innerHTML = '<p style="text-align:center; color:#f87171; padding:40px;">Lỗi khi tải dữ liệu</p>';
     }
+}
 
-    async function showLocationDetail(location) {
-        try {
-            const response = await fetch(`/api/location-detail/${encodeURIComponent(location)}`);
-            const data = await response.json();
+/* ─── Navbar Scroll Effect ───────────────────────────────────── */
 
-            document.getElementById('location-detail-content').innerHTML = `
-                <div class="detail-header">
-                    <h3>${data.location}</h3>
-                    <p>${data.count} bất động sản trong khu vực</p>
-                </div>
-                <div class="detail-stats">
-                    <div class="detail-stat">
-                        <span class="detail-stat-value">${data.avg_price} tỷ</span>
-                        <span class="detail-stat-label">Giá trung bình</span>
-                    </div>
-                    <div class="detail-stat">
-                        <span class="detail-stat-value">${data.median_price} tỷ</span>
-                        <span class="detail-stat-label">Giá trung vị</span>
-                    </div>
-                    <div class="detail-stat">
-                        <span class="detail-stat-value">${data.min_price} - ${data.max_price} tỷ</span>
-                        <span class="detail-stat-label">Khoảng giá</span>
-                    </div>
-                    <div class="detail-stat">
-                        <span class="detail-stat-value">${data.avg_area} m²</span>
-                        <span class="detail-stat-label">Diện tích TB</span>
-                    </div>
-                </div>
-                <div class="detail-chart">
-                    <h4>Phân bố giá (tỷ VNĐ)</h4>
-                    <div class="detail-bars">
-                        ${data.price_distribution.labels.map((label, i) => `
-                            <div class="detail-bar-container">
-                                <div class="detail-bar" style="width: ${Math.max(5, (data.price_distribution.counts[i] / Math.max(...data.price_distribution.counts)) * 100)}%"></div>
-                                <span class="detail-bar-label">${label}</span>
-                                <span class="detail-bar-count">${data.price_distribution.counts[i]}</span>
-                            </div>
-                        `).join('')}
-                    </div>
-                </div>
-                ${data.representative_address ? `
-                <div class="detail-address">
-                    <h4>Địa chỉ mẫu</h4>
-                    <p>${data.representative_address}</p>
-                </div>
-                ` : ''}
-            `;
+function initNavbarScroll() {
+    const navbar = document.getElementById('navbar');
 
-            detailOverlay.style.display = 'flex';
-
-        } catch (error) {
-            console.error('Failed to load location detail:', error);
+    window.addEventListener('scroll', () => {
+        if (window.scrollY > 100) {
+            navbar.style.background = 'rgba(10, 14, 26, 0.95)';
+            navbar.style.boxShadow = '0 4px 20px rgba(0, 0, 0, 0.3)';
+        } else {
+            navbar.style.background = 'rgba(10, 14, 26, 0.8)';
+            navbar.style.boxShadow = 'none';
         }
-    }
+    });
+
+    // Smooth scroll for nav links
+    document.querySelectorAll('.nav-link').forEach(link => {
+        link.addEventListener('click', (e) => {
+            e.preventDefault();
+            const target = document.querySelector(link.getAttribute('href'));
+            if (target) target.scrollIntoView({ behavior: 'smooth' });
+        });
+    });
 }

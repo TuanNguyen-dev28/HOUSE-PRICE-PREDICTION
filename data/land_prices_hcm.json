@@ -1,0 +1,199 @@
+{
+  "city": "TP. Hồ Chí Minh",
+  "unit": "triệu/m²",
+  "description": "Bảng giá đất thị trường TP.HCM 2024-2025 (tham khảo)",
+  "districts": {
+    "Quận 1": {
+      "price_min": 300,
+      "price_max": 800,
+      "price_avg": 500,
+      "streets": {
+        "Đồng Khởi": 600,
+        "Nguyễn Huệ": 700,
+        "Lê Lợi": 550,
+        "Hai Bà Trưng": 500,
+        "Trần Hưng Đạo": 450,
+        "Pasteur": 480,
+        "Lê Thánh Tôn": 520,
+        "Phạm Ngọc Thạch": 400
+      }
+    },
+    "Quận 3": {
+      "price_min": 150,
+      "price_max": 400,
+      "price_avg": 250,
+      "streets": {
+        "Võ Văn Tần": 280,
+        "Nguyễn Đình Chiểu": 260,
+        "Lê Văn Sỹ": 220,
+        "Trần Quốc Toản": 240,
+        "Điện Biên Phủ": 200,
+        "Phan Đình Giót": 180
+      }
+    },
+    "Quận 4": {
+      "price_min": 100,
+      "price_max": 250,
+      "price_avg": 160,
+      "streets": {}
+    },
+    "Quận 5": {
+      "price_min": 80,
+      "price_max": 180,
+      "price_avg": 120,
+      "streets": {
+        "Trần Hưng Đạo": 150,
+        "Nguyễn Trãi": 130,
+        "Triệu Quang Phục": 100
+      }
+    },
+    "Quận 6": {
+      "price_min": 60,
+      "price_max": 120,
+      "price_avg": 85,
+      "streets": {}
+    },
+    "Quận 7": {
+      "price_min": 100,
+      "price_max": 350,
+      "price_avg": 180,
+      "streets": {
+        "Nguyễn Lương Bằng": 200,
+        "Lê Văn Lương": 180,
+        "Đỗ Xuân Hợp": 160,
+        "Nguyễn Thị Thập": 150,
+        "Phạm Văn Đồng": 140
+      }
+    },
+    "Quận 8": {
+      "price_min": 50,
+      "price_max": 100,
+      "price_avg": 70,
+      "streets": {}
+    },
+    "Bình Thạnh": {
+      "price_min": 80,
+      "price_max": 250,
+      "price_avg": 130,
+      "streets": {
+        "Điện Biên Phủ": 180,
+        "Xô Viết Nghệ Tĩnh": 150,
+        "Phan Văn Trị": 120,
+        "Nguyễn Gia Kiểng": 140
+      }
+    },
+    "Tân Bình": {
+      "price_min": 80,
+      "price_max": 180,
+      "price_avg": 120,
+      "streets": {
+        "Trường Sơn": 140,
+        "Cộng Hòa": 130,
+        "Trần Quốc Hoàn": 120,
+        "Hoàng Văn Thụ": 110
+      }
+    },
+    "Tân Phú": {
+      "price_min": 60,
+      "price_max": 120,
+      "price_avg": 85,
+      "streets": {}
+    },
+    "Phú Nhuận": {
+      "price_min": 80,
+      "price_max": 180,
+      "price_avg": 120,
+      "streets": {
+        "Phan Đăng Lưu": 130,
+        "Nguyễn Trọng Tuyển": 120,
+        "Trần Hữu Trang": 110
+      }
+    },
+    "Thủ Đức": {
+      "price_min": 60,
+      "price_max": 150,
+      "price_avg": 100,
+      "streets": {}
+    },
+    "Quận 2 (Thủ Đức)": {
+      "price_min": 100,
+      "price_max": 300,
+      "price_avg": 180,
+      "streets": {
+        "Võ Nguyên Giáp": 200,
+        "Nguyễn Xiển": 150,
+        "Thủ Đức": 120
+      }
+    },
+    "Quận 9 (Thủ Đức)": {
+      "price_min": 60,
+      "price_max": 150,
+      "price_avg": 90,
+      "streets": {
+        "Đỗ Xuân Hợp": 100,
+        "Lê Văn Việt": 80
+      }
+    },
+    "Quận Thủ Đức": {
+      "price_min": 60,
+      "price_max": 120,
+      "price_avg": 85,
+      "streets": {}
+    },
+    "Gò Vấp": {
+      "price_min": 50,
+      "price_max": 120,
+      "price_avg": 75,
+      "streets": {
+        "Phan Văn Trị": 90,
+        "Nguyễn Văn Lượng": 70,
+        "Lê Đức Thọ": 65
+      }
+    },
+    "Bình Tân": {
+      "price_min": 40,
+      "price_max": 80,
+      "price_avg": 55,
+      "streets": {}
+    },
+    "Hóc Môn": {
+      "price_min": 15,
+      "price_max": 40,
+      "price_avg": 25,
+      "streets": {}
+    },
+    "Củ Chi": {
+      "price_min": 10,
+      "price_max": 30,
+      "price_avg": 18,
+      "streets": {}
+    },
+    "Nhà Bè": {
+      "price_min": 15,
+      "price_max": 40,
+      "price_avg": 25,
+      "streets": {}
+    },
+    "Cần Giờ": {
+      "price_min": 5,
+      "price_max": 20,
+      "price_avg": 10,
+      "streets": {}
+    },
+    "Bình Chánh": {
+      "price_min": 20,
+      "price_max": 60,
+      "price_avg": 35,
+      "streets": {
+        "Quốc lộ 1A": 40,
+        "Đại lộ Võ Văn Kiệt": 45
+      }
+    }
+  },
+  "notes": {
+    "price_min": "Giá đất ở vị trí xa trung tâm, hẻm nhỏ",
+    "price_max": "Giá đất mặt tiền đường lớn, vị trí đắc địa",
+    "price_avg": "Giá trung bình quận/huyện",
+    "streets": "Giá đất theo tuyến đường cụ thể (mặt tiền)"
+  }
+}

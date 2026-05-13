@@ -1,5 +1,5 @@
 {
-  "xgboost_weight": 0.3,
-  "random_forest_weight": 0.7,
-  "ensemble_test_r2": 0.5138686053117458
+  "xgboost_weight": 0.1,
+  "random_forest_weight": 0.9,
+  "ensemble_test_r2": 0.8646494815436577
 }

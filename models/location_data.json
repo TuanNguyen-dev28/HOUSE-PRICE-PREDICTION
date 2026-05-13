@@ -1,0 +1,315 @@
+{
+  "district_centroids": {
+    "Quận 1": {
+      "lat": 10.7758,
+      "lon": 106.7004
+    },
+    "Quận 3": {
+      "lat": 10.7794,
+      "lon": 106.6868
+    },
+    "Quận 4": {
+      "lat": 10.7644,
+      "lon": 106.7087
+    },
+    "Quận 5": {
+      "lat": 10.7558,
+      "lon": 106.6825
+    },
+    "Quận 6": {
+      "lat": 10.7475,
+      "lon": 106.6742
+    },
+    "Quận 7": {
+      "lat": 10.7419,
+      "lon": 106.7274
+    },
+    "Quận 8": {
+      "lat": 10.7365,
+      "lon": 106.6825
+    },
+    "Quận 10": {
+      "lat": 10.7678,
+      "lon": 106.6742
+    },
+    "Quận 11": {
+      "lat": 10.7644,
+      "lon": 106.6643
+    },
+    "Quận 12": {
+      "lat": 10.8525,
+      "lon": 106.654
+    },
+    "Quận Tân Bình": {
+      "lat": 10.8009,
+      "lon": 106.6535
+    },
+    "Quận Tân Phú": {
+      "lat": 10.7864,
+      "lon": 106.6317
+    },
+    "Quận Bình Tân": {
+      "lat": 10.7864,
+      "lon": 106.5968
+    },
+    "Quận Bình Thạnh": {
+      "lat": 10.8034,
+      "lon": 106.7087
+    },
+    "Quận Phú Nhuận": {
+      "lat": 10.7957,
+      "lon": 106.6893
+    },
+    "Quận Gò Vấp": {
+      "lat": 10.8396,
+      "lon": 106.6661
+    },
+    "Thành phố Thủ Đức": {
+      "lat": 10.861,
+      "lon": 106.7536
+    },
+    "Huyện Bình Chánh": {
+      "lat": 10.861,
+      "lon": 106.5
+    },
+    "Huyện Cần Giờ": {
+      "lat": 10.5,
+      "lon": 106.9
+    },
+    "Huyện Nhà Bè": {
+      "lat": 10.6789,
+      "lon": 106.7015
+    },
+    "Huyện Hóc Môn": {
+      "lat": 10.8946,
+      "lon": 106.5945
+    },
+    "Huyện Củ Chi": {
+      "lat": 10.9897,
+      "lon": 106.489
+    },
+    "Unknown": {
+      "lat": 10.8231,
+      "lon": 106.6292
+    }
+  },
+  "metro_stations": [
+    {
+      "name": "Bến Thành",
+      "lat": 10.7729,
+      "lon": 106.6984
+    },
+    {
+      "name": "Sài Gòn",
+      "lat": 10.7799,
+      "lon": 106.7005
+    },
+    {
+      "name": "Nhà hát Thành phố",
+      "lat": 10.7776,
+      "lon": 106.7044
+    },
+    {
+      "name": "Ba Son",
+      "lat": 10.7725,
+      "lon": 106.7105
+    },
+    {
+      "name": "Văn Thánh",
+      "lat": 10.7633,
+      "lon": 106.721
+    },
+    {
+      "name": "Tân Cảng",
+      "lat": 10.7605,
+      "lon": 106.732
+    },
+    {
+      "name": "Thủ Thiêm",
+      "lat": 10.7678,
+      "lon": 106.745
+    },
+    {
+      "name": "An Phú",
+      "lat": 10.7833,
+      "lon": 106.758
+    },
+    {
+      "name": "Rạch Chiếc",
+      "lat": 10.795,
+      "lon": 106.77
+    },
+    {
+      "name": "Phú Mỹ Hưng",
+      "lat": 10.8011,
+      "lon": 106.779
+    },
+    {
+      "name": "Thảo Điền",
+      "lat": 10.8092,
+      "lon": 106.788
+    },
+    {
+      "name": "An Khánh",
+      "lat": 10.818,
+      "lon": 106.795
+    },
+    {
+      "name": "Khu Công nghệ cao",
+      "lat": 10.8267,
+      "lon": 106.801
+    },
+    {
+      "name": "Suối Tiên",
+      "lat": 10.8356,
+      "lon": 106.806
+    },
+    {
+      "name": "Bến Xe Miền Tây",
+      "lat": 10.7389,
+      "lon": 106.622
+    },
+    {
+      "name": "Chợ An Đông",
+      "lat": 10.7475,
+      "lon": 106.655
+    },
+    {
+      "name": "Đinh Tiên Hoàng",
+      "lat": 10.755,
+      "lon": 106.675
+    }
+  ],
+  "hospitals": [
+    {
+      "name": "Chợ Rẫy",
+      "lat": 10.7633,
+      "lon": 106.6844
+    },
+    {
+      "name": "115 People's",
+      "lat": 10.7815,
+      "lon": 106.6965
+    },
+    {
+      "name": "FV Hospital",
+      "lat": 10.7289,
+      "lon": 106.708
+    },
+    {
+      "name": "Vinmec Central Park",
+      "lat": 10.8299,
+      "lon": 106.7175
+    },
+    {
+      "name": "Tam Duc Heart Hospital",
+      "lat": 10.726,
+      "lon": 106.705
+    },
+    {
+      "name": "Children's Hospital 1",
+      "lat": 10.778,
+      "lon": 106.678
+    },
+    {
+      "name": "Oncology Hospital",
+      "lat": 10.77,
+      "lon": 106.692
+    }
+  ],
+  "schools": [
+    {
+      "name": "ĐH Bách Khoa",
+      "lat": 10.7727,
+      "lon": 106.6654
+    },
+    {
+      "name": "ĐH Kinh tế TP.HCM",
+      "lat": 10.7729,
+      "lon": 106.6865
+    },
+    {
+      "name": "ĐH Quốc tế",
+      "lat": 10.872,
+      "lon": 106.785
+    },
+    {
+      "name": "ĐH KHTN",
+      "lat": 10.7632,
+      "lon": 106.682
+    },
+    {
+      "name": "ĐH Ngoại thương",
+      "lat": 10.7697,
+      "lon": 106.6942
+    },
+    {
+      "name": "ĐH Luật",
+      "lat": 10.7805,
+      "lon": 106.698
+    },
+    {
+      "name": "Trường THPT chuyên Lê Hồng Phong",
+      "lat": 10.782,
+      "lon": 106.683
+    },
+    {
+      "name": "Trường THPT Năng khiếu",
+      "lat": 10.87,
+      "lon": 106.782
+    }
+  ],
+  "markets": [
+    {
+      "name": "Ben Thanh Market",
+      "lat": 10.7724,
+      "lon": 106.6982
+    },
+    {
+      "name": "Saigon Square",
+      "lat": 10.7738,
+      "lon": 106.693
+    },
+    {
+      "name": "Diamond Plaza",
+      "lat": 10.779,
+      "lon": 106.6955
+    },
+    {
+      "name": "Vincom Center",
+      "lat": 10.7805,
+      "lon": 106.699
+    },
+    {
+      "name": "Takashimaya",
+      "lat": 10.7815,
+      "lon": 106.7025
+    },
+    {
+      "name": "AEON Mall Bình Tân",
+      "lat": 10.765,
+      "lon": 106.595
+    },
+    {
+      "name": "Lotte Mart",
+      "lat": 10.797,
+      "lon": 106.625
+    },
+    {
+      "name": "SC Vivo City",
+      "lat": 10.806,
+      "lon": 106.731
+    },
+    {
+      "name": "Paragon Center",
+      "lat": 10.811,
+      "lon": 106.688
+    }
+  ],
+  "cbd": {
+    "name": "Quận 1 Center",
+    "lat": 10.7758,
+    "lon": 106.7004
+  },
+  "_note": "Chỉ dùng tên quận/huyện chuẩn. Các biến thể phải được normalize trước khi tra cứu."
+}
