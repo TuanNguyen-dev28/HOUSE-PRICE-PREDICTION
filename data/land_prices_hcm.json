@@ -1,16 +1,16 @@
 {
   "city": "TP. Hồ Chí Minh",
   "unit": "triệu/m²",
-  "description": "Bảng giá đất thị trường TP.HCM 2024-2025 (tham khảo)",
+  "description": "Bảng giá đất TP.HCM 2026 (cập nhật theo Quyết định 79/2024 & NQ 87/2025)",
   "districts": {
     "Quận 1": {
       "price_min": 300,
-      "price_max": 800,
+      "price_max": 687.2,
       "price_avg": 500,
       "streets": {
-        "Đồng Khởi": 600,
-        "Nguyễn Huệ": 700,
-        "Lê Lợi": 550,
+        "Đồng Khởi": 687.2,
+        "Nguyễn Huệ": 687.2,
+        "Lê Lợi": 687.2,
         "Hai Bà Trưng": 500,
         "Trần Hưng Đạo": 450,
         "Pasteur": 480,

@@ -1,0 +1,70 @@
+feature,importance
+Is_Premium_District,0.34724218
+Premium_Bonus_Multiplier,0.15080848
+Total_Amenity_Score,0.07165436
+Street_Encoded,0.04283994
+distance_to_nearest_school,0.034128934
+Urban_Development_Index,0.03266847
+Land_Value,0.02547115
+distance_to_cbd,0.022963546
+Is_Premium_Street,0.022022152
+near_school,0.021713227
+Area,0.019847888
+Quadrant_SE,0.018473469
+distance_to_nearest_market,0.01756308
+Frontage,0.013378986
+Ward_Encoded,0.012948516
+Premium_Location_Score,0.011086732
+distance_to_nearest_hospital,0.010580352
+Balcony direction_Đông - Nam,0.009672232
+District_Encoded,0.009003448
+Bedrooms,0.008252512
+House direction_Đông - Nam,0.007585007
+Distance_From_CBD_Normalized,0.0074214246
+Land_Price_Per_M2,0.0064999005
+Overall_Accessibility,0.00537096
+near_hospital,0.0046581933
+Cluster_Lon,0.004269364
+Floors,0.0039882557
+distance_to_nearest_metro,0.003968966
+near_metro,0.003535437
+Bathrooms,0.0034971524
+Premium_Indicators_Count,0.003304243
+Distance_East,0.0031196962
+Transit_Score,0.002950166
+Latitude,0.002767992
+Walkability_Score,0.0027191935
+Longitude,0.002401506
+Is_Apartment,0.0023183688
+Cluster_Lat,0.0018995134
+Is_Premium_Location,0.0018125931
+Cluster_Size,0.0017494761
+Very_Near_CBD,0.001736909
+Amenity_Count_3km,0.0017198406
+Distance_North,0.0016665506
+Near_CBD,0.0013776604
+Is_Premium_Ward,0.0013678113
+Balcony direction_Tây - Nam,0.0012057914
+Amenity_Count_1km,0.001153162
+Access Road,0.0010303352
+Legal_status_ordinal,0.0010033086
+House direction_Đông,0.0009780142
+near_market,0.0009279082
+Quadrant_SW,0.00091714447
+Furniture_state_ordinal,0.00082698645
+Quadrant_NW,0.0007583683
+Quadrant_NE,0.000741213
+House direction_Đông - Bắc,0.0007392327
+Balcony direction_Tây - Bắc,0.00067863596
+Balcony direction_Bắc,0.0005136963
+Balcony direction_Tây,0.0005048493
+House direction_Bắc,0.00047344057
+House direction_Nam,0.00043352766
+House direction_Tây - Nam,0.00037177594
+Balcony direction_Đông - Bắc,0.00037130705
+House direction_Tây,0.00034547213
+High_Amenity,0.0
+House direction_Tây - Bắc,0.0
+Near_Metro_Core,0.0
+Balcony direction_Nam,0.0
+Balcony direction_Đông,0.0

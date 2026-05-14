@@ -498,10 +498,16 @@ def location_detail(location):
             return jsonify({'error': f'Không tìm thấy vị trí: {location}'}), 404
 
         loc_raw_df = raw_df[raw_df['_district_city'] == location]
-        bins = np.arange(0, 13, 1)
+        bins = [0, 2, 4, 6, 8, 10, 15, 20, 30, 50, float('inf')]
         counts, edges = np.histogram(loc_raw_df['Price'].dropna(), bins=bins)
+        labels = []
+        for i in range(len(bins)-1):
+            if i == len(bins) - 2:
+                labels.append(f">{bins[i]}")
+            else:
+                labels.append(f"{bins[i]}-{bins[i+1]}")
         price_dist = {
-            'labels': [f"{int(edges[i])}-{int(edges[i+1])}" for i in range(len(counts))],
+            'labels': labels,
             'counts': counts.tolist(),
         }
 
@@ -520,17 +526,27 @@ def location_detail(location):
 
 def _get_price_distribution():
     """Lấy dữ liệu histogram giá."""
-    bins = np.arange(0, 13, 1)
+    bins = [0, 2, 4, 6, 8, 10, 15, 20, 30, 50, float('inf')]
     counts, edges = np.histogram(raw_df['Price'].dropna(), bins=bins)
-    labels = [f"{int(edges[i])}-{int(edges[i+1])}" for i in range(len(counts))]
+    labels = []
+    for i in range(len(bins)-1):
+        if i == len(bins) - 2:
+            labels.append(f">{bins[i]}")
+        else:
+            labels.append(f"{bins[i]}-{bins[i+1]}")
     return {'labels': labels, 'counts': counts.tolist()}
 
 
 def _get_area_distribution():
     """Lấy dữ liệu histogram diện tích."""
-    bins = [0, 30, 50, 70, 100, 150, 200, 300, 600]
+    bins = [0, 30, 50, 70, 100, 150, 200, 300, float('inf')]
     counts, edges = np.histogram(raw_df['Area'].dropna(), bins=bins)
-    labels = [f"{int(edges[i])}-{int(edges[i+1])}" for i in range(len(counts))]
+    labels = []
+    for i in range(len(bins)-1):
+        if i == len(bins) - 2:
+            labels.append(f">{bins[i]}")
+        else:
+            labels.append(f"{bins[i]}-{bins[i+1]}")
     return {'labels': labels, 'counts': counts.tolist()}
 
 
@@ -708,4 +724,5 @@ if __name__ == '__main__':
     print("\n" + "=" * 60)
     print("  Server đang chạy tại http://localhost:5000")
     print("=" * 60 + "\n")
-    app.run(host='0.0.0.0', port=5000, debug=True)
+    # Tắt use_reloader để tránh sinh ra tiến trình python.exe chạy ngầm (zombie process)
+    app.run(host='0.0.0.0', port=5000, debug=True, use_reloader=False)

@@ -137,9 +137,9 @@ PREMIUM_DETECTOR = PremiumLocationDetector(
 
 ULTRA_PREMIUM_STREETS = {
     # District 1 - CBD Core
-    'Nguyễn Huệ': {'base_price': 700, 'district': 'Quận 1'},
-    'Đồng Khởi': {'base_price': 600, 'district': 'Quận 1'},
-    'Lê Lợi': {'base_price': 550, 'district': 'Quận 1'},
+    'Nguyễn Huệ': {'base_price': 687.2, 'district': 'Quận 1'},
+    'Đồng Khởi': {'base_price': 687.2, 'district': 'Quận 1'},
+    'Lê Lợi': {'base_price': 687.2, 'district': 'Quận 1'},
     'Hai Bà Trưng': {'base_price': 500, 'district': 'Quận 1'},
     'Pasteur': {'base_price': 480, 'district': 'Quận 1'},
     'Lê Thánh Tôn': {'base_price': 520, 'district': 'Quận 1'},
@@ -313,21 +313,36 @@ class HousePricePredictor:
         if not address or not isinstance(address, str):
             return {'street': 'Unknown', 'ward': 'Unknown', 'district': 'Unknown', 'city': 'Unknown'}
         
-        import re
         parts = [p.strip() for p in address.split(',')]
         
-        res = {
-            'city': parts[-1].strip() if len(parts) >= 1 else 'Unknown',
-            'district': parts[-2].strip() if len(parts) >= 2 else 'Unknown',
-            'ward': parts[-3].strip() if len(parts) >= 3 else 'Unknown',
-        }
+        # Determine if the last part is city or district
+        last_part = parts[-1].lower() if len(parts) >= 1 else ''
+        has_city = 'hcm' in last_part or 'hồ chí minh' in last_part or 'thành phố' in last_part and 'thủ đức' not in last_part
         
-        # Extract street - take first part (before first comma) and clean
-        if len(parts) >= 1:
-            street_raw = parts[0].strip()
+        if has_city:
+            res = {
+                'city': parts[-1] if len(parts) >= 1 else 'Unknown',
+                'district': parts[-2] if len(parts) >= 2 else 'Unknown',
+                'ward': parts[-3] if len(parts) >= 3 else 'Unknown',
+            }
+            street_idx = -4
+        else:
+            res = {
+                'city': 'TP.HCM',
+                'district': parts[-1] if len(parts) >= 1 else 'Unknown',
+                'ward': parts[-2] if len(parts) >= 2 else 'Unknown',
+            }
+            street_idx = -3
+        
+        # Extract street - take the part before ward
+        if len(parts) >= abs(street_idx):
+            street_raw = parts[street_idx].strip()
             # Remove house number prefix like "100/", "123A", etc.
+            import re
             street_clean = re.sub(r'^[\d]+[\/\d\w]*\s*', '', street_raw)
             street_clean = re.sub(r'^\d+[A-Za-z]?\s*', '', street_clean)
+            # Remove "Đường " prefix
+            street_clean = re.sub(r'^[Đđ]ường\s+', '', street_clean, flags=re.IGNORECASE)
             res['street'] = street_clean if street_clean else 'Unknown'
         else:
             res['street'] = 'Unknown'
@@ -622,17 +637,32 @@ class EnsemblePredictor:
         if not address or not isinstance(address, str):
             return {'street': 'Unknown', 'ward': 'Unknown', 'district': 'Unknown', 'city': 'Unknown'}
         
-        parts = address.split(',')
-        res = {
-            'city': parts[-1].strip() if len(parts) >= 1 else 'Unknown',
-            'district': parts[-2].strip() if len(parts) >= 2 else 'Unknown',
-            'ward': parts[-3].strip() if len(parts) >= 3 else 'Unknown',
-        }
+        parts = [p.strip() for p in address.split(',')]
         
-        if len(parts) >= 4:
-            street_raw = parts[-4].strip()
+        # Determine if the last part is city or district
+        last_part = parts[-1].lower() if len(parts) >= 1 else ''
+        has_city = 'hcm' in last_part or 'hồ chí minh' in last_part or 'thành phố' in last_part and 'thủ đức' not in last_part
+        
+        if has_city:
+            res = {
+                'city': parts[-1] if len(parts) >= 1 else 'Unknown',
+                'district': parts[-2] if len(parts) >= 2 else 'Unknown',
+                'ward': parts[-3] if len(parts) >= 3 else 'Unknown',
+            }
+            street_idx = -4
+        else:
+            res = {
+                'city': 'TP.HCM',
+                'district': parts[-1] if len(parts) >= 1 else 'Unknown',
+                'ward': parts[-2] if len(parts) >= 2 else 'Unknown',
+            }
+            street_idx = -3
+            
+        if len(parts) >= abs(street_idx):
+            street_raw = parts[street_idx].strip()
             import re
             street_clean = re.sub(r'^\d+[\/\d\w]*\s*', '', street_raw)
+            street_clean = re.sub(r'^[Đđ]ường\s+', '', street_clean, flags=re.IGNORECASE)
             res['street'] = street_clean if street_clean else 'Unknown'
         else:
             res['street'] = 'Unknown'
@@ -803,10 +833,19 @@ class EnsemblePredictor:
         xgb_pred = float(self.xgboost_model.predict(features_df)[0])
         rf_pred = float(self.random_forest_model.predict(features_df)[0])
         
-        ensemble_pred = (
-            self.weights['xgboost'] * xgb_pred +
-            self.weights['random_forest'] * rf_pred
-        )
+        # Lấy giá trị đất (Land_Value) đã được tính theo Bảng giá nhà nước
+        land_value = float(features_df['Land_Value'].iloc[0])
+        
+        # Tính giá trị xây dựng (tạm tính: 6 triệu/m² sàn)
+        area = float(input_data.get('area', 0))
+        floors = float(input_data.get('floors', 1))
+        construction_value = (area * floors * 6) / 1000  # tỷ VNĐ
+        
+        # Tổng giá trị theo chuẩn nhà nước
+        state_price = land_value + construction_value
+        
+        # Thay thế hoàn toàn dự đoán của AI bằng bảng giá nhà nước
+        ensemble_pred = state_price
         
         pred_diff = abs(xgb_pred - rf_pred)
         confidence_margin = pred_diff * 0.5

@@ -622,22 +622,23 @@ def main():
     
     # Feature importance
     log.info("\n" + "=" * 55)
-    log.info("  TOP FEATURES (Random Forest)")
+    log.info("  TOP FEATURES (XGBoost)")
     log.info("=" * 55)
     
-    rf_base = rf_model.regressor_ if hasattr(rf_model, 'regressor_') else rf_model
-    if hasattr(rf_base, 'feature_importances_'):
-        fi_df = pd.DataFrame({
-            'feature': X.columns,
-            'importance': rf_base.feature_importances_
-        }).sort_values('importance', ascending=False)
-        
-        for _, row in fi_df.head(15).iterrows():
-            bar = '█' * int(row['importance'] * 100)
-            log.info(f"  {row['feature']:<30} {row['importance']:.4f}  {bar}")
-        
-        fi_path = os.path.join(MODELS_DIR, 'feature_importances.csv')
-        fi_df.to_csv(fi_path, index=False)
+    if HAS_XGBOOST and xgb_model:
+        xgb_base = xgb_model.regressor_ if hasattr(xgb_model, 'regressor_') else xgb_model
+        if hasattr(xgb_base, 'feature_importances_'):
+            fi_df = pd.DataFrame({
+                'feature': X.columns,
+                'importance': xgb_base.feature_importances_
+            }).sort_values('importance', ascending=False)
+            
+            for _, row in fi_df.head(15).iterrows():
+                bar = '█' * int(row['importance'] * 100)
+                log.info(f"  {row['feature']:<30} {row['importance']:.4f}  {bar}")
+            
+            fi_path = os.path.join(MODELS_DIR, 'feature_importances.csv')
+            fi_df.to_csv(fi_path, index=False)
     
     # SHAP
     if HAS_SHAP and HAS_XGBOOST and xgb_model:
