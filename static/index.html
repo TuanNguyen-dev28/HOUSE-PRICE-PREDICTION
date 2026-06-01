@@ -119,6 +119,13 @@
                         <!-- Categorical Inputs -->
                         <div class="form-grid form-grid-2">
                             <div class="form-group">
+                                <label for="property_type">Kiểu nhà</label>
+                                <select id="property_type" name="property_type">
+                                    <option value="Nhà">Nhà phố / Biệt thự</option>
+                                    <option value="Chung cư">Căn hộ / Chung cư</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
                                 <label for="house_direction">Hướng nhà</label>
                                 <select id="house_direction" name="house_direction">
                                     <option value="Unknown">— Chưa xác định —</option>
@@ -153,6 +160,7 @@
                                     <option value="Have certificate">Sổ đỏ / Sổ hồng</option>
                                     <option value="Sale contract">Hợp đồng mua bán</option>
                                     <option value="In progress">Đang chờ cấp</option>
+                                    <option value="Pending">Chưa có sổ / Giấy viết tay</option>
                                 </select>
                             </div>
                             <div class="form-group">
@@ -166,26 +174,29 @@
                             </div>
                         </div>
 
-                        <!-- Location Inputs - 3 autocomplete fields -->
+                        <!-- Location Inputs - 3 hierarchical dropdown fields -->
                         <div class="form-grid form-grid-1">
                             <div class="form-group form-group-full">
-                                <label>📍 Vị trí chi tiết</label>
+                                <label>📍 Vị trí chi tiết (Quận ➔ Phường ➔ Đường) *</label>
                                 <div class="location-inputs-grid">
                                     <div class="location-input-wrapper">
-                                        <input type="text" id="street_input" placeholder="Tên đường..." autocomplete="off">
-                                        <div class="location-dropdown autocomplete-dropdown" id="street_dropdown"></div>
+                                        <select id="district_select" name="district_select" required>
+                                            <option value="">-- Chọn Quận/Huyện --</option>
+                                        </select>
                                     </div>
                                     <div class="location-input-wrapper">
-                                        <input type="text" id="ward_input" placeholder="Phường/Xã..." autocomplete="off">
-                                        <div class="location-dropdown autocomplete-dropdown" id="ward_dropdown"></div>
+                                        <select id="ward_select" name="ward_select" disabled required>
+                                            <option value="">-- Chọn Phường/Xã --</option>
+                                        </select>
                                     </div>
                                     <div class="location-input-wrapper">
-                                        <input type="text" id="district_input" placeholder="Quận/Huyện..." autocomplete="off">
-                                        <div class="location-dropdown autocomplete-dropdown" id="district_dropdown"></div>
+                                        <select id="street_select" name="street_select" disabled required>
+                                            <option value="">-- Chọn Tên Đường --</option>
+                                        </select>
                                     </div>
                                 </div>
                                 <input type="hidden" id="location_select" name="location_select" value="">
-                                <span class="input-hint" id="location-hint">Chọn vị trí để dự đoán chính xác hơn</span>
+                                <span class="input-hint" id="location-hint">Chọn vị trí theo thứ tự để bắt đầu định giá</span>
                             </div>
                         </div>
 

@@ -1,0 +1,5165 @@
+{
+  "Quận 1": {
+    "Phường 1": [
+      "Hai Bà Trưng",
+      "Lê Lợi",
+      "Nguyễn Huệ",
+      "Pasteur",
+      "Trần Hưng Đạo",
+      "Đường Võ Thị Sáu",
+      "Đồng Khởi"
+    ],
+    "Phường 2": [
+      "Hai Bà Trưng",
+      "Lê Lợi",
+      "Nguyễn Huệ",
+      "Pasteur",
+      "Trần Cao Vân",
+      "Trần Hưng Đạo",
+      "Đồng Khởi"
+    ],
+    "Phường 3": [
+      "Hai Bà Trưng",
+      "Lê Lợi",
+      "Nguyễn Huệ",
+      "Pasteur",
+      "Trần Hưng Đạo",
+      "Đường Trần Cao Vân",
+      "Đồng Khởi"
+    ],
+    "Phường 4": [
+      "Hai Bà Trưng",
+      "Lê Lợi",
+      "Nguyễn Huệ",
+      "Pasteur",
+      "Trần Hưng Đạo",
+      "Đường Cầu Khởi",
+      "Đường Lý Tự Trọng",
+      "Đồng Khởi"
+    ],
+    "Phường 5": [
+      "Hai Bà Trưng",
+      "Lê Lợi",
+      "Nguyễn Huệ",
+      "Pasteur",
+      "Trương Định",
+      "Trần Hưng Đạo",
+      "Võ Thị Sáu",
+      "Đường Nguyễn Văn Luông",
+      "Đường Phan Văn Trị",
+      "Đường Phùng Khắc Khoan",
+      "Đường Đặng Dung",
+      "Đồng Khởi"
+    ],
+    "Phường 6": [
+      "Hai Bà Trưng",
+      "Lê Lợi",
+      "Nguyễn Huệ",
+      "Pasteur",
+      "Trần Hưng Đạo",
+      "Đường Pasteur",
+      "Đồng Khởi"
+    ],
+    "Phường 7": [
+      "Hai Bà Trưng",
+      "Lê Lợi",
+      "Nguyễn Huệ",
+      "Nguyễn Thị Minh Khai",
+      "Pasteur",
+      "Trần Hưng Đạo",
+      "Đường Lê Thánh Tôn",
+      "Đường Lý Tự Trọng",
+      "Đồng Khởi"
+    ],
+    "Phường 8": [
+      "Hai Bà Trưng",
+      "Lê Lợi",
+      "Nguyễn Huệ",
+      "Nguyễn Thị Minh Khai",
+      "Pasteur",
+      "Trần Hưng Đạo",
+      "Đường Công Trường Mê Linh",
+      "Đường Lý Tự Trọng",
+      "Đường Phùng Khắc Khoan",
+      "Đường Điện Biên Phủ",
+      "Đồng Khởi"
+    ],
+    "Phường 9": [
+      "Hai Bà Trưng",
+      "Lê Lợi",
+      "Nguyễn Huệ",
+      "Nguyễn Văn Luông",
+      "Pasteur",
+      "Trần Hưng Đạo",
+      "Đường Nguyễn Cư Trinh",
+      "Đường Nguyễn Huệ",
+      "Đường Nguyễn Trãi",
+      "Đồng Khởi"
+    ],
+    "Phường 10": [
+      "Hai Bà Trưng",
+      "Lê Lợi",
+      "Nguyễn Huệ",
+      "Pasteur",
+      "Trần Hưng Đạo",
+      "Đường Lê Lợi",
+      "Đồng Khởi"
+    ],
+    "Phường 11": [
+      "Nguyễn Huệ",
+      "Đường Lý Tự Trọng",
+      "Đường Nguyễn Huệ"
+    ],
+    "Phường 12": [
+      "Nguyễn Cư Trinh",
+      "Pasteur"
+    ],
+    "Phường 13": [
+      "Đường Lê Thánh Tôn",
+      "Đường Phùng Khắc Khoan",
+      "Đường Trần Cao Vân",
+      "Đường Võ Văn Kiệt"
+    ],
+    "Phường 14": [
+      "Trần Hưng Đạo",
+      "Võ Văn Kiệt",
+      "Đường Hai Bà Trưng",
+      "Đường Lý Tự Trọng",
+      "Đường Nguyễn Trãi",
+      "Đường Phạm Ngũ Lão",
+      "Đường Trần Hưng Đạo",
+      "Đường Võ Văn Kiệt"
+    ],
+    "Phường 15": [
+      "Đường Nguyễn Trãi",
+      "Đường Đặng Dung"
+    ],
+    "Phường 16": [
+      "Nguyễn Trãi",
+      "Đường Bùi Thị Xuân",
+      "Đường Phùng Khắc Khoan"
+    ],
+    "Phường 17": [
+      "Đường Bùi Thị Xuân",
+      "Đường Nguyễn Trãi"
+    ],
+    "Phường 18": [
+      "Phùng Khắc Khoan",
+      "Đường Bùi Thị Xuân",
+      "Đường Phùng Khắc Khoan",
+      "Đường Võ Thị Sáu",
+      "Đường Đề Thám"
+    ],
+    "Phường 19": [
+      "Đường Võ Thị Sáu"
+    ],
+    "Phường 20": [
+      "Phan Văn Trị",
+      "Đường Nguyễn Bỉnh Khiêm",
+      "Đường Nguyễn Cư Trinh",
+      "Đường Phan Văn Trị",
+      "Đường Phùng Khắc Khoan",
+      "Đường Đồng Khởi"
+    ],
+    "Phường 21": [
+      "Phùng Khắc Khoan",
+      "Trương Định",
+      "Đường Bùi Thị Xuân",
+      "Đường Nguyễn Bỉnh Khiêm",
+      "Đường Phùng Khắc Khoan"
+    ],
+    "Phường 22": [
+      "Đường Phùng Khắc Khoan",
+      "Đường Võ Thị Sáu",
+      "Đường Đặng Dung"
+    ],
+    "Phường 23": [
+      "Lê Thánh Tôn",
+      "Điện Biên Phủ",
+      "Đường Phùng Khắc Khoan",
+      "Đường Trần Cao Vân",
+      "Đường Đề Thám",
+      "Đường Đồng Khởi"
+    ],
+    "Phường 24": [
+      "Trần Cao Vân",
+      "Võ Văn Kiệt",
+      "Đường Hai Bà Trưng",
+      "Đường Đề Thám"
+    ],
+    "Phường 25": [
+      "Bùi Thị Xuân",
+      "Nguyễn Trãi",
+      "Đường Nguyễn Văn Luông"
+    ],
+    "Phường Bến Thành": [
+      "Đường Lê Thị Riêng",
+      "Đường Nguyễn Thị Minh Khai",
+      "Đường Nguyễn Văn Tráng"
+    ],
+    "Phường Cô Giang": [
+      "Đường Hồ Hảo Hớn",
+      "Đường Trần Hưng Đạo",
+      "Đường Trần Đình Xu",
+      "Đường Võ Văn Kiệt",
+      "Đường Đề Thám"
+    ],
+    "Phường Cầu Kho": [
+      "Đường Bến Chương Dương",
+      "Đường Nguyễn Cảnh Chân",
+      "Đường Trần Hưng Đạo",
+      "Đường Võ Văn Kiệt"
+    ],
+    "Phường Cầu Ông Lãnh": [
+      "Đường Cô Giang",
+      "Đường Đề Thám"
+    ],
+    "Phường Nguyễn Cư Trinh": [
+      "Đường Cao Bá Nhạ",
+      "Đường Cống Quỳnh",
+      "Đường Nguyễn Cư Trinh",
+      "Đường Nguyễn Trãi",
+      "Đường Nguyễn Văn Cừ",
+      "Đường Trần Đình Xu"
+    ],
+    "Phường Phạm Ngũ Lão": [
+      "Đường Bùi Thị Xuân",
+      "Đường Bùi Viện",
+      "Đường Cống Quỳnh",
+      "Đường Nguyễn Văn Tráng",
+      "Đường Phạm Ngũ Lão",
+      "Đường Trần Hưng Đạo",
+      "Đường Tôn Thất Tùng",
+      "Đường Đề Thám"
+    ],
+    "Phường Tân Định": [
+      "Đường Nguyễn Phi Khanh",
+      "Đường Nguyễn Văn Nguyễn",
+      "Đường Thạch Thị Thanh",
+      "Đường Trần Khắc Chân",
+      "Đường Trần Quang Khải"
+    ],
+    "Phường Đa Kao": [
+      "Đường Cây Điệp",
+      "Đường Hoàng Sa",
+      "Đường Mai Thị Lựu",
+      "Đường Mạc Đĩnh Chi",
+      "Đường Nguyễn Bỉnh Khiêm",
+      "Đường Nguyễn Văn Thủ",
+      "Đường Nguyễn Đình Chiểu",
+      "Đường Phan Tôn",
+      "Đường Trần Quang Khải"
+    ],
+    "Xã 1": [
+      "Hai Bà Trưng",
+      "Lê Lợi",
+      "Nguyễn Huệ",
+      "Pasteur",
+      "Trần Hưng Đạo",
+      "Đồng Khởi"
+    ],
+    "Xã 2": [
+      "Hai Bà Trưng",
+      "Lê Lợi",
+      "Nguyễn Huệ",
+      "Pasteur",
+      "Trần Hưng Đạo",
+      "Đồng Khởi"
+    ],
+    "Xã 3": [
+      "Hai Bà Trưng",
+      "Lê Lợi",
+      "Nguyễn Huệ",
+      "Pasteur",
+      "Trần Hưng Đạo",
+      "Đồng Khởi"
+    ]
+  },
+  "Quận 3": {
+    "Phường 1": [
+      "Huỳnh Khương An",
+      "Lê Văn Sỹ",
+      "Nguyễn Thiện Thuật",
+      "Nguyễn Đình Chiểu",
+      "Phan Kế Bính",
+      "Trần Quốc Toản",
+      "Võ Văn Kiệt",
+      "Võ Văn Tần",
+      "Đường  Nguyễn Thiện Thuật",
+      "Đường Nguyễn Thiện Thuật",
+      "Đường Phan Văn Khỏe"
+    ],
+    "Phường 2": [
+      "Lê Văn Sỹ",
+      "Nguyễn Đình Chiểu",
+      "Phố Nguyễn Thiện Thuật",
+      "Trần Quốc Toản",
+      "Võ Văn Tần",
+      "Đường  Nguyễn Thiện Thuật",
+      "Đường Nguyễn Thị Minh Khai",
+      "Đường Nguyễn Đình Chiểu",
+      "Đường Phan Kế Bính",
+      "Đường Phạm Đình Toái"
+    ],
+    "Phường 3": [
+      "Lê Văn Sỹ",
+      "Nguyễn Đình Chiểu",
+      "Phố Nguyễn Thiện Thuật",
+      "Trần Quốc Toản",
+      "Võ Văn Tần",
+      "Đường  Nguyễn Thiện Thuật",
+      "Đường Bàn Cờ",
+      "Đường Nguyễn Đình Chiểu",
+      "Đường Phạm Viết Chánh",
+      "Đường Điện Biên Phủ"
+    ],
+    "Phường 4": [
+      "Lê Văn Sỹ",
+      "Nguyễn Đình Chiểu",
+      "Phan Văn Khỏe",
+      "Trần Quốc Toản",
+      "Võ Văn Tần",
+      "Đường  Nguyễn Thiện Thuật",
+      "Đường Cao Thắng",
+      "Đường Cách Mạng Tháng Tám",
+      "Đường Huỳnh Khương An",
+      "Đường Nguyễn Hiền",
+      "Đường Nguyễn Thượng Hiền",
+      "Đường Nguyễn Thị Nghĩa",
+      "Đường Nguyễn Đình Chiểu",
+      "Đường Số 2 Cư xá Đô Thành",
+      "Đường Số 3 Cư xá Đô Thành",
+      "Đường Số 4 Cư xá Đô Thành",
+      "Đường Trần Hưng Đạo",
+      "Đường Vườn Chuối"
+    ],
+    "Phường 5": [
+      "Lê Văn Sỹ",
+      "Nguyễn Đình Chiểu",
+      "Phan Văn Khỏe",
+      "Trần Quốc Toản",
+      "Võ Văn Tần",
+      "Vũ Huy Tấn",
+      "Đường Cao Thắng",
+      "Đường Nguyễn Đình Chiểu",
+      "Đường Phan Kế Bính",
+      "Đường Võ Văn Tần"
+    ],
+    "Phường 6": [
+      "Huỳnh Khương An",
+      "Lê Văn Sỹ",
+      "Nguyễn Đình Chiểu",
+      "Trần Quốc Toản",
+      "Võ Văn Tần",
+      "Đường Huỳnh Khương An",
+      "Đường Nguyễn Thị Minh Khai",
+      "Đường Nguyễn Đình Chiểu",
+      "Đường Pasteur",
+      "Đường Phạm Đình Toái"
+    ],
+    "Phường 7": [
+      "Lê Văn Sỹ",
+      "Nguyễn Đình Chiểu",
+      "Phan Kế Bính",
+      "Phan Văn Khỏe",
+      "Trần Quốc Toản",
+      "Võ Văn Tần",
+      "Đường  Kỳ Đồng",
+      "Đường Hoàng Sa",
+      "Đường Lý Chính Thắng",
+      "Đường Nam Kỳ Khởi Nghĩa",
+      "Đường Nguyễn Thượng Hiền",
+      "Đường Trần Hưng Đạo"
+    ],
+    "Phường 8": [
+      "Lê Văn Sỹ",
+      "Nguyễn Đình Chiểu",
+      "Trần Quốc Toản",
+      "Võ Văn Tần",
+      "Đường Huỳnh Khương An",
+      "Đường Nguyễn Đình Chiểu",
+      "Đường Phan Kế Bính",
+      "Đường Phan Văn Khỏe",
+      "Đường Võ Văn Kiệt"
+    ],
+    "Phường 9": [
+      "Huỳnh Khương An",
+      "Lê Văn Sỹ",
+      "Nguyễn Đình Chiểu",
+      "Trần Quốc Toản",
+      "Võ Văn Kiệt",
+      "Võ Văn Tần",
+      "Đường  Hai Bà Trưng",
+      "Đường  Kỳ Đồng",
+      "Đường Lê Văn Sỹ",
+      "Đường Lý Chính Thắng",
+      "Đường Nguyễn Thông",
+      "Đường Nguyễn Đình Chiểu",
+      "Đường Phạm Viết Chánh",
+      "Đường Trần Hưng Đạo",
+      "Đường Trần Văn Đang",
+      "Đường Võ Văn Kiệt",
+      "Đường Vũ Huy Tấn",
+      "Đường Điện Biên Phủ"
+    ],
+    "Phường 10": [
+      "Lê Văn Sỹ",
+      "Nguyễn Đình Chiểu",
+      "Phan Kế Bính",
+      "Trần Quốc Toản",
+      "Võ Văn Tần",
+      "Điện Biên Phủ",
+      "Đoàn Công Hưng",
+      "Đường Cách Mạng Tháng Tám",
+      "Đường Nguyễn Phúc Nguyên",
+      "Đường Nguyễn Thượng Hiền",
+      "Đường Trương Quốc Dung",
+      "Đường Trần Quốc Thoại"
+    ],
+    "Phường 11": [
+      "Phan Kế Bính",
+      "Phạm Viết Chánh",
+      "Trần Quốc Thoại",
+      "Đường Cách Mạng Tháng Tám",
+      "Đường Huỳnh Khương An",
+      "Đường Trần Hưng Đạo",
+      "Đường Trần Văn Đang",
+      "Đường Điện Biên Phủ",
+      "Đường Đỗ Thị Lời"
+    ],
+    "Phường 12": [
+      "Nguyễn Thị Nghĩa",
+      "Phạm Đình Toái",
+      "Đường Bà Huyện Thanh Quan",
+      "Đường Hoàng Sa",
+      "Đường Lê Văn Sỹ",
+      "Đường Lý Chính Thắng",
+      "Đường Trường Sa",
+      "Đường Trần Quang Diệu",
+      "Đường Đặng Trần Côn"
+    ],
+    "Phường 13": [
+      "Nguyễn Thượng Hiền",
+      "Đường Lê Văn Sỹ",
+      "Đường Nguyễn Thượng Hiền",
+      "Đường Nguyễn Đình Chiểu",
+      "Đường Trương Quốc Dung",
+      "Đường Trường Sa",
+      "Đường Trần Quang Diệu"
+    ],
+    "Phường 14": [
+      "Đường Cư xá Trần Quang Diệu",
+      "Đường Lê Văn Sỹ",
+      "Đường Trần Quang Diệu",
+      "Đặng Trần Côn"
+    ],
+    "Phường 15": [
+      "Đường Nguyễn Thượng Hiền"
+    ],
+    "Phường 16": [
+      "Pasteur",
+      "Phạm Viết Chánh",
+      "Trần Hưng Đạo",
+      "Võ Văn Kiệt"
+    ],
+    "Phường 17": [
+      "Đường Trần Hưng Đạo",
+      "Đường Võ Văn Kiệt",
+      "Đường Đoàn Công Hưng"
+    ],
+    "Phường 18": [
+      "Đường Bà Huyện Thanh Quan"
+    ],
+    "Phường 19": [
+      "Trần Quốc Thoại",
+      "Đường Phan Kế Bính",
+      "Đường Phạm Đình Toái",
+      "Đường Vũ Huy Tấn",
+      "Đường Đoàn Công Hưng"
+    ],
+    "Phường 20": [
+      "Đường Bà Huyện Thanh Quan",
+      "Đường Pasteur",
+      "Đường Phan Kế Bính",
+      "Đường Trần Quốc Thoại"
+    ],
+    "Phường 21": [
+      "Nguyễn Thượng Hiền",
+      "Nguyễn Thị Nghĩa",
+      "Pasteur",
+      "Đường Đoàn Công Hưng"
+    ],
+    "Phường Võ Thị Sáu": [
+      "Phố Hai Bà Trưng",
+      "Đường  Hai Bà Trưng",
+      "Đường Hoàng Sa",
+      "Đường Huỳnh Tịnh Của",
+      "Đường Lý Chính Thắng",
+      "Đường Nam Kỳ Khởi Nghĩa",
+      "Đường Võ Thị Sáu",
+      "đường Lý Chính Thắng"
+    ],
+    "Xã 1": [
+      "Lê Văn Sỹ",
+      "Nguyễn Đình Chiểu",
+      "Trần Quốc Toản",
+      "Võ Văn Tần"
+    ],
+    "Xã 2": [
+      "Lê Văn Sỹ",
+      "Nguyễn Đình Chiểu",
+      "Trần Quốc Toản",
+      "Võ Văn Tần"
+    ],
+    "Xã 3": [
+      "Lê Văn Sỹ",
+      "Nguyễn Đình Chiểu",
+      "Trần Quốc Toản",
+      "Võ Văn Tần"
+    ]
+  },
+  "Quận 4": {
+    "Phường 1": [
+      "Bến Vân Đồn",
+      "Hoàng Diệu",
+      "Đường Bến Vân Đồn",
+      "Đường Bến Đình",
+      "Đường Trần Đình Tri",
+      "Đường Tôn Thất Thuyết",
+      "Đường Vĩnh Khánh",
+      "Đường Đoàn Văn Bơ",
+      "Đại lộ Võ Văn Kiệt",
+      "Đặng Văn Ngữ"
+    ],
+    "Phường 2": [
+      "Bến Vân Đồn",
+      "Hoàng Diệu",
+      "Số 4A Đường 50",
+      "Đường Bến Vân Đồn",
+      "Đường Bến Đình",
+      "Đường Cầu Kênh Tẻ",
+      "Đường Nguyễn Khoái",
+      "Đường Nguyễn Tất",
+      "Đường Tôn Đản",
+      "Đại lộ Võ Văn Kiệt"
+    ],
+    "Phường 3": [
+      "Bến Vân Đồn",
+      "Hoàng Diệu",
+      "Đường Cầu Kênh Tẻ",
+      "Đường Khánh Hội",
+      "Đường Nguyễn Tất",
+      "Đường Tôn Thất Thuyết",
+      "Đường Đại lộ Võ Văn Kiệt",
+      "Đại lộ Võ Văn Kiệt"
+    ],
+    "Phường 4": [
+      "Bến Vân Đồn",
+      "Cầu Kênh Tẻ",
+      "Hoàng Diệu",
+      "Đường Hoàng Diệu",
+      "Đường Khánh Hội",
+      "Đường Số 16",
+      "Đường Số 25",
+      "Đường Số 4",
+      "Đường Số 40",
+      "Đường Số 7",
+      "Đường Tân Vĩnh",
+      "Đường Tôn Thất Thuyết",
+      "Đường Vĩnh Hội",
+      "Đường Đại lộ Võ Văn Kiệt",
+      "Đường Đặng Văn Ngữ",
+      "Đại lộ Võ Văn Kiệt"
+    ],
+    "Phường 5": [
+      "Bến Vân Đồn",
+      "Hoàng Diệu",
+      "Đường An Dương Vương",
+      "Đường Hoàng Diệu",
+      "Đường Lương Nhữ Bache",
+      "Đường Vĩnh Khánh",
+      "Đường Đại lộ Võ Văn Kiệt",
+      "Đại lộ Võ Văn Kiệt"
+    ],
+    "Phường 6": [
+      "Bến Vân Đồn",
+      "Hoàng Diệu",
+      "Khánh Hội",
+      "Đường An Dương Vương",
+      "Đường Bến Vân Đồn",
+      "Đường Cư Xá Vĩnh Hội",
+      "Đường Nguyễn Tất",
+      "Đại lộ Võ Văn Kiệt"
+    ],
+    "Phường 7": [
+      "Bến Vân Đồn",
+      "Hoàng Diệu",
+      "Đại lộ Võ Văn Kiệt"
+    ],
+    "Phường 8": [
+      "Bến Vân Đồn",
+      "Hoàng Diệu",
+      "R52 đường Nguyễn Hữu Hào",
+      "Đường Bến Vân Đồn",
+      "Đường Hoàng Diệu",
+      "Đường Tôn Đản",
+      "Đường Đoàn Văn Bơ",
+      "Đường Đại lộ Võ Văn Kiệt",
+      "Đường Đặng Văn Ngữ",
+      "Đại lộ Võ Văn Kiệt"
+    ],
+    "Phường 9": [
+      "An Dương Vương",
+      "Bến Vân Đồn",
+      "Hoàng Diệu",
+      "Khánh Hội",
+      "Đường Hoàng Diệu",
+      "Đường Nguyễn Tất",
+      "Đường Đoàn Văn Bơ",
+      "Đường Đại lộ Võ Văn Kiệt",
+      "Đại lộ Võ Văn Kiệt"
+    ],
+    "Phường 10": [
+      "Bến Vân Đồn",
+      "Hoàng Diệu",
+      "Trần Đình Tri",
+      "Đường Nguyễn Văn Cừ",
+      "Đường Trần Đình Tri",
+      "Đường Tôn Đản",
+      "Đường Vĩnh Khánh",
+      "Đường Đoàn Văn Bơ",
+      "Đại lộ Võ Văn Kiệt"
+    ],
+    "Phường 11": [
+      "Vĩnh Khánh",
+      "Đường Trần Đình Tri",
+      "Đặng Văn Ngữ"
+    ],
+    "Phường 12": [
+      "Bến Vân Đồn",
+      "Bến Đình",
+      "Đường Khánh Hội",
+      "Đường Lê Quốc Hưng",
+      "Đường Nguyễn Trường Tộ",
+      "Đường Nguyễn Tất",
+      "Đường Nguyễn Văn Cừ",
+      "Đường Đại lộ Võ Văn Kiệt"
+    ],
+    "Phường 13": [
+      "Khánh Hội",
+      "Đường Hoàng Diệu",
+      "Đường Khánh Hội",
+      "Đường Lê Quốc Hưng",
+      "Đường Lê Văn Linh",
+      "Đường Lương Nhữ Bache",
+      "Đường Nguyễn Tất Thành",
+      "Đường Đoàn Văn Bơ",
+      "Đường Đại lộ Võ Văn Kiệt"
+    ],
+    "Phường 14": [
+      "Lương Nhữ Bache",
+      "Trần Đình Tri",
+      "Đường Bến Vân Đồn",
+      "Đường Tôn Thất Thuyết",
+      "Đường Tôn Đản",
+      "Đường Đoàn Văn Bơ"
+    ],
+    "Phường 15": [
+      "An Dương Vương",
+      "Bến Vân Đồn",
+      "Cầu Kênh Tẻ",
+      "Xóm Chiếu",
+      "Đoàn Văn Bơ",
+      "Đường Lương Nhữ Bache",
+      "Đường Tôn Thất Thuyết",
+      "Đường Tôn Đản",
+      "Đường Xóm Chiếu",
+      "Đường Đoàn Văn Bơ",
+      "Đại lộ Võ Văn Kiệt"
+    ],
+    "Phường 16": [
+      "Hẻm 756 Đường Đoàn Văn Bơ",
+      "Đường Bến Vân Đồn",
+      "Đường Nguyễn Tất",
+      "Đường Nguyễn Văn Cừ",
+      "Đường Tôn Thất Thuyết",
+      "Đường Vĩnh Hội",
+      "Đường Xóm Chiếu",
+      "Đường Đoàn Văn Bơ",
+      "Đường Đại lộ Võ Văn Kiệt"
+    ],
+    "Phường 17": [
+      "Vĩnh Khánh",
+      "Đường Khánh Hội"
+    ],
+    "Phường 18": [
+      "Đường Khánh Hội",
+      "Đường Nguyễn Thần Hiến",
+      "Đường Tôn Thất Thuyết",
+      "Đường Vĩnh Khánh"
+    ],
+    "Xã 1": [
+      "Bến Vân Đồn",
+      "Hoàng Diệu",
+      "Đại lộ Võ Văn Kiệt"
+    ],
+    "Xã 2": [
+      "Bến Vân Đồn",
+      "Hoàng Diệu",
+      "Đại lộ Võ Văn Kiệt"
+    ],
+    "Xã 3": [
+      "Bến Vân Đồn",
+      "Hoàng Diệu",
+      "Đại lộ Võ Văn Kiệt"
+    ]
+  },
+  "Quận 5": {
+    "Phường 1": [
+      "Nguyễn Trãi",
+      "Thuận Kiều",
+      "Triệu Quang Phục",
+      "Trần Hưng Đạo",
+      "Tống Duy Tân",
+      "Đường Cao Đạt",
+      "Đường Nguyễn Trãi",
+      "Đường Nguyễn Văn Cừ",
+      "Đường Triệu Quang Phục",
+      "Đường Trần Bình Trọng",
+      "Đường Trần Hưng Đạo",
+      "Đường Tống Duy Tân",
+      "Đường Võ Văn Kiệt"
+    ],
+    "Phường 2": [
+      "Nguyễn Trãi",
+      "Triệu Quang Phục",
+      "Trần Hưng Đạo",
+      "Đường An Dương Vương",
+      "Đường Nguyễn Trãi",
+      "Đường Nguyễn Văn Cừ",
+      "Đường Phan Văn Trị",
+      "Đường Phó Cơ Điều",
+      "Đường Trần Bình Trọng",
+      "Đường Trần Hưng Đạo"
+    ],
+    "Phường 3": [
+      "Nguyễn Trãi",
+      "Phó Cơ Điều",
+      "Triệu Quang Phục",
+      "Trần Hưng Đạo",
+      "Đường Châu Văn Liêm",
+      "Đường Hải Thượng Lãn Ông",
+      "Đường Lê Hồng Phong",
+      "Đường Nguyễn Trãi",
+      "Đường Triệu Quang Phục",
+      "Đường Trần Bình Trọng",
+      "Đường Trần Hưng Đạo",
+      "Đường Tống Duy Tân"
+    ],
+    "Phường 4": [
+      "Hải Thượng Lãn Ông",
+      "Nguyễn Trãi",
+      "Triệu Quang Phục",
+      "Trần Hưng Đạo",
+      "Đường Bảo Châu",
+      "Đường Sư Vạn Hạnh",
+      "Đường Trần Bình Trọng",
+      "Đường Trần Phú"
+    ],
+    "Phường 5": [
+      "Châu Văn Liêm",
+      "Nguyễn Trãi",
+      "Triệu Quang Phục",
+      "Trần Hưng Đạo",
+      "Đường Bảo Châu",
+      "Đường Trần Hưng Đạo",
+      "Đường Tống Duy Tân",
+      "Đường Võ Văn Kiệt"
+    ],
+    "Phường 6": [
+      "Bảo Châu",
+      "Hải Thượng Lãn Ông",
+      "Nguyễn Trãi",
+      "Triệu Quang Phục",
+      "Trần Hưng Đạo",
+      "Đường Lưu Văn Liệt",
+      "Đường Nguyễn Văn Đừng",
+      "Đường Võ Văn Kiệt"
+    ],
+    "Phường 7": [
+      "Nguyễn Trãi",
+      "Triệu Quang Phục",
+      "Trần Hưng Đạo",
+      "Đường Huỳnh Mẫn Đạt",
+      "Đường Nguyễn Trãi",
+      "Đường Thuận Kiều",
+      "Đường Triệu Quang Phục",
+      "Đường Tống Duy Tân"
+    ],
+    "Phường 8": [
+      "Lưu Văn Liệt",
+      "Nguyễn Trãi",
+      "Triệu Quang Phục",
+      "Trần Hưng Đạo",
+      "Đường Hải Thượng Lãn Ông",
+      "Đường Nguyễn Trãi",
+      "Đường Triệu Quang Phục",
+      "Đường Trần Phú"
+    ],
+    "Phường 9": [
+      "Lưu Văn Liệt",
+      "Nguyễn Trãi",
+      "Triệu Quang Phục",
+      "Trần Hưng Đạo",
+      "Đường Hải Thượng Lãn Ông",
+      "Đường Lưu Văn Liệt",
+      "Đường Nguyễn Trãi",
+      "Đường Sư Vạn Hạnh",
+      "Đường Trần Phú",
+      "Đường Vạn Tượng"
+    ],
+    "Phường 10": [
+      "Châu Văn Liêm",
+      "Nguyễn Trãi",
+      "Triệu Quang Phục",
+      "Trần Hưng Đạo",
+      "Vạn Tượng",
+      "Đường An Dương Vương",
+      "Đường Lưu Văn Liệt",
+      "Đường Trần Hưng Đạo",
+      "Đường Trần Phú"
+    ],
+    "Phường 11": [
+      "Thuận Kiều",
+      "Đường An Dương Vương",
+      "Đường Hải Thượng Lãn Ông",
+      "Đường Lê Hồng Phong",
+      "Đường Nguyễn Trãi",
+      "Đường Thuận Kiều",
+      "Đường Triệu Quang Phục",
+      "Đường Trần Hưng Đạo B",
+      "Đường Vạn Tượng"
+    ],
+    "Phường 12": [
+      "Bảo Châu",
+      "Phó Cơ Điều",
+      "Đường Lưu Văn Liệt",
+      "Đường Nguyễn Chí Thanh",
+      "Đường Thuận Kiều",
+      "Đường Trần Phú"
+    ],
+    "Phường 13": [
+      "Hải Thượng Lãn Ông",
+      "Nguyễn Trãi",
+      "Trần Phú",
+      "Đường Lưu Văn Liệt",
+      "Đường Nguyễn Trãi",
+      "Đường Võ Tánh"
+    ],
+    "Phường 14": [
+      "Lê Hồng Phong",
+      "Đường Trần Phú"
+    ],
+    "Phường 15": [
+      "An Dương Vương",
+      "Châu Văn Liêm",
+      "Đường An Dương Vương",
+      "Đường Bảo Châu",
+      "Đường Phạm Hữu Chí"
+    ],
+    "Xã 1": [
+      "Nguyễn Trãi",
+      "Triệu Quang Phục",
+      "Trần Hưng Đạo"
+    ],
+    "Xã 2": [
+      "Nguyễn Trãi",
+      "Triệu Quang Phục",
+      "Trần Hưng Đạo"
+    ],
+    "Xã 3": [
+      "Nguyễn Trãi",
+      "Triệu Quang Phục",
+      "Trần Hưng Đạo"
+    ]
+  },
+  "Quận 6": {
+    "Phường 1": [
+      "Bà Hom",
+      "Hậu Giang",
+      "Lê Tuệ Mẫn",
+      "Đường Gia Phú"
+    ],
+    "Phường 2": [
+      "Bà Hom",
+      "Hậu Giang",
+      "Lê Tuệ Mẫn",
+      "Đường Lê Quang Sung",
+      "Đường Trần Trung Lập"
+    ],
+    "Phường 3": [
+      "Bà Hom",
+      "Hậu Giang",
+      "Lê Tuệ Mẫn",
+      "Đường Phạm Phú Thứ",
+      "Đường Phạm Văn Chí"
+    ],
+    "Phường 4": [
+      "Bà Hom",
+      "Hậu Giang",
+      "Lê Tuệ Mẫn",
+      "Đường Phạm Phú Thứ",
+      "Đường Phạm Văn Chí"
+    ],
+    "Phường 5": [
+      "Bà Hom",
+      "Hậu Giang",
+      "Lê Tuệ Mẫn",
+      "Đường Bửu Đình",
+      "Đường Hậu Giang",
+      "Đường Minh Phụng",
+      "Đường Phan Văn Khỏe",
+      "Đường Phạm Văn Chí"
+    ],
+    "Phường 6": [
+      "Bà Hom",
+      "Hậu Giang",
+      "Lê Tuệ Mẫn",
+      "Đường Hậu Giang",
+      "Đường Hồng Bàng",
+      "Đường Mai Xuân Thưởng"
+    ],
+    "Phường 7": [
+      "Bà Hom",
+      "Hậu Giang",
+      "Lê Tuệ Mẫn",
+      "Đường Bình Tiên",
+      "Đường Lò Gốm",
+      "Đường Phạm Văn Chí",
+      "Đường Võ Văn Kiệt"
+    ],
+    "Phường 8": [
+      "Bà Hom",
+      "Hậu Giang",
+      "Lê Tuệ Mẫn",
+      "Đường Bình Tiên",
+      "Đường Lò Gốm",
+      "Đường Mai Xuân Thưởng",
+      "Đường Phạm Văn Chí",
+      "Đường Văn Thân"
+    ],
+    "Phường 9": [
+      "Bà Hom",
+      "Hậu Giang",
+      "Lê Tuệ Mẫn",
+      "Đường Bến Phú Lâm",
+      "Đường Minh Phụng",
+      "Đường Nguyễn Phạm Tuân",
+      "Đường Nguyễn Đình Chi"
+    ],
+    "Phường 10": [
+      "Bà Hom",
+      "Bình Phú",
+      "Hậu Giang",
+      "Lê Tuệ Mẫn",
+      "Đường 32A",
+      "Đường 40",
+      "Đường 46",
+      "Đường 57",
+      "Đường 78",
+      "Đường An Dương Vương",
+      "Đường Bình Phú",
+      "Đường Bình Phú 2",
+      "Đường Cư Xá Phú Lâm D",
+      "Đường Cư Xá Ra Đa",
+      "Đường Hậu Giang",
+      "Đường Lý Chiêu Hoàng",
+      "Đường Nguyễn Văn Luông",
+      "Đường Số 21",
+      "Đường Số 40",
+      "Đường Số 42",
+      "Đường Số 55",
+      "Đường Số 57",
+      "Đường Số 64",
+      "Đường Số 74",
+      "Đường Vành Đai"
+    ],
+    "Phường 11": [
+      "Đường Bình Phú",
+      "Đường Bình Phú 1",
+      "Đường Cư Xá Phú Lâm D",
+      "Đường Hậu Giang",
+      "Đường Nguyễn Văn Luông"
+    ],
+    "Phường 12": [
+      "Đường Cư Xá Phú Lâm",
+      "Đường Cư Xá Phú Lâm A",
+      "Đường Hậu Giang",
+      "Đường Hồng Bàng",
+      "Đường Kinh Dương Vương",
+      "Đường Nguyễn Văn Luông"
+    ],
+    "Phường 13": [
+      "Đường Bà Hom",
+      "Đường Cư Xá Phú Lâm B",
+      "Đường Hậu Giang",
+      "Đường Kinh Dương Vương",
+      "Đường Số 2 Cư Xá Ra Da",
+      "Đường Tân Hòa Đông",
+      "Đường Đặng Nguyên Cẩn"
+    ],
+    "Phường 14": [
+      "Đường Hồng Bàng",
+      "Đường Tân Hòa Đông",
+      "Đường Tân Hóa",
+      "Đường Đặng Nguyên Cẩn"
+    ],
+    "Xã 1": [
+      "Bà Hom",
+      "Hậu Giang",
+      "Lê Tuệ Mẫn"
+    ],
+    "Xã 2": [
+      "Bà Hom",
+      "Hậu Giang",
+      "Lê Tuệ Mẫn"
+    ],
+    "Xã 3": [
+      "Bà Hom",
+      "Hậu Giang",
+      "Lê Tuệ Mẫn"
+    ]
+  },
+  "Quận 7": {
+    "Phường 1": [
+      "Lê Văn Lương",
+      "Nguyễn Lương Bằng",
+      "Nguyễn Thị Thập",
+      "Đỗ Xuân Hợp"
+    ],
+    "Phường 2": [
+      "Lê Văn Lương",
+      "Nguyễn Lương Bằng",
+      "Nguyễn Thị Thập",
+      "Đỗ Xuân Hợp"
+    ],
+    "Phường 3": [
+      "Lê Văn Lương",
+      "Nguyễn Lương Bằng",
+      "Nguyễn Thị Thập",
+      "Đỗ Xuân Hợp"
+    ],
+    "Phường 4": [
+      "Lê Văn Lương",
+      "Nguyễn Lương Bằng",
+      "Nguyễn Thị Thập",
+      "Đỗ Xuân Hợp"
+    ],
+    "Phường 5": [
+      "Lê Văn Lương",
+      "Nguyễn Lương Bằng",
+      "Nguyễn Thị Thập",
+      "Đỗ Xuân Hợp"
+    ],
+    "Phường 6": [
+      "Lê Văn Lương",
+      "Nguyễn Lương Bằng",
+      "Nguyễn Thị Thập",
+      "Đỗ Xuân Hợp"
+    ],
+    "Phường 7": [
+      "Lê Văn Lương",
+      "Nguyễn Lương Bằng",
+      "Nguyễn Thị Thập",
+      "Đỗ Xuân Hợp"
+    ],
+    "Phường 8": [
+      "Lê Văn Lương",
+      "Nguyễn Lương Bằng",
+      "Nguyễn Thị Thập",
+      "Đỗ Xuân Hợp"
+    ],
+    "Phường 9": [
+      "Lê Văn Lương",
+      "Nguyễn Lương Bằng",
+      "Nguyễn Thị Thập",
+      "Đỗ Xuân Hợp"
+    ],
+    "Phường 10": [
+      "Lê Văn Lương",
+      "Nguyễn Lương Bằng",
+      "Nguyễn Thị Thập",
+      "Đỗ Xuân Hợp"
+    ],
+    "Phường Bình Thuận": [
+      "Hẻm 176/20 Đường Nguyễn Thị Thập",
+      "Đường 4",
+      "Đường 43",
+      "Đường Bùi Văn Ba",
+      "Đường Huỳnh Tấn Phát",
+      "Đường Lâm Văn Bền",
+      "Đường Lý Phục Man",
+      "Đường Nguyễn Thị Thập",
+      "Đường Nguyễn Văn Linh",
+      "Đường Phú Thuận",
+      "Đường Số 14",
+      "Đường Số 43",
+      "Đường Số 45",
+      "Đường Số 51"
+    ],
+    "Phường Phú Mỹ": [
+      "Đường 2",
+      "Đường Chuyên Dùng 9",
+      "Đường D6",
+      "Đường Hoàng Quốc Việt",
+      "Đường Huỳnh Tấn Phát",
+      "Đường Lê Thị Chợ",
+      "Đường Lý Phục Man",
+      "Đường Nguyễn Lương Bằng",
+      "Đường Phạm Hữu Lầu",
+      "Đường Số 1",
+      "Đường Số 2"
+    ],
+    "Phường Phú Thuận": [
+      "Hẻm 1027 Đường Huỳnh Tấn Phát",
+      "Hẻm 1247/5",
+      "Đường 1041",
+      "Đường Cao Thị Chính",
+      "Đường Gò Ô Môi",
+      "Đường Hoàng Quốc Việt",
+      "Đường Huỳnh Tấn Phát",
+      "Đường Lê Thị Chợ",
+      "Đường Lý Phục Man",
+      "Đường N8",
+      "Đường Nguyễn Thị Thập",
+      "Đường Nguyễn Văn Linh",
+      "Đường Nguyễn Văn Quỳ",
+      "Đường Phú Thuận",
+      "Đường Đào Trí"
+    ],
+    "Phường Tân Hưng": [
+      "Dự án Căn hộ Florita",
+      "Hẻm 380 Lê Văn Lương",
+      "Phố Trần Xuân Soạn",
+      "Trần Xuân Soạn",
+      "Đường  Trần Xuân Soạn",
+      "Đường D4",
+      "Đường Lê Văn Lương",
+      "Đường Nguyễn Thị Thập",
+      "Đường Số 793",
+      "Đường Trần Trọng Cung"
+    ],
+    "Phường Tân Kiểng": [
+      "Phố Trần Xuân Soạn",
+      "Đường  Trần Xuân Soạn",
+      "Đường Bế Văn Cấm",
+      "Đường Lâm Văn Bền",
+      "Đường Lê Văn Lương",
+      "Đường Nguyễn Thị Thập",
+      "Đường Số 33",
+      "Đường Số 37",
+      "đường Trần Xuân Soạn"
+    ],
+    "Phường Tân Phong": [
+      "Đường 71",
+      "Đường Lê Văn Lương",
+      "Đường Nguyễn Lương Bằng",
+      "Đường Nguyễn Thị Thập",
+      "Đường Nguyễn Đức Cảnh",
+      "Đường Phạm Thái Bường"
+    ],
+    "Phường Tân Phú": [
+      "Dự án Midtown Phú Mỹ Hưng",
+      "Dự án The Signature",
+      "Đường 16",
+      "Đường 5",
+      "Đường Huỳnh Tấn Phát",
+      "Đường Nguyễn Thị Thập",
+      "Đường Nguyễn Văn Linh",
+      "Đường Phú Thuận",
+      "Đường Số 18",
+      "Đường Số 5",
+      "Đường Tân Phú"
+    ],
+    "Phường Tân Quy": [
+      "Đường  Trần Xuân Soạn",
+      "Đường 13",
+      "Đường 14",
+      "Đường 15",
+      "Đường 18",
+      "Đường 25A",
+      "Đường 39",
+      "Đường 40",
+      "Đường 53",
+      "Đường 79",
+      "Đường Lâm Văn Bền",
+      "Đường Lê Văn Lương",
+      "Đường Nguyễn Thị Thập",
+      "Đường Số 10",
+      "Đường Số 2",
+      "Đường Số 21",
+      "Đường Số 23",
+      "Đường Số 27",
+      "Đường Số 36",
+      "Đường Số 41",
+      "Đường Số 47",
+      "Đường Số 53",
+      "Đường Số 77",
+      "Đường Số 79",
+      "Đường Số 8",
+      "Đường Vườn Điều"
+    ],
+    "Phường Tân Thuận Tây": [
+      "Phố Trần Xuân Soạn",
+      "Đường  Trần Xuân Soạn",
+      "Đường 14A",
+      "Đường 17",
+      "Đường Bùi Văn Ba",
+      "Đường Huỳnh Tấn Phát",
+      "Đường Lâm Văn Bền",
+      "Đường Nguyễn Thị Xiếu",
+      "Đường Tân Mỹ"
+    ],
+    "Phường Tân Thuận Đông": [
+      "Dự án An Viên",
+      "Đường 7",
+      "Đường Bùi Văn Ba",
+      "Đường D6",
+      "Đường Huỳnh Tấn Phát",
+      "Đường Nguyễn Thị Xiếu",
+      "Đường Nguyễn Văn Quỳ",
+      "Đường Trần Trọng Cung",
+      "Đường Trần Văn Khánh",
+      "Đường Võ Thị Nhờ"
+    ],
+    "Tân Hưng": [
+      "Trần Xuân Soạn"
+    ],
+    "Xã 1": [
+      "Lê Văn Lương",
+      "Nguyễn Lương Bằng",
+      "Nguyễn Thị Thập",
+      "Đỗ Xuân Hợp"
+    ],
+    "Xã 2": [
+      "Lê Văn Lương",
+      "Nguyễn Lương Bằng",
+      "Nguyễn Thị Thập",
+      "Đỗ Xuân Hợp"
+    ],
+    "Xã 3": [
+      "Lê Văn Lương",
+      "Nguyễn Lương Bằng",
+      "Nguyễn Thị Thập",
+      "Đỗ Xuân Hợp"
+    ],
+    "phường Tân Quy": [
+      "đường số 23"
+    ]
+  },
+  "Quận 8": {
+    "Phường 1": [
+      "Phạm Hùng",
+      "Tạ Quang Bửu",
+      "Đường Dương Bá Trạc",
+      "Đường Dương Khả Trạc",
+      "Đường Phạm Thế Hiển",
+      "Đường Số 4",
+      "Đặng Chất Chất"
+    ],
+    "Phường 2": [
+      "Phạm Hùng",
+      "Tạ Quang Bửu",
+      "Đường  Tạ Quang Bửu",
+      "Đường Dương Bá Trạc",
+      "Đường Dạ Nam",
+      "Đường Nguyễn Thị Tần",
+      "Đường Âu Dương Lân",
+      "Đặng Chất Chất"
+    ],
+    "Phường 3": [
+      "Phạm Hùng",
+      "Tạ Quang Bửu",
+      "Đường  Tạ Quang Bửu",
+      "Đường Phạm Thế Hiển",
+      "Đường Âu Dương Lân",
+      "Đặng Chất Chất"
+    ],
+    "Phường 4": [
+      "Phạm Hùng",
+      "Tạ Quang Bửu",
+      "Đường 232",
+      "Đường 232 Cao Lỗ khu Đồng Diều",
+      "Đường Bùi Điền",
+      "Đường Cao Lỗ",
+      "Đường Hồ Thành Biên",
+      "Đường Phạm Hùng",
+      "Đường Phạm Thế Hiển",
+      "Đường Số 19",
+      "Đường Tám Danh",
+      "Đường Đặng Thúc Liêng",
+      "Đặng Chất Chất"
+    ],
+    "Phường 5": [
+      "Phạm Hùng",
+      "Tạ Quang Bửu",
+      "Đường  Tạ Quang Bửu",
+      "Đường Bông Sao",
+      "Đường Bùi Minh Trực",
+      "Đường Dương Bạch Mai",
+      "Đường Liên Tỉnh 5",
+      "Đường Lê Quyên",
+      "Đường Phạm Thế Hiển",
+      "Đường Quốc Lộ 50",
+      "Đặng Chất Chất"
+    ],
+    "Phường 6": [
+      "Phạm Hùng",
+      "Phố Tạ Quang Bửu",
+      "Tạ Quang Bửu",
+      "Đường  Tạ Quang Bửu",
+      "Đường 266",
+      "Đường Bùi Minh Trực",
+      "Đường Bến Phú Định",
+      "Đường Phạm Hùng",
+      "Đường Phạm Thế Hiển",
+      "Đặng Chất Chất"
+    ],
+    "Phường 7": [
+      "Phạm Hùng",
+      "Tạ Quang Bửu",
+      "Đường Lê Bôi",
+      "Đường Nguyễn Văn Linh",
+      "Đường Phạm Thế Hiển",
+      "Đường Số 8",
+      "Đường Trịnh Quang Nghị",
+      "Đường Đình An Tài",
+      "Đặng Chất Chất"
+    ],
+    "Phường 8": [
+      "Phạm Hùng",
+      "Tạ Quang Bửu",
+      "Đường Ba Đình",
+      "Đường Hoài Thanh",
+      "Đường Hưng Phú",
+      "Đường Nguyễn Duy",
+      "Đặng Chất Chất"
+    ],
+    "Phường 9": [
+      "Phạm Hùng",
+      "Tạ Quang Bửu",
+      "Đường 111",
+      "Đường Ba Đình",
+      "Đường Chánh Hưng",
+      "Đường Hưng Phú",
+      "Đường Nguyễn Duy",
+      "Đường Phạm Hùng",
+      "Đặng Chất Chất"
+    ],
+    "Phường 10": [
+      "Phạm Hùng",
+      "Tạ Quang Bửu",
+      "Đường Ba Đình",
+      "Đường Hưng Phú",
+      "Đường Nguyễn Duy",
+      "Đường Âu Dương Lân",
+      "Đặng Chất Chất"
+    ],
+    "Phường 11": [
+      "Đường Phong Phú",
+      "Đường Tùng Thiện Vương",
+      "Đường Ưu Long"
+    ],
+    "Phường 12": [
+      "Đường Bùi Huy Bích",
+      "Đường Cao Xuân Dục",
+      "Đường Mạc Vân",
+      "Đường Nguyễn Chế Nghĩa",
+      "Đường Nguyễn Duy",
+      "Đường Tuy Lý Vương",
+      "Đường Tùng Thiện Vương"
+    ],
+    "Phường 13": [
+      "Đường  Trần Nguyên Hãn",
+      "Đường Bến Bình Đông",
+      "Đường Tuy Lý Vương"
+    ],
+    "Phường 14": [
+      "Đường Bình Đông",
+      "Đường Bến Bình Đông",
+      "Đường Cao Lỗ",
+      "Đường Cây Sung",
+      "Đường Hoài Thanh"
+    ],
+    "Phường 15": [
+      "Phố Mai Hắc Đế",
+      "Đường  Mai Hắc Đế",
+      "Đường Bình Đông",
+      "Đường Bình Đức",
+      "Đường Bến Bình Đông",
+      "Đường Lưu Hữu Phước",
+      "Đường Lương Văn Can",
+      "Đường Mễ Cốc",
+      "Đường Rạch Cát"
+    ],
+    "Phường 16": [
+      "Đường 26",
+      "Đường An Dương Vương",
+      "Đường Bến Phú Định",
+      "Đường Phú Định",
+      "Đường Phạm Đức Sơn",
+      "Đường Trương Đình Hội"
+    ],
+    "Xã 1": [
+      "Phạm Hùng",
+      "Tạ Quang Bửu",
+      "Đặng Chất Chất"
+    ],
+    "Xã 2": [
+      "Phạm Hùng",
+      "Tạ Quang Bửu",
+      "Đặng Chất Chất"
+    ],
+    "Xã 3": [
+      "Phạm Hùng",
+      "Tạ Quang Bửu",
+      "Đặng Chất Chất"
+    ]
+  },
+  "Quận 10": {
+    "Phường 1": [
+      "Lê Đại Hành",
+      "Đường Cách Mạng Tháng Tám",
+      "Đường Hồ Thị Kỷ",
+      "Đường Lê Hồng Phong",
+      "Đường Trần Nhân Tôn",
+      "Đường Tô Hiến Thành"
+    ],
+    "Phường 2": [
+      "Thành Thái",
+      "Đường Cách Mạng Tháng Tám",
+      "Đường Lê Hồng Phong",
+      "Đường Lý Thái Tổ",
+      "Đường Nguyễn Chích Thanh",
+      "Đường Nguyễn Kim",
+      "Đường Ngô Gia Tự",
+      "Đường Sư Vạn Hạnh",
+      "Đường Trần Nhân Tôn"
+    ],
+    "Phường 3": [
+      "Nguyễn Kim",
+      "Tô Hiến Thành",
+      "Đường Lê Văn Khương",
+      "Đường Lý Thái Tổ",
+      "Đường Nguyễn Chí Thanh",
+      "Đường Sư Vạn Hạnh",
+      "Đường Trường Sa",
+      "Đường Tô Hiến Thành"
+    ],
+    "Phường 4": [
+      "Nguyễn Chích Thanh",
+      "Đường 3/2",
+      "Đường Bà Hạt",
+      "Đường Hòa Hảo",
+      "Đường Lê Đại Hành",
+      "Đường Nguyễn Tri Phương",
+      "Đường Ngô Gia Tự",
+      "Đường Nhật Tảo",
+      "Đường Trần Bình Trọng",
+      "Đường Vĩnh Viễn"
+    ],
+    "Phường 5": [
+      "Đường Hòa Hảo",
+      "Đường Lý Thái Tổ",
+      "Đường Nguyễn Kim",
+      "Đường Nguyễn Tri Phương",
+      "Đường Vĩnh Viễn"
+    ],
+    "Phường 6": [
+      "Nguyễn Kim",
+      "Trường Sa",
+      "Trần Bình Trọng",
+      "Đường Lê Văn Khương",
+      "Đường Nguyễn Kim",
+      "Đường Nguyễn Lâm",
+      "Đường Nhật Tảo",
+      "Đường Thành Thái",
+      "Đường Tân Phước",
+      "Đường Vĩnh Viễn",
+      "Đường Đường 3/2"
+    ],
+    "Phường 7": [
+      "Đường Nguyễn Kim",
+      "Đường Pasteur"
+    ],
+    "Phường 8": [
+      "Lê Đại Hành",
+      "Trần Bình Trọng",
+      "Đường Bà Hạt",
+      "Đường Cách Mạng Tháng Tám",
+      "Đường Nguyễn Tiểu La",
+      "Đường Nguyễn Tri Phương",
+      "Đường Thành Thái"
+    ],
+    "Phường 9": [
+      "Hòa Hảo",
+      "Thành Thái",
+      "Trường Sa",
+      "Đường Bà Hạt",
+      "Đường Lý Thái Tổ",
+      "Đường Nguyễn Tri Phương",
+      "Đường Ngô Gia Tự",
+      "Đường Sư Vạn Hạnh",
+      "Đường Tô Hiến Thành",
+      "Đường Vĩnh Viễn"
+    ],
+    "Phường 10": [
+      "Đường 3/2",
+      "Đường Cách Mạng Tháng Tám",
+      "Đường Lê Hồng Phong",
+      "Đường Lý Thái Tổ",
+      "Đường Sư Vạn Hạnh",
+      "Đường Thành Thái",
+      "Đường Tô Hiến Thành",
+      "Đường Điện Biên Phủ",
+      "Đường Đường 3/2"
+    ],
+    "Phường 11": [
+      "Bà Hạt",
+      "Lê Đại Hành",
+      "Trường Sa",
+      "Tô Hiến Thành",
+      "Đường 3/2",
+      "Đường Cao Thắng",
+      "Đường Lê Đại Hành",
+      "Đường Nguyễn Chích Thanh",
+      "Đường Thành Thái",
+      "Đường Điện Biên Phủ"
+    ],
+    "Phường 12": [
+      "Hòa Hảo",
+      "Lê Đại Hành",
+      "Nguyễn Kim",
+      "Trần Nhân Tôn",
+      "Đường 3/2",
+      "Đường Cao Thắng",
+      "Đường Cách Mạng Tháng Tám",
+      "Đường Hoàng Dư Khương",
+      "Đường Hòa Hưng",
+      "Đường Lê Hồng Phong",
+      "Đường Nguyễn Kim",
+      "Đường Sư Vạn Hạnh",
+      "Đường Thành Thái",
+      "Đường Tô Hiến Thành"
+    ],
+    "Phường 13": [
+      "Nguyễn Chích Thanh",
+      "Đường 3/2",
+      "Đường Cách Mạng Tháng 8",
+      "Đường Cách Mạng Tháng Tám",
+      "Đường Hòa Hưng",
+      "Đường Thành Thái",
+      "Đường Tô Hiến Thành"
+    ],
+    "Phường 14": [
+      "Trần Bình Trọng",
+      "Đường  Lý Thường Kiệt",
+      "Đường 3/2",
+      "Đường Cư Xá Đồng Tiến",
+      "Đường Lê Văn Khương",
+      "Đường Nguyễn Kim",
+      "Đường Nguyễn Ngọc Lộc",
+      "Đường Nguyễn Tri Phương",
+      "Đường Thành Thái",
+      "Đường Trường Sa",
+      "Đường Tô Hiến Thành"
+    ],
+    "Phường 15": [
+      "Hẻm 571 Đường Cách Mạng Tháng Tám",
+      "Đường Bắc Hải",
+      "Đường Cách Mạng Tháng Tám",
+      "Đường Hồ Bá Kiện",
+      "Đường Nguyễn Giản Thanh",
+      "Đường Pasteur",
+      "Đường Tô Hiến Thành",
+      "Đường Đồng Nai"
+    ]
+  },
+  "Quận 11": {
+    "Phường 1": [
+      "Đường 702",
+      "Đường Hồng Bàng",
+      "Đường Lạc Long Quân",
+      "Đường Phú Thọ"
+    ],
+    "Phường 2": [
+      "Đường Hàn Hải Nguyên",
+      "Đường Minh Phụng"
+    ],
+    "Phường 3": [
+      "Lạc Long Quân",
+      "Đường Lạc Long Quân"
+    ],
+    "Phường 4": [
+      "Đường Nguyễn Chí Thanh",
+      "Đường Phó Cơ Điều",
+      "Đường Trần Quý",
+      "Đường Tân Khai"
+    ],
+    "Phường 5": [
+      "H337 Đường Lạc Long Quân",
+      "Đường Bình Thới",
+      "Đường Cư Xá Phú Bình",
+      "Đường Cư xá Phú Thọ Hòa",
+      "Đường Hòa Bình",
+      "Đường Lạc Long Quân",
+      "Đường Trịnh Đình Trọng",
+      "Đường Ông Ích Khiêm"
+    ],
+    "Phường 6": [
+      "Đường Hà Tôn Quyền"
+    ],
+    "Phường 7": [
+      "Đường Lý Nam Đế",
+      "Đường Nhật Tảo"
+    ],
+    "Phường 8": [
+      "Đường Hàn Hải Nguyên",
+      "Đường Lò Siêu",
+      "Đường Xóm Đất"
+    ],
+    "Phường 9": [
+      "Đường Hàn Hải Nguyên",
+      "Đường Lạc Long Quân",
+      "Đường Minh Phụng",
+      "Đường Thái Phiên",
+      "Đường Đội Cung"
+    ],
+    "Phường 10": [
+      "Đường Bình Thới",
+      "Đường Lạc Long Quân"
+    ],
+    "Phường 11": [
+      "Đường Bình Thới",
+      "Đường Lê Thị Bạch Cát",
+      "Đường Lê Đại Hành",
+      "Đường Đội Cung"
+    ],
+    "Phường 12": [
+      "Đường 3/2",
+      "Đường Lãnh Binh Thăng"
+    ],
+    "Phường 13": [
+      "Đường Công Chúa Ngọc Hân",
+      "Đường Lê Đại Hành",
+      "Đường Tôn Thất Hiệp"
+    ],
+    "Phường 14": [
+      "Đường 100 Bình Thới",
+      "Đường Bình Thới",
+      "Đường Cư Xá Bình Thới",
+      "Đường Âu Cơ",
+      "Đường Ông Ích Khiêm"
+    ],
+    "Phường 15": [
+      "Đường  Lý Thường Kiệt",
+      "Đường 3/2",
+      "Đường Nguyễn Chí Thanh",
+      "Đường Thiên Phước"
+    ]
+  },
+  "Quận 12": {
+    "Hiệp Thành": [
+      "Nguyễn Ảnh Thủ"
+    ],
+    "Phường An Phú Đông": [
+      "Đường An Phú Đông 1",
+      "Đường An Phú Đông 25",
+      "Đường An Phú Đông 27",
+      "Đường An Phú Đông 3",
+      "Đường An Phú Đông 9",
+      "Đường Hà Huy Giáp",
+      "Đường Nguyễn Thị Nhuần",
+      "Đường Quốc lộ 1A",
+      "Đường T15",
+      "Đường Thạnh Lộc 15",
+      "Đường Võ Thị Thừa",
+      "Đường Vườn Lài"
+    ],
+    "Phường Hiệp Thành": [
+      "Dự án Hiệp Thành City",
+      "Đường 13",
+      "Đường Bùi Văn Ngữ",
+      "Đường Dương Thị Mười",
+      "Đường Hiệp Thành",
+      "Đường Hiệp Thành 12",
+      "Đường Hiệp Thành 13",
+      "Đường Hiệp Thành 17",
+      "Đường Hiệp Thành 23",
+      "Đường Hiệp Thành 26",
+      "Đường Hiệp Thành 27",
+      "Đường Hiệp Thành 35",
+      "Đường Hiệp Thành 37",
+      "Đường Hiệp Thành 42",
+      "Đường Hiệp Thành 43",
+      "Đường Hiệp Thành 44",
+      "Đường Hiệp Thành 45",
+      "Đường Hiệp Thành 5",
+      "Đường Hiệp Thành 6",
+      "Đường Hiệp Thành 7",
+      "Đường Hương Lộ 80B",
+      "Đường Hương Lộ 18B",
+      "Đường Liên Khu 2-5",
+      "Đường Lâm Thị Hố",
+      "Đường Lê Văn Khương",
+      "Đường Nguyễn Thị Búp",
+      "Đường Nguyễn Thị Kiểu",
+      "Đường Nguyễn Thị Thơi",
+      "Đường Nguyễn Thị Tràng",
+      "Đường Nguyễn Thị Đặng",
+      "Đường Nguyễn Ảnh Thủ",
+      "Đường Trần Quang Cơ",
+      "Đường Trần Thị Cờ",
+      "Đường Trần Thị Do",
+      "Đường Trần Thị Hè"
+    ],
+    "Phường Thạnh Lộc": [
+      "Đường Hà Huy Giáp",
+      "Đường Nguyễn Oanh",
+      "Đường Nguyễn Thị Sáu",
+      "Đường Thạnh Lộc 13",
+      "Đường Thạnh Lộc 15",
+      "Đường Thạnh Lộc 16",
+      "Đường Thạnh Lộc 17",
+      "Đường Thạnh Lộc 19",
+      "Đường Thạnh Lộc 26",
+      "Đường Thạnh Lộc 27",
+      "Đường Thạnh Lộc 28",
+      "Đường Thạnh Lộc 29",
+      "Đường Thạnh Lộc 31",
+      "Đường Thạnh Lộc 37",
+      "Đường Thạnh Lộc 40",
+      "Đường Thạnh Lộc 41",
+      "Đường Thạnh Lộc 43",
+      "Đường Thạnh Lộc 44",
+      "Đường Thạnh Lộc 47",
+      "Đường Thạnh Lộc 48",
+      "Đường Thạnh Lộc 49",
+      "Đường Thạnh Lộc 57",
+      "Đường Thạnh Lộc 8",
+      "Đường Vườn Lài"
+    ],
+    "Phường Thạnh Xuân": [
+      "Quốc lộ 1",
+      "Đường 21",
+      "Đường Bùi Công Trừng",
+      "Đường Hà Huy Giáp",
+      "Đường Quốc lộ 1A",
+      "Đường Thạnh Lộc 24",
+      "Đường Thạnh Xuân",
+      "Đường Thạnh Xuân 13",
+      "Đường Thạnh Xuân 18",
+      "Đường Thạnh Xuân 21",
+      "Đường Thạnh Xuân 22",
+      "Đường Thạnh Xuân 24",
+      "Đường Thạnh Xuân 25",
+      "Đường Thạnh Xuân 35",
+      "Đường Thạnh Xuân 38",
+      "Đường Thạnh Xuân 40",
+      "Đường Thạnh Xuân 43",
+      "Đường Thạnh Xuân 46",
+      "Đường Thạnh Xuân 48",
+      "Đường Thạnh Xuân 52",
+      "Đường Tô Ngọc Vân",
+      "Đường Đình Quới An"
+    ],
+    "Phường Thới An": [
+      "Đường Lê Thị Riêng",
+      "Đường Lê Văn Khương",
+      "Đường Nguyễn Thị Kiêu",
+      "Đường Nguyễn Thị Xinh",
+      "Đường Quốc lộ 1A",
+      "Đường Thới An 06",
+      "Đường Thới An 09",
+      "Đường Thới An 11",
+      "Đường Thới An 12",
+      "Đường Thới An 15",
+      "Đường Thới An 16",
+      "Đường Thới An 21",
+      "Đường Thới An 22",
+      "Đường Thới An 5",
+      "Đường Thới An 9",
+      "Đường Trần Thị Cờ",
+      "Đường Võ Thị Phải",
+      "Đường Đình Quới An"
+    ],
+    "Phường Trung Mỹ Tây": [
+      "Đường  Hà Đặc",
+      "Đường Hà Chương",
+      "Đường Hà Thị Khiêm",
+      "Đường Lê Thị Nho",
+      "Đường Nguyễn Ảnh Thủ",
+      "Đường Quốc Lộ 22",
+      "Đường Song Hành",
+      "Đường Trung Mỹ Tây",
+      "Đường Trung Mỹ Tây 16",
+      "Đường Trung Mỹ Tây 19",
+      "Đường Trung Mỹ Tây 2",
+      "Đường Trung Mỹ Tây 2A",
+      "Đường Tô Ký",
+      "Đường Đỗ Hành"
+    ],
+    "Phường Tân Chánh Hiệp": [
+      "Đường 3",
+      "Đường Bùi Văn Ngữ",
+      "Đường Dương Thị Mười",
+      "Đường Huỳnh Thị Hai",
+      "Đường Lâm Thị Hố",
+      "Đường Nguyễn Thị Búp",
+      "Đường Nguyễn Ảnh Thủ",
+      "Đường Trần Thị Năm",
+      "Đường Tân Chánh Hiệp",
+      "Đường Tân Chánh Hiệp 16",
+      "Đường Tân Chánh Hiệp 17",
+      "Đường Tân Chánh Hiệp 18",
+      "Đường Tân Chánh Hiệp 2",
+      "Đường Tân Chánh Hiệp 25",
+      "Đường Tân Chánh Hiệp 3",
+      "Đường Tân Chánh Hiệp 35",
+      "Đường Tân Chánh Hiệp 36",
+      "Đường Tân Chánh Hiệp 4",
+      "Đường Tân Chánh Hiệp 5",
+      "Đường Tân Chánh Hiệp 7",
+      "Đường Tô Ký",
+      "Đường Đông Bắc"
+    ],
+    "Phường Tân Hưng Thuận": [
+      "Đường 10",
+      "Đường 35",
+      "Đường DD5",
+      "Đường Nguyễn Văn Quá",
+      "Đường Quốc lộ 1A",
+      "Đường Song Hành",
+      "Đường Trường Chinh",
+      "Đường Đông Hưng Thuận 3",
+      "Đường Đông Hưng Thuận 39",
+      "Đường Đông Hưng Thuận 42",
+      "Đường Đông Hưng Thuận 6",
+      "Đường Đông Hưng Thuận 7"
+    ],
+    "Phường Tân Thới Hiệp": [
+      "Hẻm thông Đường Nguyễn Thị Kiểu",
+      "Đường Dương Thị Mười",
+      "Đường Lê Văn Khương",
+      "Đường Nguyễn Thị Căn",
+      "Đường Nguyễn Thị Kiểu",
+      "Đường Nguyễn Thị Đặng",
+      "Đường Nguyễn Văn Quá",
+      "Đường Quốc lộ 1A",
+      "Đường Trương Thị Hoa",
+      "Đường Trần Thị Năm",
+      "Đường Tân Chánh Hiệp 21",
+      "Đường Tân Thới Hiệp 1",
+      "Đường Tân Thới Hiệp 13",
+      "Đường Tân Thới Hiệp 14",
+      "Đường Tân Thới Hiệp 15",
+      "Đường Tân Thới Hiệp 20",
+      "Đường Tân Thới Hiệp 21",
+      "Đường Tân Thới Hiệp 29",
+      "Đường Tân Thới Hiệp 6",
+      "Đường Tân Thới Hiệp 7"
+    ],
+    "Phường Tân Thới Nhất": [
+      "Khu phố 1",
+      "Đường Dương Thị Giang",
+      "Đường Phan Văn Hớn",
+      "Đường Quốc lộ 1A",
+      "Đường Trường Chinh",
+      "Đường Tân Thới Nhất 05",
+      "Đường Tân Thới Nhất 1",
+      "Đường Tân Thới Nhất 11",
+      "Đường Tân Thới Nhất 12",
+      "Đường Tân Thới Nhất 13",
+      "Đường Tân Thới Nhất 17",
+      "Đường Tân Thới Nhất 18",
+      "Đường Tân Thới Nhất 2",
+      "Đường Tân Thới Nhất 21",
+      "Đường Tân Thới Nhất 25",
+      "Đường Tân Thới Nhất 3",
+      "Đường Tân Thới Nhất 5",
+      "Đường Tân Thới Nhất 6",
+      "Đường Tân Thới Nhất 8"
+    ],
+    "Phường Đông Hưng Thuận": [
+      "Đường Nguyễn Văn Quá",
+      "Đường Quốc lộ 1A",
+      "Đường Trường Chinh",
+      "Đường Tân Hưng Thuận",
+      "Đường Tô Ký",
+      "Đường Đông Hưng Thuận 11",
+      "Đường Đông Hưng Thuận 12",
+      "Đường Đông Hưng Thuận 17",
+      "Đường Đông Hưng Thuận 18",
+      "Đường Đông Hưng Thuận 19",
+      "Đường Đông Hưng Thuận 2",
+      "Đường Đông Hưng Thuận 22",
+      "Đường Đông Hưng Thuận 26",
+      "Đường Đông Hưng Thuận 27",
+      "Đường Đông Hưng Thuận 31",
+      "Đường Đông Hưng Thuận 40",
+      "Đường Đông Hưng Thuận 45",
+      "Đường Đông Hưng Thuận 5",
+      "Đường Đông Hưng Thuận 6"
+    ],
+    "Tân Thới Hiệp": [
+      "Nguyễn Thị Kiểu"
+    ]
+  },
+  "Thành phố Thủ Đức": {
+    "Phường 1": [
+      "Ghềnh Ráng",
+      "Lê Văn Việt",
+      "Man Thiện",
+      "Nguyễn Xiển",
+      "Trần Não",
+      "Võ Nguyên Giáp",
+      "Võ Văn Ngân",
+      "Đặng Văn Bi",
+      "Đỗ Xuân Hợp"
+    ],
+    "Phường 2": [
+      "Ghềnh Ráng",
+      "Lê Văn Việt",
+      "Man Thiện",
+      "Nguyễn Xiển",
+      "Trần Não",
+      "Võ Nguyên Giáp",
+      "Võ Văn Ngân",
+      "Đặng Văn Bi",
+      "Đỗ Xuân Hợp"
+    ],
+    "Phường 3": [
+      "Ghềnh Ráng",
+      "Lê Văn Việt",
+      "Man Thiện",
+      "Nguyễn Xiển",
+      "Trần Não",
+      "Võ Nguyên Giáp",
+      "Võ Văn Ngân",
+      "Đặng Văn Bi",
+      "Đỗ Xuân Hợp"
+    ],
+    "Phường 4": [
+      "Ghềnh Ráng",
+      "Lê Văn Việt",
+      "Man Thiện",
+      "Nguyễn Xiển",
+      "Trần Não",
+      "Võ Nguyên Giáp",
+      "Võ Văn Ngân",
+      "Đặng Văn Bi",
+      "Đỗ Xuân Hợp"
+    ],
+    "Phường 5": [
+      "Ghềnh Ráng",
+      "Lê Văn Việt",
+      "Man Thiện",
+      "Nguyễn Xiển",
+      "Trần Não",
+      "Võ Nguyên Giáp",
+      "Võ Văn Ngân",
+      "Đặng Văn Bi",
+      "Đỗ Xuân Hợp"
+    ],
+    "Phường 6": [
+      "Ghềnh Ráng",
+      "Lê Văn Việt",
+      "Man Thiện",
+      "Nguyễn Xiển",
+      "Trần Não",
+      "Võ Nguyên Giáp",
+      "Võ Văn Ngân",
+      "Đặng Văn Bi",
+      "Đỗ Xuân Hợp"
+    ],
+    "Phường 7": [
+      "Ghềnh Ráng",
+      "Lê Văn Việt",
+      "Man Thiện",
+      "Nguyễn Xiển",
+      "Trần Não",
+      "Võ Nguyên Giáp",
+      "Võ Văn Ngân",
+      "Đặng Văn Bi",
+      "Đỗ Xuân Hợp"
+    ],
+    "Phường 8": [
+      "Ghềnh Ráng",
+      "Lê Văn Việt",
+      "Man Thiện",
+      "Nguyễn Xiển",
+      "Trần Não",
+      "Võ Nguyên Giáp",
+      "Võ Văn Ngân",
+      "Đặng Văn Bi",
+      "Đỗ Xuân Hợp"
+    ],
+    "Phường 9": [
+      "Ghềnh Ráng",
+      "Lê Văn Việt",
+      "Man Thiện",
+      "Nguyễn Xiển",
+      "Trần Não",
+      "Võ Nguyên Giáp",
+      "Võ Văn Ngân",
+      "Đặng Văn Bi",
+      "Đỗ Xuân Hợp"
+    ],
+    "Phường 10": [
+      "Ghềnh Ráng",
+      "Lê Văn Việt",
+      "Man Thiện",
+      "Nguyễn Xiển",
+      "Trần Não",
+      "Võ Nguyên Giáp",
+      "Võ Văn Ngân",
+      "Đặng Văn Bi",
+      "Đỗ Xuân Hợp"
+    ],
+    "An Khánh": [
+      "An Phú",
+      "Nguyễn Duy Trinh",
+      "Võ Nguyên Giáp",
+      "Xa lộ Hà Nội",
+      "Đường An Phú",
+      "Đường Liên phường",
+      "Đường Lương Định Của",
+      "Đường Nguyễn Duy Trinh",
+      "Đường Xa lộ Hà Nội",
+      "Đường Đỗ Xuân Hợp"
+    ],
+    "An Phú": [
+      "Nguyễn Duy Trinh",
+      "Quốc lộ 1A",
+      "Trần Não",
+      "Đường An Phú",
+      "Đường Lương Định Của",
+      "Đường Xa lộ Hà Nội",
+      "Đường Đỗ Xuân Hợp"
+    ],
+    "Bình An": [
+      "An Phú",
+      "Quốc lộ 1A",
+      "Võ Nguyên Giáp",
+      "Đường An Phú",
+      "Đường Liên phường",
+      "Đường Lương Định Của",
+      "Đường Nguyễn Duy Trinh",
+      "Đường Quốc lộ 1A",
+      "Đường Võ Nguyên Giáp",
+      "Đường Xa lộ Hà Nội",
+      "Đường Đỗ Xuân Hợp"
+    ],
+    "Bình Trưng Tây": [
+      "Trần Não",
+      "Đường An Phú",
+      "Đường Nguyễn Duy Trinh",
+      "Đường Quốc lộ 1A",
+      "Đường Trần Não",
+      "Đường Võ Nguyên Giáp",
+      "Đường Xa lộ Hà Nội",
+      "Đặng Nhữ"
+    ],
+    "Bình Trưng Đông": [
+      "Liên phường",
+      "Trần Não",
+      "Đường An Phú",
+      "Đường Liên phường",
+      "Đường Lương Định Của",
+      "Đường Nguyễn Duy Trinh",
+      "Đường Quốc lộ 1A",
+      "Đường Võ Nguyên Giáp",
+      "Đường Đặng Nhữ",
+      "Đặng Nhữ",
+      "Đỗ Xuân Hợp"
+    ],
+    "Cát Lái": [
+      "Lương Định Của",
+      "Nguyễn Duy Trinh",
+      "Quốc lộ 1A",
+      "Đường An Phú",
+      "Đường Lương Định Của",
+      "Đường Đặng Nhữ",
+      "Đặng Nhữ"
+    ],
+    "Hiệp Phú": [
+      "Hiệp Phú",
+      "Long Thuận",
+      "Tăng Nhơn Phú B",
+      "Đường Tân Phú",
+      "Đường Tăng Nhơn Phú A",
+      "Đường Võ Văn Ngân",
+      "Đường Đỗ Xuân Hợp",
+      "Đỗ Xuân Hợp"
+    ],
+    "Long Bình": [
+      "Long Thuận",
+      "Man Thiện",
+      "Đường Hiệp Phú",
+      "Đường Long Thuận",
+      "Đường Tăng Nhơn Phú B"
+    ],
+    "Long Phước": [
+      "Hiệp Phú",
+      "Long Thuận",
+      "Man Thiện",
+      "Tân Phú",
+      "Tăng Nhơn Phú B",
+      "Đường Hiệp Phú",
+      "Đường Man Thiện",
+      "Đường Nguyễn Văn Tứ",
+      "Đường Tân Phú",
+      "Đường Tăng Nhơn Phú A",
+      "Đường Tăng Nhơn Phú B",
+      "Đường Đỗ Xuân Hợp",
+      "Đỗ Xuân Hợp"
+    ],
+    "Long Thạnh Mỹ": [
+      "Hiệp Phú",
+      "Long Thuận",
+      "Lê Văn Việt",
+      "Nguyễn Văn Tứ",
+      "Đường Long Thuận",
+      "Đường Lê Văn Việt",
+      "Đường Nguyễn Văn Tứ",
+      "Đường Tân Phú",
+      "Đường Tăng Nhơn Phú A",
+      "Đường Tăng Nhơn Phú B",
+      "Đường Đỗ Xuân Hợp"
+    ],
+    "Phước Long A": [
+      "Lê Văn Việt",
+      "Tăng Nhơn Phú A",
+      "Đường Man Thiện",
+      "Đường Tăng Nhơn Phú A",
+      "Đường Đỗ Xuân Hợp",
+      "Đỗ Xuân Hợp"
+    ],
+    "Phước Long B": [
+      "Long Thuận",
+      "Đường Hiệp Phú",
+      "Đường Long Thuận",
+      "Đường Man Thiện",
+      "Đường Nguyễn Văn Tứ",
+      "Đường Tân Phú",
+      "Đường Tăng Nhơn Phú A"
+    ],
+    "Phường  Thạnh Mỹ Lợi": [
+      "Đường 18",
+      "Đường 19",
+      "Đường 21",
+      "Đường Nguyễn Thị Định",
+      "Đường Số 7",
+      "Đường Thạnh Mỹ Lợi"
+    ],
+    "Phường An Lợi Đông": [
+      "Đường Số 11"
+    ],
+    "Phường An Phú": [
+      "Đường Mai Chí Thọ",
+      "Đường Thái Thuận"
+    ],
+    "Phường Bình An": [
+      "Đường Số 10",
+      "Đường Số 5",
+      "Đường Trần Não"
+    ],
+    "Phường Bình Chiểu": [
+      "Hẻm 185 Đường Ngô Chí Quốc",
+      "Đường 1",
+      "Đường 13",
+      "Đường 22",
+      "Đường 9",
+      "Đường Bình Chiểu",
+      "Đường Huỳnh Anh",
+      "Đường Lê Thị Hoa",
+      "Đường Ngô Chí Quốc",
+      "Đường Số 4",
+      "Đường Tỉnh lộ 43"
+    ],
+    "Phường Bình Thọ": [
+      "Đường 11",
+      "Đường 13",
+      "Đường 9",
+      "Đường Dân Chủ",
+      "Đường Hàn Thuyên",
+      "Đường Hữu Nghị",
+      "Đường Số 11",
+      "Đường Số 8",
+      "Đường Võ Văn Ngân",
+      "Đường Đặng Văn Bi"
+    ],
+    "Phường Bình Trưng Tây": [
+      "Đường 13",
+      "Đường 15",
+      "Đường 16",
+      "Đường 27",
+      "Đường 34",
+      "Đường 5",
+      "Đường Lê Văn Thịnh",
+      "Đường Nguyễn Duy Trinh",
+      "Đường Nguyễn Thị Định",
+      "Đường Nguyễn Tuyển",
+      "Đường Nguyễn Tư Nghiêm",
+      "Đường Số 25",
+      "Đường Số 33",
+      "Đường Số 36",
+      "Đường Số 37",
+      "Đường Số 38",
+      "Đường Số 39",
+      "Đường Số 5",
+      "Đường Số 6",
+      "Đường Trương Văn Bang"
+    ],
+    "Phường Bình Trưng Đông": [
+      "Đường 2",
+      "Đường 43",
+      "Đường 49",
+      "Đường 5",
+      "Đường 6",
+      "Đường Lê Văn Thịnh",
+      "Đường Nguyễn Duy Trinh",
+      "Đường Nguyễn Trung Nguyệt",
+      "Đường Nguyễn Văn Giáp",
+      "Đường Số 15",
+      "Đường Số 31",
+      "Đường Số 37",
+      "Đường Số 39",
+      "Đường Số 7"
+    ],
+    "Phường Cát Lái": [
+      "Dự án Citi Bella",
+      "Dự án Citi Bella 2",
+      "Dự án Citi Home",
+      "Đường 10",
+      "Đường 25",
+      "Đường 26",
+      "Đường 28",
+      "Đường 38",
+      "Đường 38 CL",
+      "Đường Lê Văn Thịnh",
+      "Đường Nguyễn Thị Định",
+      "Đường Nguyễn Thị Định 2",
+      "Đường Số 10",
+      "Đường Số 2",
+      "Đường Số 24",
+      "Đường Số 25"
+    ],
+    "Phường Hiệp Bình Chánh": [
+      "Phạm Văn Đồng",
+      "Đường  45",
+      "Đường  52",
+      "Đường 10",
+      "Đường 12",
+      "Đường 12 Phạm Văn Đồng",
+      "Đường 17",
+      "Đường 20",
+      "Đường 22",
+      "Đường 23",
+      "Đường 27",
+      "Đường 35",
+      "Đường 38",
+      "Đường 40",
+      "Đường 43",
+      "Đường 46",
+      "Đường 47",
+      "Đường 48",
+      "Đường 49",
+      "Đường 53",
+      "Đường 57",
+      "Đường 8",
+      "Đường 9",
+      "Đường Hiệp Bình",
+      "Đường Kha Vạn Cân",
+      "Đường Phạm Văn Đồng",
+      "Đường Quốc Lộ 13",
+      "Đường Số 10",
+      "Đường Số 12",
+      "Đường Số 17",
+      "Đường Số 18",
+      "Đường Số 2",
+      "Đường Số 20",
+      "Đường Số 22",
+      "Đường Số 23",
+      "Đường Số 25",
+      "Đường Số 27",
+      "Đường Số 35",
+      "Đường Số 36",
+      "Đường Số 38",
+      "Đường Số 40",
+      "Đường Số 47",
+      "Đường Số 48",
+      "Đường Số 50",
+      "Đường Số 53",
+      "Đường Số 6",
+      "Đường Số 7",
+      "Đường Số 8"
+    ],
+    "Phường Hiệp Bình Phước": [
+      "Dự án KDC Hồng Long",
+      "Hẻm 12 đường Số 8",
+      "Đường 10",
+      "Đường 11",
+      "Đường 12",
+      "Đường 18",
+      "Đường 21",
+      "Đường 389",
+      "Đường 4",
+      "Đường 43",
+      "Đường 6",
+      "Đường 606",
+      "Đường 7",
+      "Đường 8",
+      "Đường 9",
+      "Đường Gò Dưa",
+      "Đường Hiệp Bình",
+      "Đường Nguyễn Thị Nhung",
+      "Đường Quốc Lộ 13",
+      "Đường Quốc Lộ 13A",
+      "Đường Quốc lộ 1A",
+      "Đường Số 1",
+      "Đường Số 10",
+      "Đường Số 11",
+      "Đường Số 2",
+      "Đường Số 21",
+      "Đường Số 3",
+      "Đường Số 4",
+      "Đường Số 6",
+      "Đường Số 8",
+      "Đường Số 9",
+      "Đường Đinh Thị Thi"
+    ],
+    "Phường Hiệp Phú": [
+      "Đường 147 Tân Lập 2",
+      "Đường 77",
+      "Đường 96",
+      "Đường Lê Văn Việt",
+      "Đường Quang Trung",
+      "Đường Số 96 Trương Văn Thành",
+      "Đường Trương Văn Hải",
+      "Đường Trương Văn Thành",
+      "Đường Trần Thị Điệu",
+      "Đường Trịnh Hoài Đức",
+      "Đường Tân Hòa 2",
+      "Đường Tân Lập 1",
+      "Đường Tân Lập 2",
+      "Đường Tự Do"
+    ],
+    "Phường Linh Chiểu": [
+      "Đường 10",
+      "Đường 12",
+      "Đường 13",
+      "Đường 14",
+      "Đường 17",
+      "Đường 19",
+      "Đường 5",
+      "Đường 8",
+      "Đường Chương Dương",
+      "Đường Hoàng Diệu",
+      "Đường Hoàng Diệu 2",
+      "Đường Kha Vạn Cân",
+      "Đường Linh Trung",
+      "Đường Số 11",
+      "Đường Số 14",
+      "Đường Số 17",
+      "Đường Số 19",
+      "Đường Số 5",
+      "Đường Số 6",
+      "Đường Võ Văn Ngân"
+    ],
+    "Phường Linh Trung": [
+      "Đường 1",
+      "Đường 10",
+      "Đường 18",
+      "Đường 6",
+      "Đường 7",
+      "Đường 8",
+      "Đường Hoàng Diệu 2",
+      "Đường Linh Trung",
+      "Đường Lê Văn Chí",
+      "Đường Phạm Văn Đồng",
+      "Đường Số 10",
+      "Đường Số 17",
+      "Đường Số 18",
+      "Đường Số 3",
+      "Đường Số 5",
+      "Đường Số 6",
+      "Đường Số 7",
+      "Đường Số 8",
+      "Đường Số 9"
+    ],
+    "Phường Linh Tây": [
+      "Đường 10",
+      "Đường 12",
+      "Đường 13",
+      "Đường 4",
+      "Đường 6",
+      "Đường 9",
+      "Đường Kha Vạn Cân",
+      "Đường Phạm Văn Đồng",
+      "Đường Số 13",
+      "Đường Số 4",
+      "Đường Số 6",
+      "Đường Số 9",
+      "Đường Tô Ngọc Vân",
+      "Đường Đào Trinh Nhất"
+    ],
+    "Phường Linh Xuân": [
+      "Hẻm 221/ Đường Quốc lộ 1K",
+      "Đường 10",
+      "Đường 11",
+      "Đường 13",
+      "Đường 4",
+      "Đường 5",
+      "Đường 6",
+      "Đường 8",
+      "Đường 9",
+      "Đường Lê Văn Tách",
+      "Đường Nguyễn Tri Phương",
+      "Đường Quốc lộ 1K",
+      "Đường Số 10",
+      "Đường Số 11",
+      "Đường Số 3",
+      "Đường Số 4",
+      "Đường Số 5",
+      "Đường Số 6",
+      "Đường Số 8",
+      "Đường Số 9"
+    ],
+    "Phường Linh Đông": [
+      ".12.7 Đường 34",
+      "Đường  24",
+      "Đường 16",
+      "Đường 20",
+      "Đường 22",
+      "Đường 26",
+      "Đường 30",
+      "Đường 32",
+      "Đường 38",
+      "Đường 41",
+      "Đường Kha Vạn Cân",
+      "Đường Linh Đông",
+      "Đường Lý Kế Xuyên",
+      "Đường Lý Tế Xuyên",
+      "Đường Phạm Văn Đồng",
+      "Đường Số 22",
+      "Đường Số 24",
+      "Đường Số 32",
+      "Đường Số 34",
+      "Đường Số 36",
+      "Đường Số 37",
+      "Đường Số 40",
+      "Đường Số 41",
+      "Đường Tô Ngọc Vân"
+    ],
+    "Phường Long Bình": [
+      "Đường 10",
+      "Đường 3",
+      "Đường Hoàng Hữu Nam",
+      "Đường Số 3",
+      "Đường Số 9"
+    ],
+    "Phường Long Phước": [
+      "Đường Long Phước",
+      "Đường Long Thuận",
+      "Đường Số 6"
+    ],
+    "Phường Long Thạnh Mỹ": [
+      "Dự án The Beverly - Vinhomes Grand Park",
+      "Dự án The Beverly Solari  - Vinhomes Grand Park",
+      "Dự án Vinhomes Grand Park",
+      "Đường 108",
+      "Đường 12A",
+      "Đường 12C",
+      "Đường 19",
+      "Đường 31",
+      "Đường Hoàng Hữu Nam",
+      "Đường Lâm Viên",
+      "Đường Lê Văn Việt",
+      "Đường Nguyễn Văn Tăng",
+      "Đường Nguyễn Xiển",
+      "Đường Số 2",
+      "Đường Vành Đai 3"
+    ],
+    "Phường Long Trường": [
+      "Dự án Centana City Điền Phúc Thành",
+      "Dự án Palm Marina",
+      "Đường 2",
+      "Đường Lã Xuân Oai",
+      "Đường Nguyễn Duy Trinh",
+      "Đường Số 2",
+      "Đường Số 4",
+      "Đường Số 5",
+      "Đường Số 6",
+      "Đường Số 7",
+      "Đường Số 9",
+      "Đường Trường Lưu",
+      "Đường Võ Văn Hát"
+    ],
+    "Phường Phú Hữu": [
+      "Dự án Ehome S",
+      "Dự án Mega Ruby",
+      "Dự án Mega Village",
+      "Hẻm 41 Đường Gò Cát",
+      "Hẻm 827 Đường Nguyễn Duy Trinh",
+      "Đường 46",
+      "Đường 827",
+      "Đường 835",
+      "Đường 836",
+      "Đường 990",
+      "Đường Bưng Ông Thoàn",
+      "Đường D",
+      "Đường D3",
+      "Đường Gò Cát",
+      "Đường Liên Phường",
+      "Đường Nguyễn Duy Trinh",
+      "Đường Nguyễn Thị Tư",
+      "Đường Số 2",
+      "Đường Vành Đai 2",
+      "Đường Vành Đai Trong",
+      "Đường Võ Chí Công",
+      "Đường Đỗ Xuân Hợp"
+    ],
+    "Phường Phước Bình": [
+      "Đường 10",
+      "Đường 11",
+      "Đường 12",
+      "Đường 6C",
+      "Đường 7",
+      "Đường Số 11",
+      "Đường Số 4",
+      "Đường Số 5",
+      "Đường Số 7",
+      "Đường Số 8",
+      "Đường Đại lộ 3",
+      "Đường Đỗ Xuân Hợp"
+    ],
+    "Phường Phước Long A": [
+      "Đường 21",
+      "Đường Hồ Bá Phấn",
+      "Đường Tây Hòa",
+      "Đường Đinh Củng Viên",
+      "Đường Đỗ Xuân Hợp"
+    ],
+    "Phường Phước Long B": [
+      "Dự án River Park",
+      "Đường 141",
+      "Đường 145",
+      "Đường 147",
+      "Đường 185",
+      "Đường 22",
+      "Đường 25",
+      "Đường 297",
+      "Đường 339",
+      "Đường 359",
+      "Đường 475",
+      "Đường 79",
+      "Đường Bưng Ông Thoàn",
+      "Đường Dương Đình Hội",
+      "Đường Liên Phường",
+      "Đường Số 147",
+      "Đường Số 20",
+      "Đường Số 22",
+      "Đường Số 339",
+      "Đường Số 359",
+      "Đường Số 475",
+      "Đường Trần Thị Điệu",
+      "Đường Tân Lập 2",
+      "Đường Tăng Nhơn Phú",
+      "Đường Võ Chí Công",
+      "Đường Đỗ Xuân Hợp"
+    ],
+    "Phường Tam Bình": [
+      "Đường 11",
+      "Đường 12",
+      "Đường 3",
+      "Đường 7",
+      "Đường Gò Dưa",
+      "Đường Quốc lộ 1A",
+      "Đường Số 10",
+      "Đường Số 12",
+      "Đường Số 2",
+      "Đường Tam Châu",
+      "Đường Tô Ngọc Vân"
+    ],
+    "Phường Tam Phú": [
+      "Đường Bình Phú",
+      "Đường Cây Keo",
+      "Đường Lý Tế Xuyên",
+      "Đường Số 1",
+      "Đường Số 2",
+      "Đường Số 4",
+      "Đường Số 6",
+      "Đường Tam Bình",
+      "Đường Tam Châu",
+      "Đường Tô Ngọc Vân",
+      "Đường Ụ Ghe"
+    ],
+    "Phường Thạnh Mỹ Lợi": [
+      "Đường Nguyễn Thị Định"
+    ],
+    "Phường Thảo Điền": [
+      "Đường 61",
+      "Đường Nguyễn Văn Hưởng"
+    ],
+    "Phường Trường Thạnh": [
+      "Đường 12",
+      "Đường 230 Nguyễn Xiển",
+      "Đường 8",
+      "Đường D3",
+      "Đường Long Thuận",
+      "Đường Lò Lu",
+      "Đường N5",
+      "Đường Nguyễn Duy Trinh",
+      "Đường Nguyễn Xiển",
+      "Đường Số 2",
+      "Đường Số 8",
+      "Đường Vành Đai 3",
+      "Đường Ích Thạnh"
+    ],
+    "Phường Trường Thọ": [
+      "Dự án Sài Gòn Metro Park",
+      "Đường 1",
+      "Đường 11",
+      "Đường 163",
+      "Đường 2",
+      "Đường 3",
+      "Đường 4",
+      "Đường 5",
+      "Đường 8",
+      "Đường Cư Xá Điện Lực",
+      "Đường Hồ Văn Tư",
+      "Đường Kha Vạn Cân",
+      "Đường Số 1",
+      "Đường Số 10",
+      "Đường Số 11",
+      "Đường Số 2",
+      "Đường Số 3",
+      "Đường Số 4",
+      "Đường Số 5",
+      "Đường Số 8",
+      "Đường Số 9",
+      "Đường Thống Nhất",
+      "Đường Trường Thọ",
+      "Đường Võ Văn Ngân",
+      "Đường Xa Lộ Hà Nội",
+      "Đường Đặng Văn Bi"
+    ],
+    "Phường Tân Phú": [
+      "Hẻm 208 Đường 138",
+      "Đường 100A",
+      "Đường 120",
+      "Đường 154",
+      "Đường 179",
+      "Đường Cầu Xây",
+      "Đường Hoàng Hữu Nam",
+      "Đường Số 138"
+    ],
+    "Phường Tăng Nhơn Phú A": [
+      "Đường 102",
+      "Đường 102 Lã Xuân Oai",
+      "Đường 106",
+      "Đường 160",
+      "Đường 182",
+      "Đường 2",
+      "Đường 210",
+      "Đường 379",
+      "Đường 385",
+      "Đường 494",
+      "Đường 591",
+      "Đường Làng Tăng Phú",
+      "Đường Lã Xuân Oai",
+      "Đường Lê Văn Việt",
+      "Đường Man Thiện",
+      "Đường Số 160",
+      "Đường Số 182",
+      "Đường Số 2",
+      "Đường Số 8",
+      "Đường Tăng Nhơn Phú A"
+    ],
+    "Phường Tăng Nhơn Phú B": [
+      "Đường 1",
+      "Đường 10",
+      "Đường 175",
+      "Đường 2",
+      "Đường 5",
+      "Đường 7A",
+      "Đường 8",
+      "Đường Bưng Ông Thoàn",
+      "Đường Dương Đình Hội",
+      "Đường Lê Văn Việt",
+      "Đường Quang Trung",
+      "Đường Số 2",
+      "Đường Số 4",
+      "Đường Số 8",
+      "Đường Số 9",
+      "Đường Tăng Nhơn Phú",
+      "Đường Tăng Nhơn Phú B",
+      "Đường Đình Phong Phú"
+    ],
+    "Thạnh Mỹ Lợi": [
+      "An Phú",
+      "Đường Liên phường",
+      "Đường Lương Định Của",
+      "Đường Nguyễn Duy Trinh",
+      "Đường Quốc lộ 1A",
+      "Đường Võ Nguyên Giáp",
+      "Đường Xa lộ Hà Nội",
+      "Đường Đặng Nhữ",
+      "Đặng Nhữ"
+    ],
+    "Trường Thạnh": [
+      "Lò Lu"
+    ],
+    "Tân Phú": [
+      "Tăng Nhơn Phú B",
+      "Đường Long Thuận",
+      "Đường Man Thiện",
+      "Đường Nguyễn Văn Tứ",
+      "Đường Tăng Nhơn Phú A",
+      "Đỗ Xuân Hợp"
+    ],
+    "Tăng Nhơn Phú A": [
+      "Long Thuận",
+      "Nguyễn Văn Tứ",
+      "Đường Hiệp Phú",
+      "Đường Long Thuận",
+      "Đường Man Thiện",
+      "Đường Nguyễn Văn Tứ",
+      "Đường Tăng Nhơn Phú A",
+      "Đường Võ Văn Ngân",
+      "Đường Đỗ Xuân Hợp",
+      "Đỗ Xuân Hợp"
+    ],
+    "Tăng Nhơn Phú B": [
+      "Nguyễn Văn Tứ",
+      "Tăng Nhơn Phú A",
+      "Đường Hiệp Phú",
+      "Đường Man Thiện",
+      "Đường Nguyễn Văn Tứ",
+      "Đường Tăng Nhơn Phú A",
+      "Đường Tăng Nhơn Phú B",
+      "Đường Đỗ Xuân Hợp",
+      "Đỗ Xuân Hợp"
+    ],
+    "Xã 1": [
+      "Ghềnh Ráng",
+      "Lê Văn Việt",
+      "Man Thiện",
+      "Nguyễn Xiển",
+      "Trần Não",
+      "Võ Nguyên Giáp",
+      "Võ Văn Ngân",
+      "Đặng Văn Bi",
+      "Đỗ Xuân Hợp"
+    ],
+    "Xã 2": [
+      "Ghềnh Ráng",
+      "Lê Văn Việt",
+      "Man Thiện",
+      "Nguyễn Xiển",
+      "Trần Não",
+      "Võ Nguyên Giáp",
+      "Võ Văn Ngân",
+      "Đặng Văn Bi",
+      "Đỗ Xuân Hợp"
+    ],
+    "Xã 3": [
+      "Ghềnh Ráng",
+      "Lê Văn Việt",
+      "Man Thiện",
+      "Nguyễn Xiển",
+      "Trần Não",
+      "Võ Nguyên Giáp",
+      "Võ Văn Ngân",
+      "Đặng Văn Bi",
+      "Đỗ Xuân Hợp"
+    ]
+  },
+  "Huyện Bình Chánh": {
+    "Phường 1": [
+      "Nguyễn Văn Bứa",
+      "Quốc lộ 1A",
+      "Trần Đại Nghĩa"
+    ],
+    "Phường 2": [
+      "Nguyễn Văn Bứa",
+      "Quốc lộ 1A",
+      "Trần Đại Nghĩa"
+    ],
+    "Phường 3": [
+      "Nguyễn Văn Bứa",
+      "Quốc lộ 1A",
+      "Trần Đại Nghĩa"
+    ],
+    "Phường 4": [
+      "Nguyễn Văn Bứa",
+      "Quốc lộ 1A",
+      "Trần Đại Nghĩa"
+    ],
+    "Phường 5": [
+      "Nguyễn Văn Bứa",
+      "Quốc lộ 1A",
+      "Trần Đại Nghĩa"
+    ],
+    "Phường 6": [
+      "Nguyễn Văn Bứa",
+      "Quốc lộ 1A",
+      "Trần Đại Nghĩa"
+    ],
+    "Phường 7": [
+      "Nguyễn Văn Bứa",
+      "Quốc lộ 1A",
+      "Trần Đại Nghĩa"
+    ],
+    "Phường 8": [
+      "Nguyễn Văn Bứa",
+      "Quốc lộ 1A",
+      "Trần Đại Nghĩa"
+    ],
+    "Phường 9": [
+      "Nguyễn Văn Bứa",
+      "Quốc lộ 1A",
+      "Trần Đại Nghĩa"
+    ],
+    "Phường 10": [
+      "Nguyễn Văn Bứa",
+      "Quốc lộ 1A",
+      "Trần Đại Nghĩa"
+    ],
+    "Thị trấn Tân Túc": [
+      "Đường Nguyễn Hữu Trí",
+      "Đường Tân Túc"
+    ],
+    "Xã 1": [
+      "Nguyễn Văn Bứa",
+      "Quốc lộ 1A",
+      "Trần Đại Nghĩa"
+    ],
+    "Xã 2": [
+      "Nguyễn Văn Bứa",
+      "Quốc lộ 1A",
+      "Trần Đại Nghĩa"
+    ],
+    "Xã 3": [
+      "Nguyễn Văn Bứa",
+      "Quốc lộ 1A",
+      "Trần Đại Nghĩa"
+    ],
+    "Xã An Phú Tây": [
+      "Đường An Phú Tây",
+      "Đường Đinh Đức Thiện"
+    ],
+    "Xã Bình Chánh": [
+      "Đường 1",
+      "Đường Hoàng Phan Thái",
+      "Đường Quốc lộ 1A",
+      "Đường Trịnh Như Khuê",
+      "Đường Đinh Đức Thiện"
+    ],
+    "Xã Bình Hưng": [
+      "Dự án 6B Intresco",
+      "Dự án Đại Phúc Green Villas",
+      "Hẻm C13 Đường Nguyễn Văn Linh",
+      "Đường 1",
+      "Đường 10",
+      "Đường 11",
+      "Đường 4C",
+      "Đường 5A",
+      "Đường C3",
+      "Đường Nguyễn Văn Linh",
+      "Đường Phạm Hùng",
+      "Đường Quốc Lộ 50",
+      "Đường Số 1",
+      "Đường Số 11",
+      "Đường Số 21",
+      "Đường Số 2A",
+      "Đường Số 3",
+      "Ấp 4"
+    ],
+    "Xã Bình Lợi": [
+      "Đường 10"
+    ],
+    "Xã Hưng Long": [
+      "Đường An Phú Tây - Hưng Long",
+      "Đường Đoàn Nguyễn Tuấn"
+    ],
+    "Xã Lê Minh Xuân": [
+      "Đường Kênh C",
+      "Đường Thích Thiện Hòa",
+      "Đường Trần Văn Giàu",
+      "Đường Ấp 6"
+    ],
+    "Xã Phong Phú": [
+      "Dự án 13E Phong Phú",
+      "Dự án Greenlife 13C",
+      "Dự án Việt Phú Garden",
+      "Đường 10",
+      "Đường 12D",
+      "Đường 5",
+      "Đường Nguyễn Văn Linh",
+      "Đường Quốc Lộ 50",
+      "Đường Song Hành",
+      "Đường Số 13",
+      "Đường Trịnh Quang Nghị",
+      "Đường Đa Phước",
+      "Đường Ấp 4"
+    ],
+    "Xã Phạm Văn Hai": [
+      "Đường An Hạ",
+      "Đường Nguyễn Văn Bứa",
+      "Đường Trần Văn Giàu",
+      "Đường Tỉnh Lộ 10"
+    ],
+    "Xã Qui Đức": [
+      "Đường Hóc Hưu",
+      "Đường Quốc Lộ 50"
+    ],
+    "Xã Tân Kiên": [
+      "Phố Trần Đại Nghĩa",
+      "Đường  Trần Đại Nghĩa",
+      "Đường Huỳnh Bá Chánh",
+      "Đường Hưng Nhơn",
+      "Đường Nguyễn Cửu Phú"
+    ],
+    "Xã Tân Nhựt": [
+      "Đường Tân Long"
+    ],
+    "Xã Tân Quý Tây": [
+      "Đường Hương Lộ 11",
+      "Đường Quốc lộ 1A",
+      "Đường Đinh Đức Thiện",
+      "Đường Đoàn Nguyễn Tuấn"
+    ],
+    "Xã Vĩnh Lộc A": [
+      "Đường Hương lộ  80",
+      "Đường Liên khu 4-5",
+      "Đường Liên Ấp 2-3-4",
+      "Đường Liên ấp 234",
+      "Đường Lê Thị Ngay",
+      "Đường Nguyễn Thị Sưa",
+      "Đường Quách Điêu",
+      "Đường Thới Hòa",
+      "Đường Vĩnh Lộc",
+      "Ấp 1"
+    ],
+    "Xã Vĩnh Lộc B": [
+      "D16/22/ ấp 4b",
+      "Đường 1A",
+      "Đường 1C",
+      "Đường Liên ấp 123",
+      "Đường Nguyễn Thị Tú",
+      "Đường Ngô Miễn Thiệu",
+      "Đường Quách Điêu",
+      "Đường Số 1A",
+      "Đường Trần Văn Giàu",
+      "Đường Võ Văn Vân",
+      "Đường Vĩnh Lộc"
+    ],
+    "Xã Đa Phước": [
+      "Đường Chú Lường",
+      "Đường Ấp 4"
+    ]
+  },
+  "Huyện Cần Giờ": {
+    "Phường 7": [
+      "Đường vào Cần Giờ"
+    ]
+  },
+  "Huyện Củ Chi": {
+    "Phường 3": [
+      "ĐT 15"
+    ],
+    "Phường 4": [
+      "Tỉnh lộ 8"
+    ],
+    "Phường 6": [
+      "Tỉnh lộ 8"
+    ],
+    "Phường 8": [
+      "Trần Não",
+      "Tỉnh lộ 8",
+      "ĐT 15"
+    ],
+    "Phường 10": [
+      "Trần Não",
+      "ĐT 15"
+    ],
+    "Thị trấn Củ Chi": [
+      "Đường Ninh Tốn"
+    ],
+    "Xã 1": [
+      "Trần Não"
+    ],
+    "Xã An Nhơn Tây": [
+      "Đường Bàu Trâm"
+    ],
+    "Xã Bình Mỹ": [
+      "Đường Bình Mỹ",
+      "Đường Tỉnh lộ 8"
+    ],
+    "Xã Hòa Phú": [
+      "Đường Tỉnh lộ 8"
+    ],
+    "Xã Phú Hòa Đông": [
+      "Đường Cây Trắc",
+      "Đường Nguyễn Thị Nê"
+    ],
+    "Xã Phước Hiệp": [
+      "Đường Ba Sa"
+    ],
+    "Xã Phước Thạnh": [
+      "Đường Quốc Lộ 22"
+    ],
+    "Xã Phước Vĩnh An": [
+      "Đường Cây Bài"
+    ],
+    "Xã Phạm Văn Cội": [
+      "Đường 490"
+    ],
+    "Xã Tân An Hội": [
+      "Đường Giáp Hải",
+      "Đường Nguyễn Văn Hoài",
+      "Đường Nguyễn Văn Khạ",
+      "Đường Tỉnh lộ 8"
+    ],
+    "Xã Tân Phú Trung": [
+      "Đường Giồng Cát",
+      "Đường Hồ Văn Tắng",
+      "Đường Nguyễn Thị Lắng",
+      "Đường Số 92",
+      "Đường Tỉnh Lộ 2"
+    ],
+    "Xã Tân Thông Hội": [
+      "Đường 17",
+      "Đường 21",
+      "Đường 29",
+      "Đường 42",
+      "Đường Lê Minh Nhựt",
+      "Đường Suối Lội",
+      "Đường Số 9A"
+    ],
+    "Xã Tân Thạnh Đông": [
+      "Đường 113",
+      "Đường Nguyễn Kim Cương",
+      "Đường Nguyễn Thị Dưỡng",
+      "Đường Tỉnh lộ 15"
+    ]
+  },
+  "Huyện Hóc Môn": {
+    "Phường 1": [
+      "Quốc lộ 22",
+      "Thới Hoà",
+      "Xuân Thới Đông"
+    ],
+    "Phường 2": [
+      "Quốc lộ 22",
+      "Thới Hoà",
+      "Xuân Thới Đông"
+    ],
+    "Phường 3": [
+      "Quốc lộ 22",
+      "Thới Hoà",
+      "Xuân Thới Đông"
+    ],
+    "Phường 4": [
+      "Quốc lộ 22",
+      "Thới Hoà",
+      "Xuân Thới Đông"
+    ],
+    "Phường 5": [
+      "Quốc lộ 22",
+      "Thới Hoà",
+      "Xuân Thới Đông"
+    ],
+    "Phường 6": [
+      "Quốc lộ 22",
+      "Thới Hoà",
+      "Xuân Thới Đông"
+    ],
+    "Phường 7": [
+      "Quốc lộ 22",
+      "Thới Hoà",
+      "Xuân Thới Đông"
+    ],
+    "Phường 8": [
+      "Quốc lộ 22",
+      "Thới Hoà",
+      "Xuân Thới Đông"
+    ],
+    "Phường 9": [
+      "Quốc lộ 22",
+      "Thới Hoà",
+      "Xuân Thới Đông"
+    ],
+    "Phường 10": [
+      "Quốc lộ 22",
+      "Thới Hoà",
+      "Xuân Thới Đông"
+    ],
+    "Thị trấn Hóc Môn": [
+      "Đường Trần Khắc Chân"
+    ],
+    "Xã  Đông Thạnh": [
+      "Đường Bùi Công Trừng",
+      "Đường Huỳnh Thị Na",
+      "Đường Nguyễn Thị Sáng",
+      "Đường Trịnh Thị Dối",
+      "Đường ĐT 7-5",
+      "Đường Đông Thạnh 2-3",
+      "Đường Đông Thạnh 3-1",
+      "Đường Đông Thạnh 4",
+      "Đường Đông Thạnh 4-2",
+      "Đường Đặng Thúc Vịnh",
+      "Đường Ấp 3",
+      "Đường Ấp 6"
+    ],
+    "Xã 1": [
+      "Quốc lộ 22",
+      "Thới Hoà",
+      "Xuân Thới Đông"
+    ],
+    "Xã 2": [
+      "Quốc lộ 22",
+      "Thới Hoà",
+      "Xuân Thới Đông"
+    ],
+    "Xã 3": [
+      "Quốc lộ 22",
+      "Thới Hoà",
+      "Xuân Thới Đông"
+    ],
+    "Xã Bà Điểm": [
+      "Nguyễn Thị Hai",
+      "Đường Bà Điểm 2",
+      "Đường Bà Điểm 4",
+      "Đường Bà Điểm 5",
+      "Đường Hưng Lân",
+      "Đường Nam Lân 5",
+      "Đường Nguyễn Thị Huê",
+      "Đường Nguyễn Thị Sóc",
+      "Đường Nguyễn Ảnh Thủ",
+      "Đường Phan Văn Hớn",
+      "Đường Tiền Lân 19",
+      "Đường Trần Văn Mười",
+      "Đường Đông Lân"
+    ],
+    "Xã Nhị Bình": [
+      "Đường Nhị Bình",
+      "Đường Ấp 4"
+    ],
+    "Xã Thới Tam Thôn": [
+      "Đường Bùi Thị Lùng",
+      "Đường Nam Thới",
+      "Đường Nguyễn Thị Ngâu",
+      "Đường Nguyễn Thị Sáu",
+      "Đường Nguyễn Thị Thảnh",
+      "Đường Nguyễn Ảnh Thủ",
+      "Đường Phạm Thị Giây",
+      "Đường Tam Đông",
+      "Đường Tam Đông 12",
+      "Đường Tam Đông 25",
+      "Đường Thới Tam Thôn 12B",
+      "Đường Thới Tam Thôn 13",
+      "Đường Thới Tam Thôn 6",
+      "Đường Trung Đông 13",
+      "Đường Trung Đông 8",
+      "Đường Trần Thị Bốc",
+      "Đường Trịnh Thị Miếng",
+      "Đường Tô Ký",
+      "Đường Tô Ký 6",
+      "Đường Đông Thạnh",
+      "Đường Đặng Thúc Vịnh",
+      "Đường Ấp Tam Đông",
+      "Đường Ấp Đông 4"
+    ],
+    "Xã Trung Chánh": [
+      "Đường Mỹ Huề",
+      "Đường Nguyễn Ảnh Thủ",
+      "Đường Trung Chánh",
+      "Đường Trung Mỹ Tân Xuân",
+      "Đường Trung Mỹ Tây 5",
+      "Đường Tô Ký"
+    ],
+    "Xã Tân Hiệp": [
+      "Tân Hiệp 1 - 13",
+      "Đường Dương Công Khi",
+      "Đường Huỳnh Thị Mài",
+      "Đường Lê Lợi",
+      "Đường Lê Thị Lơ",
+      "Đường Nguyễn Thị Sáu",
+      "Đường Song Hành",
+      "Đường Thị Trấn Tân Hiệp",
+      "Đường Tân Hiệp 16",
+      "Đường Tân Hiệp 29",
+      "Đường Tân Hiệp 31",
+      "Đường Tân Hiệp 39-40",
+      "Đường Tân Hiệp 8",
+      "Đường Tân Thới 3",
+      "Đường Đỗ Văn Dậy",
+      "Đường Đỗ Văn Dậy 16"
+    ],
+    "Xã Tân Thới Nhì": [
+      "Đường 8",
+      "Đường Dân Thắng 2",
+      "Đường Lê Lợi",
+      "Đường Tân Thới Nhì",
+      "Đường Tân Thới Nhì 26",
+      "Đường Tân Thới Nhì 9"
+    ],
+    "Xã Tân Xuân": [
+      "Đường Lê Thị Hà",
+      "Đường Song Hành",
+      "Đường Tân Xuân 1",
+      "Đường Tân Xuân 3",
+      "Đường Tân Xuân 6",
+      "Đường Ấp Đình"
+    ],
+    "Xã Xuân Thới Sơn": [
+      "Đường Dương Công Khi",
+      "Đường Lê Thị Kim",
+      "Đường Nguyễn Thị Thử",
+      "Đường Nguyễn Văn Bứa",
+      "Đường Quốc Lộ 22",
+      "Đường Trương Thị Như",
+      "Đường Tỉnh lộ 9",
+      "Đường Võ Thị Hồi",
+      "Đường Xuân Thới Sơn 19",
+      "Đường Xuân Thới Sơn 24"
+    ],
+    "Xã Xuân Thới Thượng": [
+      "Đường Dương Công Khi",
+      "Đường Nguyễn Thị Sáu",
+      "Đường Nguyễn Văn Bứa",
+      "Đường Phan Văn Hớn",
+      "Đường Trần Văn Mười",
+      "Đường Xuân Thới Thượng 30",
+      "Đường Xuân Thới Thượng 4",
+      "Đường Xuân Thới Thượng 5",
+      "Đường Xuân Thới Thượng 6-2",
+      "Ấp 03",
+      "Ấp 4"
+    ],
+    "Xã Xuân Thới Đông": [
+      "Đường Lê Thị Kim",
+      "Đường Trần Văn Mười",
+      "Đường Võ Thị Hồi",
+      "Đường Xuân Thới Thượng 6"
+    ],
+    "ấp 7 Xã Xuân Thới Thượng": [
+      "Đường Phan Văn Hớn"
+    ]
+  },
+  "Huyện Nhà Bè": {
+    "Phường 1": [
+      "Huỳnh Tấn Phát",
+      "Lê Văn Lương",
+      "Nguyễn Văn Tạo"
+    ],
+    "Phường 2": [
+      "Huỳnh Tấn Phát",
+      "Lê Văn Lương",
+      "Nguyễn Văn Tạo"
+    ],
+    "Phường 3": [
+      "Huỳnh Tấn Phát",
+      "Lê Văn Lương",
+      "Nguyễn Văn Tạo"
+    ],
+    "Phường 4": [
+      "Huỳnh Tấn Phát",
+      "Lê Văn Lương",
+      "Nguyễn Văn Tạo"
+    ],
+    "Phường 5": [
+      "Huỳnh Tấn Phát",
+      "Lê Văn Lương",
+      "Nguyễn Văn Tạo"
+    ],
+    "Phường 6": [
+      "Huỳnh Tấn Phát",
+      "Lê Văn Lương",
+      "Nguyễn Văn Tạo"
+    ],
+    "Phường 7": [
+      "Huỳnh Tấn Phát",
+      "Lê Văn Lương",
+      "Nguyễn Văn Tạo"
+    ],
+    "Phường 8": [
+      "Huỳnh Tấn Phát",
+      "Lê Văn Lương",
+      "Nguyễn Văn Tạo"
+    ],
+    "Phường 9": [
+      "Huỳnh Tấn Phát",
+      "Lê Văn Lương",
+      "Nguyễn Văn Tạo"
+    ],
+    "Phường 10": [
+      "Huỳnh Tấn Phát",
+      "Lê Văn Lương",
+      "Nguyễn Văn Tạo"
+    ],
+    "Phú Xuân": [
+      "Huỳnh Tấn Phát"
+    ],
+    "Thị trấn Nhà Bè": [
+      "Hẻm 1982 Đường Huỳnh Tấn Phát",
+      "Hẻm 2056 Huỳnh Tấn Phát",
+      "Đường Dương Cát Lợi",
+      "Đường Huỳnh Thị Đồng",
+      "Đường Huỳnh Tấn Phát",
+      "Đường Đào Tông Nguyên"
+    ],
+    "Xã 1": [
+      "Huỳnh Tấn Phát",
+      "Lê Văn Lương",
+      "Nguyễn Văn Tạo"
+    ],
+    "Xã 2": [
+      "Huỳnh Tấn Phát",
+      "Lê Văn Lương",
+      "Nguyễn Văn Tạo"
+    ],
+    "Xã 3": [
+      "Huỳnh Tấn Phát",
+      "Lê Văn Lương",
+      "Nguyễn Văn Tạo"
+    ],
+    "Xã Hiệp Phước": [
+      "Đường Nguyễn Văn Tạo",
+      "Đường Phan Văn Bảy"
+    ],
+    "Xã Long Thới": [
+      "Đường Huỳnh Thị Đồng",
+      "Đường Nguyễn Văn Tạo",
+      "Đường Ngô Quang Thắm"
+    ],
+    "Xã Nhơn Đức": [
+      "Lê Văn Lương",
+      "Đường 826C",
+      "Đường Lê Văn Lương",
+      "Đường Nguyễn Bình",
+      "Đường Nguyễn Văn Tạo",
+      "Đường Nhơn Đức",
+      "Đường Đào Sư Tích",
+      "Đường Ấp 3"
+    ],
+    "Xã Phú Xuân": [
+      "Hẻm 2056 Huỳnh Tấn Phát",
+      "Hẻm 2503/1 Đường Huỳnh Tấn Phát",
+      "Hẻm 2534 Đường Huỳnh Tấn Phát",
+      "Đường Dương Cát Lợi",
+      "Đường Huỳnh Thị Đồng",
+      "Đường Huỳnh Tấn Phát",
+      "Đường Nguyễn Bình",
+      "Đường Nguyễn Lương Bằng",
+      "Đường Đào Tông Nguyên"
+    ],
+    "Xã Phước Kiển": [
+      "Đường Lê Văn Lương",
+      "Đường Nguyễn Hữu Thọ",
+      "Đường Phạm Hữu Lầu",
+      "Đường Đào Sư Tích"
+    ],
+    "Xã Phước Lộc": [
+      "Đường Nguyễn Văn Ràng",
+      "Đường Đào Sư Tích"
+    ]
+  },
+  "Phường Bình Hưng Hòa  Tân": {},
+  "Quận Bình Thạnh": {
+    "Phường 1": [
+      "Phan Văn Trị",
+      "Trần Bình Trọng",
+      "Xô Viết Nghệ Tĩnh",
+      "Điện Biên Phủ",
+      "Đường  Phó Đức Chính",
+      "Đường Bùi Hữu Nghĩa",
+      "Đường Lê Văn Duyệt",
+      "Đường Nguyễn Văn Đậu",
+      "Đường Yên Đỗ",
+      "Đường Đinh Tiên Hoàng"
+    ],
+    "Phường 2": [
+      "Nguyễn Văn Đậu",
+      "Phan Văn Trị",
+      "Xô Viết Nghệ Tĩnh",
+      "Điện Biên Phủ",
+      "Đường  Phan Đăng Lưu",
+      "Đường Bùi Hữu Nghĩa",
+      "Đường Bạch Đằng",
+      "Đường Phan Bội Châu",
+      "Đường Phan Đăng Lưu",
+      "Đường Thanh Đa",
+      "Đường Võ Trường Toản",
+      "Đường Vũ Tùng"
+    ],
+    "Phường 3": [
+      "Nguyễn Lâm",
+      "Phan Văn Trị",
+      "Xô Viết Nghệ Tĩnh",
+      "Điện Biên Phủ",
+      "Đường  Phan Đăng Lưu",
+      "Đường  Vạn Kiếp",
+      "Đường Chu Văn An",
+      "Đường Lê Văn Duyệt",
+      "Đường Nguyễn Gia Tri",
+      "Đường Nguyễn Lâm",
+      "Đường Trần Kế Xương",
+      "Đường Vũ Huy Tấn",
+      "Đường Đinh Tiên Hoàng",
+      "Đường Điện Biên Phủ"
+    ],
+    "Phường 4": [
+      "Phan Văn Trị",
+      "Xô Viết Nghệ Tĩnh",
+      "Điện Biên Phủ",
+      "Đường Thanh Đa",
+      "Đường Võ Tánh"
+    ],
+    "Phường 5": [
+      "Nguyễn Gia Tri",
+      "Nguyễn Văn Đậu",
+      "Phan Văn Trị",
+      "Xô Viết Nghệ Tĩnh",
+      "Điện Biên Phủ",
+      "Đường  Phan Đăng Lưu",
+      "Đường Hoàng Hoa Thám",
+      "Đường Lê Quang Định",
+      "Đường Nguyễn Thượng Hiền",
+      "Đường Nguyễn Trung Trực",
+      "Đường Nguyễn Văn Đậu",
+      "Đường Nơ Trang Long",
+      "Đường Trần Bình Trọng"
+    ],
+    "Phường 6": [
+      "Bạch Đằng",
+      "Nơ Trang Long",
+      "Phan Văn Trị",
+      "Xô Viết Nghệ Tĩnh",
+      "Điện Biên Phủ",
+      "Đường Hoàng Hoa Thám",
+      "Đường Lam Sơn",
+      "Đường Nguyễn Gia Tri",
+      "Đường Nguyễn Thượng Hiền",
+      "Đường Nguyễn Văn Đậu",
+      "Đường Ngô Tất Tố",
+      "Đường Võ Tánh"
+    ],
+    "Phường 7": [
+      "Phan Văn Trị",
+      "Xô Viết Nghệ Tĩnh",
+      "Điện Biên Phủ",
+      "Đường Hoàng Hoa Thám",
+      "Đường Lê Quang Định",
+      "Đường Lê Trực",
+      "Đường Nơ Trang Long",
+      "Đường Phan Văn Trị",
+      "Đường Thanh Đa"
+    ],
+    "Phường 8": [
+      "Phan Văn Trị",
+      "Võ Tánh",
+      "Xô Viết Nghệ Tĩnh",
+      "Điện Biên Phủ",
+      "Đường Bạch Đằng"
+    ],
+    "Phường 9": [
+      "Phan Văn Trị",
+      "Thanh Đa",
+      "Xô Viết Nghệ Tĩnh",
+      "Điện Biên Phủ",
+      "Đường Võ Tánh"
+    ],
+    "Phường 10": [
+      "Nơ Trang Long",
+      "Phan Văn Trị",
+      "Xô Viết Nghệ Tĩnh",
+      "Điện Biên Phủ",
+      "Đường Nguyễn Gia Tri",
+      "Đường Phan Kế Bính",
+      "Đường Trần Bình Trọng",
+      "Đường Điện Biên Phủ",
+      "Đường Đoàn Công Hưng"
+    ],
+    "Phường 11": [
+      "Trần Bình Trọng",
+      "Đường Bùi Đình Túy",
+      "Đường Lê Quang Định",
+      "Đường Mai Xuân Thưởng",
+      "Đường Nguyên Hồng",
+      "Đường Nguyễn Văn Đậu",
+      "Đường Ngô Tất Tố",
+      "Đường Nơ Trang Long",
+      "Đường Phan Kế Bính",
+      "Đường Phan Văn Trị",
+      "Đường Thanh Đa",
+      "Đường Trần Bình Trọng",
+      "Đường Trần Quý Cáp",
+      "Đường Tăng Bạt Hổ",
+      "Đường Xô Viết Nghệ Tĩnh"
+    ],
+    "Phường 12": [
+      "Lê Quang Định",
+      "Đường Bùi Đình Túy",
+      "Đường Chu Văn An",
+      "Đường Nguyễn Gia Tri",
+      "Đường Nguyễn Khuyến",
+      "Đường Ngô Đức Kế",
+      "Đường Nơ Trang Long",
+      "Đường Phan Chu Trinh",
+      "Đường Phan Văn Trị",
+      "Đường Đặng Thùy Trâm"
+    ],
+    "Phường 13": [
+      "Lê Quang Định",
+      "Võ Tánh",
+      "Đường  111/8/ Đặng Thùy Trâm",
+      "Đường  Nguyễn Xí",
+      "Đường Bình Lợi",
+      "Đường Nguyên Hồng",
+      "Đường Nguyễn Văn Đậu",
+      "Đường Ngô Tất Tố",
+      "Đường Nơ Trang Long",
+      "Đường Phan Văn Trị",
+      "Đường Phạm Văn Đồng",
+      "Đường Thanh Đa",
+      "Đường Trần Bình Trọng",
+      "Đường Trục",
+      "Đường Đặng Thùy Trâm"
+    ],
+    "Phường 14": [
+      "Lê Quang Định",
+      "Đường Lê Quang Định",
+      "Đường Nguyễn An Ninh",
+      "Đường Nguyễn Huy Lượng",
+      "Đường Nơ Trang Long",
+      "Đường Phan Bội Châu",
+      "Đường Phan Văn Trị",
+      "Đường Trần Bình Trọng",
+      "Đường Trần Văn Kỷ"
+    ],
+    "Phường 15": [
+      "Đường Bạch Đằng",
+      "Đường Trường Sa",
+      "Đường Đinh Bộ Lĩnh",
+      "Đường Điện Biên Phủ"
+    ],
+    "Phường 16": [
+      "Phan Văn Trị",
+      "Xô Viết Nghệ Tĩnh"
+    ],
+    "Phường 17": [
+      "Đường Nguyễn Cửu Vân",
+      "Đường Phan Văn Hân",
+      "Đường Phan Đăng Lưu",
+      "Đường Xô Viết Nghệ Tĩnh",
+      "Đường Điện Biên Phủ"
+    ],
+    "Phường 18": [
+      "Đường Xô Viết Nghệ Tĩnh"
+    ],
+    "Phường 19": [
+      "Nguyễn Gia Tri",
+      "Thanh Đa",
+      "Trần Bình Trọng",
+      "Đường Huỳnh Mẫn Đạt",
+      "Đường Huỳnh Tịnh Của",
+      "Đường Nguyễn Công Trứ",
+      "Đường Nguyễn Văn Lạc",
+      "Đường Ngô Tất Tố",
+      "Đường Phan Kế Bính",
+      "Đường Phạm Viết Chánh",
+      "Đường Trần Quang Long"
+    ],
+    "Phường 20": [
+      "Võ Tánh",
+      "Đường Ngô Tất Tố"
+    ],
+    "Phường 21": [
+      "Nguyễn Văn Đậu",
+      "Nơ Trang Long",
+      "Đường Xô Viết Nghệ Tĩnh",
+      "Đường Điện Biên Phủ"
+    ],
+    "Phường 22": [
+      "Đường Nguyễn Hữu Cảnh",
+      "Đường Ngô Tất Tố",
+      "Đường Võ Duy Ninh",
+      "Đường Võ Tánh",
+      "Đường Điện Biên Phủ"
+    ],
+    "Phường 23": [
+      "Đường Nguyễn Văn Đậu",
+      "Đường Võ Tánh",
+      "Đường Xô Viết Nghệ Tĩnh",
+      "Đường Điện Biên Phủ"
+    ],
+    "Phường 24": [
+      "Phan Văn Trị",
+      "Phan Đăng Lưu",
+      "Thanh Đa",
+      "Đường  Nguyễn Thiện Thuật",
+      "Đường Bùi Đình Túy",
+      "Đường Bạch Đằng",
+      "Đường Chu Văn An",
+      "Đường Nguyễn Văn Đậu",
+      "Đường Ngô Tất Tố",
+      "Đường Phan Chu Trinh",
+      "Đường Phan Đăng Lưu",
+      "Đường Xô Viết Nghệ Tĩnh",
+      "Đường Đinh Bộ Lĩnh"
+    ],
+    "Phường 25": [
+      "Hẻm 157/13 Đường Nguyễn Gia Trí",
+      "Lê Quang Định",
+      "Phan Văn Trị",
+      "Đường D5",
+      "Đường Nguyễn Gia Tri",
+      "Đường Nguyễn Gia Trí",
+      "Đường Nguyễn Văn Thương",
+      "Đường Tân Cảng",
+      "Đường Ung Văn Khiêm",
+      "Đường Xô Viết Nghệ Tĩnh",
+      "Đường Điện Biên Phủ",
+      "Đường Đoàn Công Hưng"
+    ],
+    "Phường 26": [
+      "Bạch Đằng",
+      "Nơ Trang Long",
+      "Phố Nguyễn Xí",
+      "Trần Bình Trọng",
+      "Đường  Nguyễn Xí",
+      "Đường Bùi Đình Túy",
+      "Đường Chu Văn An",
+      "Đường Phan Đăng Lưu",
+      "Đường Quốc Lộ 13",
+      "Đường Tầm Vu",
+      "Đường Xô Viết Nghệ Tĩnh",
+      "Đường Đinh Bộ Lĩnh",
+      "Đường Đoàn Công Hưng"
+    ],
+    "Phường 27": [
+      "Nguyễn Văn Đậu",
+      "Đường Bình Quới",
+      "Đường Nguyễn Văn Đậu",
+      "Đường Thanh Đa"
+    ],
+    "Phường 28": [
+      "Nguyễn Văn Đậu",
+      "Đường Bình Quới",
+      "Đường Xô Viết Nghệ Tĩnh"
+    ],
+    "Xã 1": [
+      "Phan Văn Trị",
+      "Xô Viết Nghệ Tĩnh",
+      "Điện Biên Phủ"
+    ],
+    "Xã 2": [
+      "Phan Văn Trị",
+      "Xô Viết Nghệ Tĩnh",
+      "Điện Biên Phủ"
+    ],
+    "Xã 3": [
+      "Phan Văn Trị",
+      "Xô Viết Nghệ Tĩnh",
+      "Điện Biên Phủ"
+    ]
+  },
+  "Quận Bình Tân": {
+    "Phường 1": [
+      "Kinh Dương Vương",
+      "Mã Lò",
+      "Vành Đai Trong"
+    ],
+    "Phường 2": [
+      "Kinh Dương Vương",
+      "Mã Lò",
+      "Vành Đai Trong"
+    ],
+    "Phường 3": [
+      "Kinh Dương Vương",
+      "Mã Lò",
+      "Vành Đai Trong"
+    ],
+    "Phường 4": [
+      "Kinh Dương Vương",
+      "Mã Lò",
+      "Vành Đai Trong"
+    ],
+    "Phường 5": [
+      "Kinh Dương Vương",
+      "Mã Lò",
+      "Vành Đai Trong"
+    ],
+    "Phường 6": [
+      "Kinh Dương Vương",
+      "Mã Lò",
+      "Vành Đai Trong"
+    ],
+    "Phường 7": [
+      "Kinh Dương Vương",
+      "Mã Lò",
+      "Vành Đai Trong"
+    ],
+    "Phường 8": [
+      "Kinh Dương Vương",
+      "Mã Lò",
+      "Vành Đai Trong"
+    ],
+    "Phường 9": [
+      "Kinh Dương Vương",
+      "Mã Lò",
+      "Vành Đai Trong"
+    ],
+    "Phường 10": [
+      "Kinh Dương Vương",
+      "Mã Lò",
+      "Vành Đai Trong"
+    ],
+    "An Lạc": [
+      "Nguyễn Quý Yêm"
+    ],
+    "Phường An Lạc": [
+      ".. Đường Bùi Tư Toàn",
+      "Dự án Nam Hùng Vương",
+      "Phú Định",
+      "Đường 10",
+      "Đường 17",
+      "Đường 2",
+      "Đường 2D",
+      "Đường 4",
+      "Đường 6",
+      "Đường 7",
+      "Đường An Dương Vương",
+      "Đường Bùi Tư Toàn",
+      "Đường Hồ Học Lãm",
+      "Đường Hồ Ngọc Lãm",
+      "Đường Hồ Văn Long",
+      "Đường Khiếu Năng Tĩnh",
+      "Đường Kinh Dương Vương",
+      "Đường Kinh dương Vương",
+      "Đường Liên khu 4-5",
+      "Đường Lê Công Phép",
+      "Đường Lê Cơ",
+      "Đường Lê Tấn Bê",
+      "Đường Lê Đình Cẩn",
+      "Đường Nguyễn Quý Yêm",
+      "Đường Quốc Lộ 1",
+      "Đường Quốc lộ 1A",
+      "Đường Số 1",
+      "Đường Số 2",
+      "Đường Số 2C",
+      "Đường Số 2D",
+      "Đường Số 8",
+      "Đường Số 9",
+      "Đường Tên Lửa"
+    ],
+    "Phường An Lạc A": [
+      "Đường 10",
+      "Đường 12",
+      "Đường 1A",
+      "Đường Bùi Hữu Diện",
+      "Đường Dương Bá Cung",
+      "Đường Dương Tự Quán",
+      "Đường Hoàng Văn Hợp",
+      "Đường Hồ Học Lãm",
+      "Đường Khiếu Năng Tĩnh",
+      "Đường Kinh Dương Vương",
+      "Đường Nguyễn Thức Đường",
+      "Đường Phan Cát Tựu",
+      "Đường Phùng Tá Chu",
+      "Đường Số 10",
+      "Đường Số 12",
+      "Đường Số 14",
+      "Đường Số 1A",
+      "Đường Số 1C",
+      "Đường Số 21",
+      "Đường Số 4C",
+      "Đường Số 6",
+      "Đường Số 7",
+      "Đường Tên Lửa",
+      "Đường Đỗ Năng Tế"
+    ],
+    "Phường Bình Hưng Hòa": [
+      "Đường 10",
+      "Đường 11",
+      "Đường 12",
+      "Đường 15",
+      "Đường 16",
+      "Đường 2",
+      "Đường 26/3",
+      "Đường 7",
+      "Đường Bình Hưng Hòa",
+      "Đường Gò Xoài",
+      "Đường Hương Lộ 3",
+      "Đường Hương lộ 2",
+      "Đường Hồ Văn Long",
+      "Đường Lê Trọng Tấn",
+      "Đường Lê Văn Quới",
+      "Đường Mã Lò",
+      "Đường Phan Đăng Giảng",
+      "Đường Phạm Đăng Giản",
+      "Đường Phạm Đăng Giảng",
+      "Đường Số 10",
+      "Đường Số 11",
+      "Đường Số 12",
+      "Đường Số 13",
+      "Đường Số 15",
+      "Đường Số 16",
+      "Đường Số 18",
+      "Đường Số 2",
+      "Đường Số 3",
+      "Đường Số 4",
+      "Đường Số 5",
+      "Đường Số 6",
+      "Đường Số 7",
+      "Đường Số 8",
+      "Đường Số 9",
+      "Đường Tân Kỳ Tân Quý"
+    ],
+    "Phường Bình Hưng Hòa A": [
+      "Đường 1",
+      "Đường 10",
+      "Đường 10A",
+      "Đường 10B",
+      "Đường 12",
+      "Đường 12A",
+      "Đường 13A",
+      "Đường 14",
+      "Đường 14A",
+      "Đường 14B",
+      "Đường 16",
+      "Đường 16A",
+      "Đường 18B",
+      "Đường 21",
+      "Đường 22",
+      "Đường 26/3",
+      "Đường 3B",
+      "Đường 5",
+      "Đường Bình Long",
+      "Đường Gò Xoài",
+      "Đường Hương lộ 2",
+      "Đường Liên khu 8-9",
+      "Đường Lê Trọng Tấn",
+      "Đường Lê Văn Quới",
+      "Đường Lô Tư",
+      "Đường Miếu Bình Đông",
+      "Đường Miếu Gò Xoài",
+      "Đường Mã Lò",
+      "Đường Số 1",
+      "Đường Số 12",
+      "Đường Số 13A",
+      "Đường Số 14",
+      "Đường Số 14A",
+      "Đường Số 14B",
+      "Đường Số 16A",
+      "Đường Số 17A",
+      "Đường Số 18",
+      "Đường Số 18B",
+      "Đường Số 21",
+      "Đường Số 4",
+      "Đường Số 5",
+      "Đường Số 6",
+      "Đường Số 8",
+      "Đường Tỉnh Lộ 10",
+      "Đường số 14 Lê Văn Quới",
+      "Đường Ấp Chiến Lược"
+    ],
+    "Phường Bình Hưng Hòa B": [
+      "Dự án Green Town Bình Tân",
+      "Đường 3",
+      "Đường 6",
+      "Đường 6B",
+      "Đường 8",
+      "Đường A8",
+      "Đường Bình Thành",
+      "Đường Bùi Dương Lịch",
+      "Đường Cây Cám",
+      "Đường G8",
+      "Đường Hương lộ  80",
+      "Đường Hồ Văn Long",
+      "Đường Liên Khu 45",
+      "Đường Liên Khu 5 - 6",
+      "Đường Liên Khu 5-6",
+      "Đường Liên khu 4-5",
+      "Đường Lê Trọng Tấn",
+      "Đường Mã Lò",
+      "Đường Nguyễn Thị Tú",
+      "Đường Quốc lộ 1A",
+      "Đường Số 1",
+      "Đường Số 18",
+      "Đường Số 2",
+      "Đường Số 3",
+      "Đường Số 3A",
+      "Đường Số 3D",
+      "Đường Số 4",
+      "Đường Số 6",
+      "Đường Số 8",
+      "Đường Tỉnh Lộ 10"
+    ],
+    "Phường Bình Trị Đông": [
+      "Tỉnh Lộ 10",
+      "Đường 3",
+      "Đường An Dương Vương",
+      "Đường Bà Hom",
+      "Đường Bình Trị Đông",
+      "Đường Chiến Lược",
+      "Đường Hương lộ 2",
+      "Đường Liên Khu 1-6",
+      "Đường Liên Khu 16-18",
+      "Đường Liên Khu 5-11-12",
+      "Đường Liên khu 10-11",
+      "Đường Lê Văn Quới",
+      "Đường Lê Đình Cẩn",
+      "Đường Mã Lò",
+      "Đường Phan Anh",
+      "Đường Trương Phước Phan",
+      "Đường Tân Hòa Đông",
+      "Đường Tỉnh Lộ 10",
+      "Đường Đình Nghi Xuân",
+      "Đường Đình Tân Khai",
+      "Đường Đất Mới"
+    ],
+    "Phường Bình Trị Đông A": [
+      "Đường Ao Đôi",
+      "Đường Bình Trị Đông",
+      "Đường Bến Lội",
+      "Đường Chiến Lược",
+      "Đường Hương lộ 2",
+      "Đường Liên khu 10-11",
+      "Đường Lê Văn Quới",
+      "Đường Lê Đình Cẩn",
+      "Đường Mã Lò",
+      "Đường Tân Hòa Đông",
+      "Đường Tây Lân",
+      "Đường Tỉnh Lộ 10",
+      "Đường Đất Mới"
+    ],
+    "Phường Bình Trị Đông B": [
+      "Hẻm 504 Đường Kinh Dương Vương",
+      "Hẻm 753 Đường Tỉnh Lộ 10",
+      "Tên Lửa",
+      "Đường  36",
+      "Đường 1",
+      "Đường 1A",
+      "Đường 1C",
+      "Đường 1D",
+      "Đường 24B",
+      "Đường 25A",
+      "Đường 27",
+      "Đường 29",
+      "Đường 3",
+      "Đường 32B",
+      "Đường 55A",
+      "Đường 7A",
+      "Đường 8A",
+      "Đường Hồ Học Lãm",
+      "Đường Kinh Dương Vương",
+      "Đường Lê Đình Cẩn",
+      "Đường Sinco",
+      "Đường Số 16",
+      "Đường Số 1A",
+      "Đường Số 21",
+      "Đường Số 21A",
+      "Đường Số 24B",
+      "Đường Số 25",
+      "Đường Số 25A",
+      "Đường Số 26",
+      "Đường Số 27",
+      "Đường Số 29",
+      "Đường Số 32B",
+      "Đường Số 36",
+      "Đường Số 5",
+      "Đường Số 5A",
+      "Đường Số 7",
+      "Đường Số 8",
+      "Đường Tên Lửa",
+      "Đường Tỉnh Lộ 10",
+      "Đường Vành Đai Trong"
+    ],
+    "Phường Tân Tạo": [
+      "Lê Đình Cẩn",
+      "Quốc Lộ 1A",
+      "Đường 38",
+      "Đường 53C",
+      "Đường 55A",
+      "Đường Bà Hom",
+      "Đường Chiến Lược",
+      "Đường Hồ Văn Long",
+      "Đường Lê Đình Cẩn",
+      "Đường Lộ Tẻ",
+      "Đường Nguyễn Triệu Luật",
+      "Đường Quốc lộ 1A",
+      "Đường Số 3",
+      "Đường Số 55A",
+      "Đường Tây Lân",
+      "Đường Tỉnh Lộ 10"
+    ],
+    "Phường Tân Tạo A": [
+      "Mộp phần nhà số 45 Đường Số 3",
+      "Đường  Trần Đại Nghĩa",
+      "Đường Cầu Kinh",
+      "Đường Hồ Văn Long",
+      "Đường Nguyễn Văn Cự",
+      "Đường Số 1",
+      "Đường Số 3",
+      "Đường Số 4",
+      "Đường Số 5",
+      "Đường Trần Thanh Mại",
+      "Đường Tỉnh Lộ 10"
+    ],
+    "Xã 1": [
+      "Kinh Dương Vương",
+      "Mã Lò",
+      "Vành Đai Trong"
+    ],
+    "Xã 2": [
+      "Kinh Dương Vương",
+      "Mã Lò",
+      "Vành Đai Trong"
+    ],
+    "Xã 3": [
+      "Kinh Dương Vương",
+      "Mã Lò",
+      "Vành Đai Trong"
+    ]
+  },
+  "Quận Gò Vấp": {
+    "Phường 1": [
+      "Lê Đức Thọ",
+      "Nguyễn Văn Lượng",
+      "Phan Văn Trị",
+      "Đường Lê Quang Định",
+      "Đường Nguyên Hồng",
+      "Đường Nguyễn Bỉnh Khiêm",
+      "Đường Nguyễn Thượng Hiền",
+      "Đường Phạm Văn Đồng",
+      "Đường Thiên Hộ Dương",
+      "Đường Thống Nhất",
+      "Đường Trần Quốc Tuấn"
+    ],
+    "Phường 2": [
+      "Lê Đức Thọ",
+      "Nguyễn Văn Lượng",
+      "Phan Văn Trị"
+    ],
+    "Phường 3": [
+      "Lê Đức Thọ",
+      "Nguyễn Văn Lượng",
+      "Phan Văn Trị",
+      "Đường Lê Lai",
+      "Đường Nguyễn Kiệm",
+      "Đường Nguyễn Thái Sơn",
+      "Đường Nguyễn Tuân",
+      "Đường Nguyễn Văn Công",
+      "Đường Phan Văn Trị",
+      "Đường Phạm Ngũ Lão",
+      "Đường Phạm Văn Đồng",
+      "Đường Số 2",
+      "Đường Số 7",
+      "Đường Trương Đăng Quế"
+    ],
+    "Phường 4": [
+      "Lê Đức Thọ",
+      "Nguyễn Văn Lượng",
+      "Phan Văn Trị",
+      "Đường Huỳnh Khương An",
+      "Đường Lê Lai",
+      "Đường Lê Lợi",
+      "Đường Nguyễn Thái Sơn",
+      "Đường Nguyễn Văn Bảo",
+      "Đường Số 1"
+    ],
+    "Phường 5": [
+      "Lê Đức Thọ",
+      "Nguyễn Văn Lượng",
+      "Phan Văn Trị",
+      "Đường 20",
+      "Đường Dương Quảng Hàm",
+      "Đường Huỳnh Khương An",
+      "Đường Lê Đức Thọ",
+      "Đường Lương Ngọc Quyến",
+      "Đường Nguyễn Thái Sơn",
+      "Đường Nguyễn Văn Nghi",
+      "Đường Phan Văn Trị",
+      "Đường Quảng Hàm",
+      "Đường Số 14",
+      "Đường Số 20",
+      "Đường Trần Bá Giao"
+    ],
+    "Phường 6": [
+      "Hẻm 234 Đường Lê Đức Thọ",
+      "Lê Đức Thọ",
+      "Nguyễn Văn Lượng",
+      "Phan Văn Trị",
+      "Đường  Phạm Huy Thông",
+      "Đường 30",
+      "Đường Dương Quảng Hàm",
+      "Đường Lê Văn Thọ",
+      "Đường Lê Đức Thọ",
+      "Đường Nguyễn Oanh",
+      "Đường Nguyễn Văn Dung",
+      "Đường Nguyễn Văn Lượng",
+      "Đường Số 27",
+      "Đường Số 28",
+      "Đường Số 3",
+      "Đường Số 30"
+    ],
+    "Phường 7": [
+      "Lê Đức Thọ",
+      "Nguyễn Văn Lượng",
+      "Phan Văn Trị",
+      "Đường  Lý Thường Kiệt",
+      "Đường  Phạm Huy Thông",
+      "Đường Dương Quảng Hàm",
+      "Đường Lê Đức Thọ",
+      "Đường Nguyễn Du",
+      "Đường Nguyễn Oanh",
+      "Đường Nguyễn Thái Sơn",
+      "Đường Nguyễn Văn Nghi",
+      "Đường Phan Văn Trị",
+      "Đường Phạm Ngũ Lão",
+      "Đường Số 7",
+      "Đường Trần Thị Nghỉ",
+      "Đường Tú Mỡ"
+    ],
+    "Phường 8": [
+      "Lê Đức Thọ",
+      "Nguyễn Văn Lượng",
+      "Phan Văn Trị",
+      "Đường 14",
+      "Đường 19",
+      "Đường 21",
+      "Đường Cây Trâm",
+      "Đường Lê Văn Thọ",
+      "Đường Nguyễn Văn Khối",
+      "Đường Phạm Văn Chiêu",
+      "Đường Quang Trung",
+      "Đường Số 10",
+      "Đường Số 14",
+      "Đường Số 18",
+      "Đường Số 19",
+      "Đường Số 21",
+      "Đường Số 8"
+    ],
+    "Phường 9": [
+      "Lê Đức Thọ",
+      "Nguyễn Văn Lượng",
+      "Phan Văn Trị",
+      "Đường Cây Trâm",
+      "Đường Lê Văn Thọ",
+      "Đường Lê Đức Thọ",
+      "Đường Nguyễn Văn Khối",
+      "Đường Phạm Văn Chiêu",
+      "Đường Số 2",
+      "Đường Số 20",
+      "Đường Số 3",
+      "Đường Số 9"
+    ],
+    "Phường 10": [
+      "Hẻm 1 trục Đường Phan Văn Trị",
+      "Lê Đức Thọ",
+      "Nguyễn Văn Lượng",
+      "Phan Văn Trị",
+      "Đường Nguyễn Oanh",
+      "Đường Nguyễn Văn Lượng",
+      "Đường Phan Văn Trị",
+      "Đường Phạm Văn Chiêu",
+      "Đường Quang Trung",
+      "Đường Số 10",
+      "Đường Số 14",
+      "Đường Thống Nhất"
+    ],
+    "Phường 11": [
+      "Đường 11",
+      "Đường 8",
+      "Đường Lê Văn Thọ",
+      "Đường Nguyễn Văn Khối",
+      "Đường Quang Trung",
+      "Đường Số 1",
+      "Đường Số 11",
+      "Đường Số 12",
+      "Đường Số 2",
+      "Đường Số 4",
+      "Đường Số 8",
+      "Đường Thống Nhất"
+    ],
+    "Phường 12": [
+      "Đường 18",
+      "Đường Bùi Quang Là",
+      "Đường Huỳnh Văn Nghệ",
+      "Đường Nguyễn Duy Cung",
+      "Đường Nguyễn Tư Giản",
+      "Đường Phan Huy Ích",
+      "Đường Phạm Văn Bạch",
+      "Đường Phạm Văn Chiêu",
+      "Đường Quang Trung",
+      "Đường Tân Sơn",
+      "Đường Đỗ Phúc Tịnh",
+      "Đường Đỗ Thúc Tịnh"
+    ],
+    "Phường 13": [
+      "Đường 1",
+      "Đường An Hội",
+      "Đường Lê Đức Thọ",
+      "Đường Phạm Văn Chiêu",
+      "Đường Số 1",
+      "Đường Trương Đăng Quế"
+    ],
+    "Phường 14": [
+      "Số 61/ Phố 59",
+      "Đường  59",
+      "Đường 44",
+      "Đường 51",
+      "Đường 53",
+      "Đường Lê Văn Thọ",
+      "Đường Phan Huy Ích",
+      "Đường Phạm Văn Chiêu",
+      "Đường Quang Trung",
+      "Đường Số 44",
+      "Đường Số 45",
+      "Đường Số 51",
+      "Đường Số 59"
+    ],
+    "Phường 15": [
+      "Đường 6",
+      "Đường Huỳnh Văn Nghệ",
+      "Đường Lê Đức Thọ",
+      "Đường Nguyễn Oanh",
+      "Đường Nguyễn Thái Sơn",
+      "Đường Phan Huy Ích",
+      "Đường Thống Nhất",
+      "Đường Tô Ngọc Vân"
+    ],
+    "Phường 16": [
+      "Đường 1",
+      "Đường 16",
+      "Đường 4",
+      "Đường 9",
+      "Đường Lê Văn Thọ",
+      "Đường Lê Đức Thọ",
+      "Đường Nguyễn Văn Khối",
+      "Đường Nguyễn Văn Lượng",
+      "Đường Phạm Văn Chiêu",
+      "Đường Số 1",
+      "Đường Số 2",
+      "Đường Số 4",
+      "Đường Số 9",
+      "Đường Thống Nhất"
+    ],
+    "Phường 17": [
+      "Hẻm 411 Đường Lê Đức Thọ",
+      "Đường Lê Hoàng Phái",
+      "Đường Lê Thị Hồng",
+      "Đường Lê Đức Thọ",
+      "Đường Nguyễn Oanh",
+      "Đường Nguyễn Văn Lượng",
+      "Đường Số 5"
+    ],
+    "Xã 1": [
+      "Lê Đức Thọ",
+      "Nguyễn Văn Lượng",
+      "Phan Văn Trị"
+    ],
+    "Xã 2": [
+      "Lê Đức Thọ",
+      "Nguyễn Văn Lượng",
+      "Phan Văn Trị"
+    ],
+    "Xã 3": [
+      "Lê Đức Thọ",
+      "Nguyễn Văn Lượng",
+      "Phan Văn Trị"
+    ]
+  },
+  "Quận Phú Nhuận": {
+    "Phường 1": [
+      "Nguyễn Trọng Tuyển",
+      "Nguyễn Đình Chính",
+      "Phan Đăng Lưu",
+      "Đường  Phan Đăng Lưu",
+      "Đường Cô Bắc",
+      "Đường Cô Giang",
+      "Đường Hoàng Hoa Thám",
+      "Đường Huỳnh Văn Nghệ",
+      "Đường Nguyễn Trọng Tuyển",
+      "Đường Phan Xích Long",
+      "Đường Phan Đình Phùng",
+      "Đường Phan Đăng Lưu",
+      "Đường Trương Quốc Dung"
+    ],
+    "Phường 2": [
+      "Huỳnh Văn Nghệ",
+      "Nguyễn Trọng Tuyển",
+      "Phan Đăng Lưu",
+      "Đường Cô Giang",
+      "Đường Hoa Mai",
+      "Đường Hoa Đào",
+      "Đường Huỳnh Văn Nghệ",
+      "Đường Nguyễn Trọng Tuyển",
+      "Đường Nguyễn Đình Chính",
+      "Đường Phan Xích Long",
+      "Đường Phan Đình Phùng",
+      "Đường Trường Sa",
+      "Đường Trần Hữu Trang"
+    ],
+    "Phường 3": [
+      "Nguyễn Trọng Tuyển",
+      "Phan Đăng Lưu",
+      "Đường  Phan Đăng Lưu",
+      "Đường Huỳnh Văn Nghệ",
+      "Đường Nguyễn Kiệm",
+      "Đường Nguyễn Lâm",
+      "Đường Nguyễn Đình Chiểu",
+      "Đường Phan Xích Long",
+      "Đường Thích Quảng Đức",
+      "Đường Trần Hữu Trang",
+      "Đường Trần Kế Xương"
+    ],
+    "Phường 4": [
+      "Nguyễn Trọng Tuyển",
+      "Nguyễn Đình Chính",
+      "Phan Đăng Lưu",
+      "Trương Quốc Dung",
+      "Đường  Phan Đăng Lưu",
+      "Đường Hoàng Minh Giám",
+      "Đường Lê Tự Tài",
+      "Đường Lê Văn Sỹ",
+      "Đường Nguyễn Kiệm",
+      "Đường Nguyễn Đình Chiểu",
+      "Đường Phan Đăng Lưu",
+      "Đường Phùng Văn Cung",
+      "Đường Số 7",
+      "Đường Thích Quảng Đức",
+      "Đường Trần Hữu Trang"
+    ],
+    "Phường 5": [
+      "Hoàng Minh Giám",
+      "Lê Văn Sỹ",
+      "Nguyễn Trọng Tuyển",
+      "Phan Đăng Lưu",
+      "Đường  Phan Đăng Lưu",
+      "Đường Hoàng Hoa Thám",
+      "Đường Lam Sơn",
+      "Đường Lê Văn Sỹ",
+      "Đường Nguyễn Thượng Hiền",
+      "Đường Nguyễn Trọng Tuyển",
+      "Đường Phan Xích Long",
+      "Đường Thích Quảng Đức"
+    ],
+    "Phường 6": [
+      "Nguyễn Trọng Tuyển",
+      "Phan Đăng Lưu",
+      "Trần Hữu Trang",
+      "Đường Lam Sơn"
+    ],
+    "Phường 7": [
+      "Nguyễn Trọng Tuyển",
+      "Nguyễn Đình Chính",
+      "Phan Đăng Lưu",
+      "Trương Quốc Dung",
+      "Đường  Phan Đăng Lưu",
+      "Đường Hoa Sữa",
+      "Đường Hoàng Văn Thụ",
+      "Đường Lê Văn Sỹ",
+      "Đường Nguyễn Công Hoan",
+      "Đường Nguyễn Lâm",
+      "Đường Nguyễn Trọng Tuyển",
+      "Đường Nhiêu Tứ",
+      "Đường Phan Tây Hồ",
+      "Đường Phan Xích Long",
+      "Đường Phùng Văn Cung",
+      "Đường Thích Quảng Đức",
+      "Đường Trần Hữu Trang",
+      "Đường Trần Kế Xương"
+    ],
+    "Phường 8": [
+      "Huỳnh Văn Nghệ",
+      "Lê Văn Sỹ",
+      "Nguyễn Trọng Tuyển",
+      "Phan Xích Long",
+      "Phan Đăng Lưu",
+      "Đường Hoàng Văn Thụ",
+      "Đường Lê Văn Sỹ",
+      "Đường Nguyễn Thị Huỳnh",
+      "Đường Nguyễn Trọng Tuyển",
+      "Đường Phan Đăng Lưu",
+      "Đường Trương Quốc Dung",
+      "Đường Trần Huy Liệu"
+    ],
+    "Phường 9": [
+      "Nguyễn Trọng Tuyển",
+      "Phan Đăng Lưu",
+      "Thích Quảng Đức",
+      "Đường Chiến Thắng",
+      "Đường Hoàng Minh Giám",
+      "Đường Huỳnh Văn Bánh",
+      "Đường Hồ Văn Huê",
+      "Đường Lê Văn Sỹ",
+      "Đường Nguyễn Kiệm",
+      "Đường Thích Quảng Đức",
+      "Đường Trần Huy Liệu",
+      "Đường Trần Hữu Trang",
+      "Đường Trần Khắc Chân",
+      "Đường Đào Duy Anh",
+      "Đường Đỗ Tấn Phong"
+    ],
+    "Phường 10": [
+      "Nguyễn Trọng Tuyển",
+      "Phan Đăng Lưu",
+      "Thích Quảng Đức",
+      "Đường Hoàng Diệu",
+      "Đường Mai Văn Ngọc",
+      "Đường Nguyễn Trọng Tuyển",
+      "Đường Phan Đăng Lưu",
+      "Đường Thích Quảng Đức",
+      "Đường Trần Hữu Trang",
+      "Đường Đặng Văn Ngữ"
+    ],
+    "Phường 11": [
+      "Đường Huỳnh Văn Bánh",
+      "Đường Hồ Biểu Chánh",
+      "Đường Lê Văn Sỹ",
+      "Đường Nguyễn Đình Chính",
+      "Đường Phan Đăng Lưu",
+      "Đường Thích Quảng Đức",
+      "Đường Trương Quốc Dung",
+      "Đường Trần Huy Liệu"
+    ],
+    "Phường 12": [
+      "Đường Hoàng Minh Giám",
+      "Đường Huỳnh Văn Bánh",
+      "Đường Huỳnh Văn Nghệ",
+      "Đường Nguyễn Đình Chính"
+    ],
+    "Phường 13": [
+      "Đường Huỳnh Văn Bánh",
+      "Đường Lê Văn Sỹ",
+      "Đường Trường Sa",
+      "Đường Đặng Văn Ngữ"
+    ],
+    "Phường 14": [
+      "Đường Huỳnh Văn Bánh",
+      "Đường Lê Văn Sỹ",
+      "Đường Đặng Văn Ngữ"
+    ],
+    "Phường 15": [
+      "Đường Duy Tân",
+      "Đường Huỳnh Văn Bánh",
+      "Đường Nguyễn Đình Chính",
+      "Đường Trần Huy Liệu"
+    ],
+    "Phường 17": [
+      "Đường Huỳnh Văn Bánh",
+      "Đường Phan Đình Phùng"
+    ],
+    "P5": [
+      "Đường Thích Quảng Đức"
+    ],
+    "Xã 1": [
+      "Nguyễn Trọng Tuyển",
+      "Phan Đăng Lưu"
+    ],
+    "Xã 2": [
+      "Nguyễn Trọng Tuyển",
+      "Phan Đăng Lưu"
+    ],
+    "Xã 3": [
+      "Nguyễn Trọng Tuyển",
+      "Phan Đăng Lưu"
+    ]
+  },
+  "Quận Tân Bình": {
+    "Phường 1": [
+      "Cộng Hòa",
+      "Hẻm 343/.. Đường Nguyễn Trọng Tuyển",
+      "Trường Sơn",
+      "Trần Quốc Hoàn",
+      "Đường A19",
+      "Đường Bùi Thị Xuân",
+      "Đường Lê Văn Huỳnh",
+      "Đường Lê Văn Sỹ",
+      "Đường Nguyễn Trọng Tuyển",
+      "Đường Phạm Văn Hai",
+      "Đường Trương Công Định",
+      "Đường Trường Chinh",
+      "Đường Tân Canh",
+      "Đường Tân Sơn Nhì",
+      "Đường Âu Cơ",
+      "Đường Đặng Văn Ngữ",
+      "Đường Đồng Đen"
+    ],
+    "Phường 2": [
+      "Cộng Hòa",
+      "Phan Đình Phùng",
+      "Trường Sơn",
+      "Trần Quốc Hoàn",
+      "Đường Bùi Thị Xuân",
+      "Đường Bạch Đằng",
+      "Đường Cửu Long",
+      "Đường Hoàng Văn Thụ",
+      "Đường Hồng Hà",
+      "Đường Lam Sơn",
+      "Đường Lê Văn Huỳnh",
+      "Đường Lê Văn Sỹ",
+      "Đường Nguyễn Bặc",
+      "Đường Nguyễn Trọng Tuyển",
+      "Đường Phạm Văn Hai",
+      "Đường Trương Công Định",
+      "Đường Trường Chinh",
+      "Đường Trần Quốc Hoàn",
+      "Đường Yên Thế",
+      "Đồng Đen"
+    ],
+    "Phường 3": [
+      "Cộng Hòa",
+      "Lê Văn Huỳnh",
+      "Trường Sơn",
+      "Trần Quốc Hoàn",
+      "Tân Sơn Nhì",
+      "Đường A19",
+      "Đường Bùi Thị Xuân",
+      "Đường Cộng Hòa",
+      "Đường Hoàng Văn Thụ",
+      "Đường Nguyễn Bặc",
+      "Đường Phạm Văn Hai",
+      "Đường Đồng Đen"
+    ],
+    "Phường 4": [
+      "Cộng Hòa",
+      "Trường Sơn",
+      "Trần Quốc Hoàn",
+      "Đường Cách Mạng Tháng Tám",
+      "Đường Hiệp Nhất",
+      "Đường Hoàng Việt",
+      "Đường Hoàng Văn Thụ",
+      "Đường Hậu Giang",
+      "Đường Nguyễn Thái Bình",
+      "Đường Nguyễn Đình Khơi",
+      "Đường Thăng Long",
+      "Đường Trường Sơn",
+      "Đường Xuân Hồng",
+      "Đường Út Tịch",
+      "Đồng Đen"
+    ],
+    "Phường 5": [
+      "Bờ Bao Tân Thắng",
+      "Cộng Hòa",
+      "Hoàng Văn Thụ",
+      "Trường Sơn",
+      "Trần Quốc Hoàn",
+      "Đường Chấn Hưng",
+      "Đường Cách Mạng Tháng Tám",
+      "Đường Cộng Hòa",
+      "Đường Hoàng Sa",
+      "Đường Hoàng Văn Thụ",
+      "Đường Lê Văn Huỳnh",
+      "Đường Phạm Văn Hai",
+      "Đường Trương Công Định"
+    ],
+    "Phường 6": [
+      "Cộng Hòa",
+      "Phan Đình Phùng",
+      "Trường Sơn",
+      "Trần Quốc Hoàn",
+      "Đường  Lý Thường Kiệt",
+      "Đường Cách Mạng Tháng Tám",
+      "Đường Lê Văn Huỳnh",
+      "Đường Nghĩa Hòa",
+      "Đường Nghĩa Hưng",
+      "Đường Nghĩa Phát",
+      "Đường Phú Lộc",
+      "Đường Tứ Hải",
+      "Đường Đất Thánh"
+    ],
+    "Phường 7": [
+      "Cộng Hòa",
+      "Lý Thường Kiệt",
+      "Trường Sơn",
+      "Trần Quốc Hoàn",
+      "Đường  Lý Thường Kiệt",
+      "Đường Bành Văn Trân",
+      "Đường Chử Đồng Tử",
+      "Đường Cách Mạng Tháng Tám",
+      "Đường Hoàng Văn Thụ",
+      "Đường Lý Thường Kiệt",
+      "Đường Phan Đình Phùng",
+      "Đường Trần Quốc Hoàn",
+      "Đường nhà Bành Văn Trân",
+      "Đường Đặng Lộ"
+    ],
+    "Phường 8": [
+      "A19",
+      "Bờ Bao Tân Thắng",
+      "Cộng Hòa",
+      "Phố Lý Thường Kiệt",
+      "Trương Công Định",
+      "Trường Chinh",
+      "Trường Sơn",
+      "Trần Quốc Hoàn",
+      "Tân Sơn Nhì",
+      "Đường  Lý Thường Kiệt",
+      "Đường A19",
+      "Đường Bờ Bao Tân Thắng",
+      "Đường Cộng Hòa",
+      "Đường Duy Tân",
+      "Đường Hoàng Văn Thụ",
+      "Đường Lý Thường Kiệt",
+      "Đường Lạc Long Quân",
+      "Đường Phan Đình Phùng",
+      "Đường Thành Mỹ",
+      "Đường Trương Công Định",
+      "Đường Tân Phước",
+      "Đường Tân Sơn Nhì",
+      "Đường Âu Cơ",
+      "Đường Đông Hồ"
+    ],
+    "Phường 9": [
+      "Cộng Hòa",
+      "Hoàng Văn Thụ",
+      "Phố Lý Thường Kiệt",
+      "Trường Sơn",
+      "Trần Quốc Hoàn",
+      "Đường  Lý Thường Kiệt",
+      "Đường Lý Thường Kiệt",
+      "Đường Lạc Long Quân",
+      "Đường Nguyễn Thị Nhỏ",
+      "Đường Phan Đình Phùng",
+      "Đường Thiên Phước",
+      "Đường Thành Mỹ",
+      "Đường Trường Chinh",
+      "Đường Trần Văn Hoàng",
+      "Đường Tân Trang",
+      "Đường Âu Cơ"
+    ],
+    "Phường 10": [
+      "Cộng Hòa",
+      "Lê Văn Huỳnh",
+      "Số 108/66 Trần Văn Quang",
+      "Trường Sơn",
+      "Trần Quốc Hoàn",
+      "Tân Sơn Nhì",
+      "Đường  Lý Thường Kiệt",
+      "Đường 1",
+      "Đường Bùi Thế Mỹ",
+      "Đường Bờ Bao Tân Thắng",
+      "Đường Cách Mạng Tháng Tám",
+      "Đường Hồng Hạc",
+      "Đường Hồng Lạc",
+      "Đường Lê Văn Huỳnh",
+      "Đường Lạc Long Quân",
+      "Đường Nguyễn Hồng Đào",
+      "Đường Ni Sư Huỳnh Liên",
+      "Đường Phan Huy Ích",
+      "Đường Số 1",
+      "Đường Số 7",
+      "Đường Thái Thị Nhạn",
+      "Đường Trần Văn Quang",
+      "Đường Âu Cơ",
+      "Đường Đặng Minh Trứ",
+      "Đường Đồng Đen"
+    ],
+    "Phường 11": [
+      "Đường Bàu Cát",
+      "Đường Bờ Bao Tân Thắng",
+      "Đường Hồng Lạc",
+      "Đường Lê Lai",
+      "Đường Lý Thường Kiệt",
+      "Đường Lạc Long Quân",
+      "Đường Ni Sư Huỳnh Liên",
+      "Đường Năm Châu",
+      "Đường Phan Sào Nam",
+      "Đường Phạm Phú Thứ",
+      "Đường Trường Chinh",
+      "Đường Tái Thiết",
+      "Đường Võ Thành Trang",
+      "Đường Đồng Đen",
+      "Đồng Đen"
+    ],
+    "Phường 12": [
+      "Hẻm 304 Đường Trường Chinh",
+      "Đường A19",
+      "Đường A4",
+      "Đường Bàu Cát",
+      "Đường Bàu Cát 1",
+      "Đường Bờ Bao Tân Thắng",
+      "Đường C18",
+      "Đường Châu Vĩnh Tế",
+      "Đường Hoàng Hoa Thám",
+      "Đường Hoàng Văn Thụ",
+      "Đường K300",
+      "Đường Lê Lai",
+      "Đường Nguyễn Bá Tuyển",
+      "Đường Nguyễn Minh Hoàng",
+      "Đường Nguyễn Thái Bình",
+      "Đường Nguyễn Tử Nha",
+      "Đường Nhất Chi Mai",
+      "Đường Năm Châu",
+      "Đường Sơn Cang",
+      "Đường Trung Lang",
+      "Đường Trương Công Định",
+      "Đường Trường Chinh",
+      "Đường Trần Mai Ninh",
+      "Đường Đồng Đen"
+    ],
+    "Phường 13": [
+      "Hẻm 36/ Bình Giã",
+      "Đường Bàu Cát Đôi",
+      "Đường Bình Giã",
+      "Đường Cách Mạng Tháng Tám",
+      "Đường Cộng Hòa",
+      "Đường Hoàng Hoa Thám",
+      "Đường Lê Tấn Quốc",
+      "Đường Lê Văn Huỳnh",
+      "Đường Mai Lão Bạng",
+      "Đường Nguyễn Hồng Đào",
+      "Đường Ngô Bệ",
+      "Đường Nhất Chi Mai",
+      "Đường Phan Văn Sửu",
+      "Đường Thân Nhân Trung",
+      "Đường Trương Công Định",
+      "Đường Trường Chinh",
+      "Đường Trần Quốc Hoàn",
+      "Đường Trần Văn Dư",
+      "Đường Tân Hải",
+      "Đường Đồng Xoài"
+    ],
+    "14": [
+      "Trường Chinh"
+    ],
+    "Phường 14": [
+      "Trường Chinh",
+      "Tân Sơn Nhì",
+      "Đường Ba Vân",
+      "Đường Bàu Cát",
+      "Đường Bàu Cát 1",
+      "Đường Bờ Bao Tân Thắng",
+      "Đường Cộng Hòa",
+      "Đường Lê Lai",
+      "Đường Nguyễn Hồng Đào",
+      "Đường Trương Công Định",
+      "Đường Trường Chinh",
+      "Đường Âu Cơ",
+      "Đường Đồng Đen"
+    ],
+    "Phường 15": [
+      "Đường Cống Lở",
+      "Đường Cộng Hòa",
+      "Đường Hoàng Bật Đạt",
+      "Đường Hoàng Văn Thụ",
+      "Đường Huỳnh Văn Nghệ",
+      "Đường Lý Thường Kiệt",
+      "Đường Nguyễn Bặc",
+      "Đường Nguyễn Phúc Chu",
+      "Đường Nguyễn Sỹ Sách",
+      "Đường Phan Huy Ích",
+      "Đường Phạm Văn Bạch",
+      "Đường Thân Nhân Trung",
+      "Đường Trường Chinh",
+      "Đường Trần Quốc Hoàn",
+      "Đường Trần Thái Tông",
+      "Đường Trần Thánh Tông",
+      "Đường Trần Thị Trọng",
+      "Đường Tân Sơn",
+      "Đường Tân Trụ"
+    ],
+    "Xã 1": [
+      "Cộng Hòa",
+      "Trường Sơn",
+      "Trần Quốc Hoàn"
+    ],
+    "Xã 2": [
+      "Cộng Hòa",
+      "Trường Sơn",
+      "Trần Quốc Hoàn"
+    ],
+    "Xã 3": [
+      "Cộng Hòa",
+      "Trường Sơn",
+      "Trần Quốc Hoàn"
+    ],
+    "phường 15": [
+      "đường Phạm Văn Bạch"
+    ]
+  },
+  "Quận Tân Phú": {
+    "Phường 1": [
+      "Hiệp Tân",
+      "Lũy Bán Bích",
+      "Thới Hoà",
+      "Tây Sơn",
+      "Âu Cơ",
+      "Đường Tân Thới Hòa",
+      "Đường Tây Thạnh",
+      "Đường Đông Hưng Thuận"
+    ],
+    "Phường 2": [
+      "Lũy Bán Bích",
+      "Tây Sơn",
+      "Tây Thạnh",
+      "Âu Cơ",
+      "Đường Lê Trọn",
+      "Đường Nguyễn Hữu Tiến",
+      "Đường Nguyễn Sỹ Sắt",
+      "Đường Tân Thới Hòa",
+      "Đường Tây Thạnh",
+      "Đường Đông Hưng Thuận"
+    ],
+    "Phường 3": [
+      "Lũy Bán Bích",
+      "Thới Hoà",
+      "Tây Sơn",
+      "Âu Cơ",
+      "Đường Thới Hoà",
+      "Đường Tân Hương",
+      "Đường Tân Thới Hòa",
+      "Đường Đông Hưng Thuận"
+    ],
+    "Phường 4": [
+      "Lũy Bán Bích",
+      "Nguyễn Sỹ Sắt",
+      "Tây Sơn",
+      "Âu Cơ",
+      "Đông Hưng Thuận",
+      "Đường Nguyễn Hữu Tiến",
+      "Đường Tân Thới Hòa",
+      "Đường Tây Thạnh",
+      "Đường Đông Hưng Thuận"
+    ],
+    "Phường 5": [
+      "Hiệp Tân",
+      "Lũy Bán Bích",
+      "Nguyễn Sỹ Sắt",
+      "Tân Hương",
+      "Tân Thới Hòa",
+      "Tây Sơn",
+      "Âu Cơ",
+      "Đường Thới Hoà",
+      "Đường Đông Hưng Thuận"
+    ],
+    "Phường 6": [
+      "Lũy Bán Bích",
+      "Trung Mỹ Tây",
+      "Tây Sơn",
+      "Âu Cơ",
+      "Đường Hiệp Tân",
+      "Đường Lê Trọn",
+      "Đường Tây Thạnh"
+    ],
+    "Phường 7": [
+      "Lũy Bán Bích",
+      "Thới Hoà",
+      "Tây Sơn",
+      "Âu Cơ",
+      "Đường Đông Hưng Thuận"
+    ],
+    "Phường 8": [
+      "Lũy Bán Bích",
+      "Trung Mỹ Tây",
+      "Tây Sơn",
+      "Âu Cơ",
+      "Đường Hiệp Tân",
+      "Đường Nguyễn Sỹ Sắt"
+    ],
+    "Phường 9": [
+      "Lũy Bán Bích",
+      "Nguyễn Thứ",
+      "Thới Hoà",
+      "Trung Mỹ Tây",
+      "Tây Sơn",
+      "Tây Thạnh",
+      "Âu Cơ",
+      "Đường Lê Trọn",
+      "Đường Nguyễn Hữu Tiến",
+      "Đường Nguyễn Thứ"
+    ],
+    "Phường 10": [
+      "Lũy Bán Bích",
+      "Nguyễn Hữu Tiến",
+      "Nguyễn Thứ",
+      "Tây Sơn",
+      "Âu Cơ",
+      "Đường Hiệp Tân",
+      "Đường Lê Trọn",
+      "Đường Nguyễn Hữu Tiến",
+      "Đường Trung Mỹ Tây",
+      "Đường Tân Hương",
+      "Đường Tây Thạnh"
+    ],
+    "Phường 11": [
+      "Lê Trọn",
+      "Đường Hiệp Tân",
+      "Đường Lê Trọn",
+      "Đường Thới Hoà",
+      "Đường Tân Thới Hòa",
+      "Đường Tây Thạnh"
+    ],
+    "Phường Hiệp Tân": [
+      "Đường  Thạch Lam",
+      "Đường Bình Long",
+      "Đường Cây Keo",
+      "Đường Dương Khuê",
+      "Đường Hoàng Thiều Hoa",
+      "Đường Huỳnh Văn Một",
+      "Đường Hòa Bình",
+      "Đường Lý Thái Tông",
+      "Đường Lý Thánh Tông",
+      "Đường Lũy Bán Bích",
+      "Đường Nguyễn Mỹ Ca",
+      "Đường Nguyễn Thiệu Lâu",
+      "Đường Nguyễn Văn Vịnh",
+      "Đường Phan Anh",
+      "Đường Thoại Ngọc Hầu",
+      "Đường Trần Thị Báo",
+      "Đường Trần Văn Giáp",
+      "Đường Tô Hiệu"
+    ],
+    "Phường Hòa Thạnh": [
+      "Hẻm 118 Đường Huỳnh Thiện Lộc",
+      "Đường 1",
+      "Đường Huỳnh Thiện Lộc",
+      "Đường Hòa Bình",
+      "Đường Kênh Tân Hóa",
+      "Đường Lũy Bán Bích",
+      "Đường Lương Đắc Bằng",
+      "Đường Nghiêm Toản",
+      "Đường Thoại Ngọc Hầu",
+      "Đường Trịnh Đình Trọng",
+      "Đường Tân Thành",
+      "Đường Tô Hiệu",
+      "Đường Âu Cơ",
+      "Đường Đoàn Hồng Phước"
+    ],
+    "Phường Phú Thạnh": [
+      "Hẻm 61 Đường Nguyễn Sơn",
+      "Đường  Thạch Lam",
+      "Đường Bình Long",
+      "Đường Hiền Vương",
+      "Đường Lê Cao Lãng",
+      "Đường Lê Khôi",
+      "Đường Lê Lâm",
+      "Đường Lê Lăng",
+      "Đường Lê Niệm",
+      "Đường Lê Sao",
+      "Đường Lũy Bán Bích",
+      "Đường Nguyễn Sơn",
+      "Đường Phan Văn Năm",
+      "Đường Phú Thọ Hòa",
+      "Đường Quách Hữu Nghiêm",
+      "Đường Quách Đình Bảo",
+      "Đường Thoại Ngọc Hầu",
+      "Đường Trần Quang Cơ",
+      "Đường Trần Thủ Độ",
+      "Đường Văn Cao",
+      "Đường Đỗ Bí"
+    ],
+    "Phường Phú Thọ Hòa": [
+      "Hẻm 127 Đường Lê Thúc Hoạch",
+      "Đường  Hoàng Ngọc Phách",
+      "Đường  Lê Văn Phan",
+      "Đường Bình Long",
+      "Đường Lê Khôi",
+      "Đường Lê Lâm",
+      "Đường Lê Lư",
+      "Đường Lê Quốc Trinh",
+      "Đường Lê Thiệt",
+      "Đường Lê Thúc Hoạch",
+      "Đường Lý Thánh Tông",
+      "Đường Nguyễn Nhữ Lãm",
+      "Đường Nguyễn Sơn",
+      "Đường Nguyễn Văn Yến",
+      "Đường Phan Thị Hành",
+      "Đường Phú Thọ Hòa",
+      "Đường Thoại Ngọc Hầu",
+      "Đường Tân Hương",
+      "Đường Tân Quý",
+      "Đường Văn Cao",
+      "Đường Vườn Lài"
+    ],
+    "Phường Phú Trung": [
+      "Đường Cao Văn Ngọc",
+      "Đường Huỳnh Văn Chính",
+      "Đường Hòa Bình",
+      "Đường Khuông Việt",
+      "Đường Kênh Tân Hóa",
+      "Đường Lê Ngã",
+      "Đường Lũy Bán Bích",
+      "Đường Trịnh Đình Thảo",
+      "Đường Trịnh Đình Trọng",
+      "Đường Âu Cơ"
+    ],
+    "Phường Sơn Kỳ": [
+      "Hẻm 115 Đường Lê Trọng Tấn",
+      "Hẻm 30 Phố Đỗ Nhuận",
+      "Phố Đỗ Nhuận",
+      "Đường  Phùng Chí Kiên",
+      "Đường  Đỗ Nhuận",
+      "Đường 19/5",
+      "Đường 30",
+      "Đường Bờ Bao Tân Thắng",
+      "Đường DC1",
+      "Đường DC6",
+      "Đường DC7",
+      "Đường Kênh 19/5",
+      "Đường Lê Trọng Tấn",
+      "Đường N1",
+      "Đường N4",
+      "Đường Sơn Kỳ",
+      "Đường Số 5",
+      "Đường Tân Kỳ Tân Quý",
+      "Đường Đoàn Giỏi",
+      "Đường Đô Đốc Chấn",
+      "Đỗ Nhuận"
+    ],
+    "Phường Tân Quý": [
+      "Hẻm 143 Đường Gò Dầu",
+      "Hẻm 33 Đường Gò Dầu",
+      "Phố Phùng Chí Kiên",
+      "Đường  Phùng Chí Kiên",
+      "Đường Bình Long",
+      "Đường Cầu Xéo",
+      "Đường Dương Thiệu Tước",
+      "Đường Dương Văn Dương",
+      "Đường Gò Dầu",
+      "Đường Hoàng Văn Hòe",
+      "Đường Lê Liễu",
+      "Đường Lê Sát",
+      "Đường Lê Thúc Hoạch",
+      "Đường Lê Đình Thám",
+      "Đường Lý Tuệ",
+      "Đường Nguyễn Háo Vĩnh",
+      "Đường Nguyễn Lộ Trạch",
+      "Đường Nguyễn Ngọc Nhựt",
+      "Đường Nguyễn Súy",
+      "Đường Phạm Ngọc",
+      "Đường Phạm Qúy Thích",
+      "Đường Số 18",
+      "Đường Tân Hương",
+      "Đường Tân Kỳ Tân Quý",
+      "Đường Tân Quý",
+      "Đường Tây Sơn",
+      "Đường Đô Đốc Long",
+      "Đường Đỗ Công Tường",
+      "Đường Đỗ Thị Tâm",
+      "Đường Đỗ Thừa Luông",
+      "Đường Độc Lập"
+    ],
+    "Phường Tân Sơn Nhì": [
+      "Hẻm 27 Đường Nguyễn Văn Săng",
+      "Hẻm 33 Đường Gò Dầu",
+      "Hẻm 370 Đường Tân Sơn Nhì",
+      "Hẻm 84 Đường Tân Sơn Nhì",
+      "Hẻm 90 Trần Văn Ơn",
+      "Đường Cầu Xéo",
+      "Đường Diệp Minh Châu",
+      "Đường Gò Dầu",
+      "Đường Hoa Bằng",
+      "Đường Nguyễn Cửu Đàm",
+      "Đường Nguyễn Quý Anh",
+      "Đường Nguyễn Thế Truyện",
+      "Đường Nguyễn Văn Săng",
+      "Đường Trương Vĩnh Ký",
+      "Đường Trường Chinh",
+      "Đường Trần Tấn",
+      "Đường Trần Văn Ơn",
+      "Đường Tân Kỳ Tân Quý",
+      "Đường Tân Sơn Nhì"
+    ],
+    "Phường Tân Thành": [
+      "Hẻm 21 Đường Vườn Lài",
+      "Đường  Nguyễn Văn Tố",
+      "Đường Bác Ái",
+      "Đường Cách Mạng",
+      "Đường Dân Chủ",
+      "Đường Gò Dầu",
+      "Đường Lê Đình Thụ",
+      "Đường Lũy Bán Bích",
+      "Đường Nguyễn Trường Tộ",
+      "Đường Nguyễn Văn Huyên",
+      "Đường Phan Đình Phùng",
+      "Đường Thành Công",
+      "Đường Thống Nhất",
+      "Đường Tân Hương",
+      "Đường Tân Thành",
+      "Đường Tự Quyết",
+      "Đường Vườn Lài",
+      "Đường Âu Cơ",
+      "Đường Độc Lập",
+      "Độc Lập"
+    ],
+    "Phường Tân Thới Hòa": [
+      "Đường Hòa Bình",
+      "Đường Lý Thánh Tông",
+      "Đường Lũy Bán Bích",
+      "Đường Lương Thế Vinh",
+      "Đường Phan Anh",
+      "Đường Tô Hiệu"
+    ],
+    "Phường Tây Thạnh": [
+      "Hẻm 226 Đường Lê Trọng Tấn",
+      "Hẻm 23 Đường Nguyễn Hữu Tiến",
+      "Phố Đỗ Nhuận",
+      "Đường B",
+      "Đường B2",
+      "Đường B3",
+      "Đường B4",
+      "Đường Bùi Xuân Phái",
+      "Đường C2",
+      "Đường Chế Lan Viên",
+      "Đường D10",
+      "Đường D11",
+      "Đường Dương Đức Hiền",
+      "Đường Hồ Đắc Di",
+      "Đường Kênh 19/5B",
+      "Đường Lê Trọng Tấn",
+      "Đường Lưu Chí Hiếu",
+      "Đường Nguyễn Hữu Dật",
+      "Đường Nguyễn Hữu Tiến",
+      "Đường Nguyễn Đỗ Cung",
+      "Đường Phạm Ngọc Thảo",
+      "Đường S1",
+      "Đường S3",
+      "Đường S7",
+      "Đường S9",
+      "Đường T1",
+      "Đường T3",
+      "Đường T4B",
+      "Đường T6",
+      "Đường T8",
+      "Đường Trường Chinh",
+      "Đường Tân Kỳ Tân Quý",
+      "Đường Tây Thạnh"
+    ],
+    "Xã 1": [
+      "Lũy Bán Bích",
+      "Tây Sơn",
+      "Âu Cơ"
+    ],
+    "Xã 2": [
+      "Lũy Bán Bích",
+      "Tây Sơn",
+      "Âu Cơ"
+    ],
+    "Xã 3": [
+      "Lũy Bán Bích",
+      "Tây Sơn",
+      "Âu Cơ"
+    ],
+    "Đường Tây Thạnh": [
+      "Hẻm 242"
+    ]
+  }
+}

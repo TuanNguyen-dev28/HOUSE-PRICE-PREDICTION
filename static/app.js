@@ -62,6 +62,7 @@ async function makePrediction() {
         floors: parseInt(floorsVal),
         bedrooms: parseInt(bedroomsVal),
         bathrooms: parseInt(bathroomsVal),
+        property_type: document.getElementById('property_type').value,
         house_direction: document.getElementById('house_direction').value,
         balcony_direction: document.getElementById('balcony_direction').value,
         legal_status: document.getElementById('legal_status').value,
@@ -111,6 +112,10 @@ function displayResult(data, formData) {
     // Build summary
     const summaryEl = document.getElementById('result-summary');
     summaryEl.innerHTML = `
+        <div class="summary-item">
+            <span class="summary-label">Kiểu nhà</span>
+            <span class="summary-value">${formData.property_type}</span>
+        </div>
         <div class="summary-item">
             <span class="summary-label">Diện tích</span>
             <span class="summary-value">${formData.area} m²</span>
@@ -314,150 +319,106 @@ function renderAreaChart(data) {
 
 /* ─── Location Selector (3 autocomplete fields) ──────────────── */
 
-let locationData = { streets: [], wards: [], districts: [] };
+/* ─── Location Selector (Hierarchical Dropdowns) ──────────────── */
+
+let locationHierarchy = {};
 
 async function initLocationSelector() {
-    // Load location data from API
-    try {
-        const response = await fetch('/api/location-data');
-        const data = await response.json();
-        locationData = {
-            streets: data.streets || [],
-            wards: data.wards || [],
-            districts: data.districts || []
-        };
-    } catch (error) {
-        console.error('Failed to load location data:', error);
-    }
-
-    // Initialize each autocomplete input
-    initAutocomplete('street_input', 'street_dropdown', locationData.streets);
-    initAutocomplete('ward_input', 'ward_dropdown', locationData.wards);
-    initAutocomplete('district_input', 'district_dropdown', locationData.districts);
-
-    // Update hidden location field when any input changes
-    const inputs = ['street_input', 'ward_input', 'district_input'];
-    inputs.forEach(id => {
-        document.getElementById(id).addEventListener('input', updateHiddenLocation);
-        document.getElementById(id).addEventListener('change', updateHiddenLocation);
-    });
-}
-
-function initAutocomplete(inputId, dropdownId, dataList) {
-    const input = document.getElementById(inputId);
-    const dropdown = document.getElementById(dropdownId);
-
-    if (!input || !dropdown) return;
-
-    input.addEventListener('input', (e) => {
-        const query = e.target.value.trim().toLowerCase();
-
-        if (query.length < 1) {
-            dropdown.style.display = 'none';
-            return;
-        }
-
-        // Filter data
-        const filtered = dataList.filter(item => {
-            const itemLower = item.toLowerCase();
-            return itemLower.includes(query) || removeAccents(itemLower).includes(removeAccents(query));
-        }).slice(0, 10);
-
-        if (filtered.length === 0) {
-            dropdown.innerHTML = '<div class="no-results">Không tìm thấy</div>';
-        } else {
-            dropdown.innerHTML = filtered.map(item => `
-                <div class="autocomplete-item" data-value="${item}">${item}</div>
-            `).join('');
-
-            dropdown.querySelectorAll('.autocomplete-item').forEach(item => {
-                item.addEventListener('click', () => {
-                    input.value = item.dataset.value;
-                    dropdown.style.display = 'none';
-                    updateHiddenLocation();
-                    updateLocationHint();
-                });
-            });
-        }
-
-        dropdown.style.display = 'block';
-    });
-
-    // Keyboard navigation
-    input.addEventListener('keydown', (e) => {
-        const items = dropdown.querySelectorAll('.autocomplete-item');
-        if (items.length === 0) return;
-
-        if (e.key === 'ArrowDown') {
-            e.preventDefault();
-            const selected = dropdown.querySelector('.autocomplete-item.selected');
-            items.forEach(i => i.classList.remove('selected'));
-            if (selected && selected.nextElementSibling) {
-                selected.nextElementSibling.classList.add('selected');
-            } else {
-                items[0].classList.add('selected');
-            }
-        } else if (e.key === 'ArrowUp') {
-            e.preventDefault();
-            const selected = dropdown.querySelector('.autocomplete-item.selected');
-            items.forEach(i => i.classList.remove('selected'));
-            if (selected && selected.previousElementSibling) {
-                selected.previousElementSibling.classList.add('selected');
-            } else {
-                items[items.length - 1].classList.add('selected');
-            }
-        } else if (e.key === 'Enter') {
-            const selected = dropdown.querySelector('.autocomplete-item.selected');
-            if (selected) {
-                e.preventDefault();
-                input.value = selected.dataset.value;
-                dropdown.style.display = 'none';
-                updateHiddenLocation();
-                updateLocationHint();
-            }
-        } else if (e.key === 'Escape') {
-            dropdown.style.display = 'none';
-        }
-    });
-
-    // Close dropdown on outside click
-    document.addEventListener('click', (e) => {
-        if (!input.contains(e.target) && !dropdown.contains(e.target)) {
-            dropdown.style.display = 'none';
-        }
-    });
-}
-
-function updateHiddenLocation() {
-    const street = document.getElementById('street_input').value.trim();
-    const ward = document.getElementById('ward_input').value.trim();
-    const district = document.getElementById('district_input').value.trim();
-
-    // Build address string
-    let addressParts = [];
-    if (street) addressParts.push(street);
-    if (ward) addressParts.push(ward);
-    if (district) addressParts.push(district);
-    addressParts.push('TP.HCM');
-
-    const fullAddress = addressParts.join(', ');
-    document.getElementById('location_select').value = fullAddress;
-}
-
-function updateLocationHint() {
-    const street = document.getElementById('street_input').value.trim();
-    const ward = document.getElementById('ward_input').value.trim();
-    const district = document.getElementById('district_input').value.trim();
-
+    const districtSelect = document.getElementById('district_select');
+    const wardSelect = document.getElementById('ward_select');
+    const streetSelect = document.getElementById('street_select');
     const hint = document.getElementById('location-hint');
+    const hiddenLocation = document.getElementById('location_select');
 
-    if (district) {
-        hint.textContent = `Đã chọn: ${district}`;
-        if (ward) hint.textContent += `, ${ward}`;
-        if (street) hint.textContent += `, ${street}`;
-    } else {
-        hint.textContent = 'Chọn vị trí để dự đoán chính xác hơn';
+    // 1. Load location hierarchy data from JSON file
+    try {
+        const response = await fetch('/location_hierarchy.json');
+        locationHierarchy = await response.json();
+        
+        // 2. Populate District dropdown
+        populateDropdown(districtSelect, Object.keys(locationHierarchy), '-- Chọn Quận/Huyện --');
+    } catch (error) {
+        console.error('Failed to load location hierarchy:', error);
+        hint.textContent = '❌ Lỗi tải danh mục địa điểm, vui lòng tải lại trang.';
+        return;
     }
+
+    // 3. District change listener
+    districtSelect.addEventListener('change', () => {
+        const selectedDistrict = districtSelect.value;
+        
+        // Reset Ward and Street
+        resetDropdown(wardSelect, '-- Chọn Phường/Xã --');
+        resetDropdown(streetSelect, '-- Chọn Tên Đường --');
+        hiddenLocation.value = '';
+        
+        if (selectedDistrict) {
+            // Enable Ward select and populate it
+            wardSelect.disabled = false;
+            const wards = Object.keys(locationHierarchy[selectedDistrict] || {});
+            populateDropdown(wardSelect, wards, '-- Chọn Phường/Xã --');
+            
+            hint.textContent = `Đã chọn: ${selectedDistrict}`;
+            hiddenLocation.value = `${selectedDistrict}, TP.HCM`;
+        } else {
+            wardSelect.disabled = true;
+            streetSelect.disabled = true;
+            hint.textContent = 'Chọn vị trí theo thứ tự để bắt đầu định giá';
+        }
+    });
+
+    // 4. Ward change listener
+    wardSelect.addEventListener('change', () => {
+        const selectedDistrict = districtSelect.value;
+        const selectedWard = wardSelect.value;
+        
+        // Reset Street
+        resetDropdown(streetSelect, '-- Chọn Tên Đường --');
+        
+        if (selectedWard) {
+            // Enable Street select and populate it
+            streetSelect.disabled = false;
+            const streets = locationHierarchy[selectedDistrict][selectedWard] || [];
+            populateDropdown(streetSelect, streets, '-- Chọn Tên Đường --');
+            
+            hint.textContent = `Đã chọn: ${selectedDistrict} ➔ ${selectedWard}`;
+            hiddenLocation.value = `${selectedWard}, ${selectedDistrict}, TP.HCM`;
+        } else {
+            streetSelect.disabled = true;
+            hint.textContent = `Đã chọn: ${selectedDistrict}`;
+            hiddenLocation.value = `${selectedDistrict}, TP.HCM`;
+        }
+    });
+
+    // 5. Street change listener
+    streetSelect.addEventListener('change', () => {
+        const selectedDistrict = districtSelect.value;
+        const selectedWard = wardSelect.value;
+        const selectedStreet = streetSelect.value;
+        
+        if (selectedStreet) {
+            hint.textContent = `Đã chọn: ${selectedDistrict} ➔ ${selectedWard} ➔ ${selectedStreet}`;
+            hiddenLocation.value = `${selectedStreet}, ${selectedWard}, ${selectedDistrict}, TP.HCM`;
+        } else {
+            hint.textContent = `Đã chọn: ${selectedDistrict} ➔ ${selectedWard}`;
+            hiddenLocation.value = `${selectedWard}, ${selectedDistrict}, TP.HCM`;
+        }
+    });
+}
+
+function populateDropdown(selectElement, itemsList, defaultText) {
+    selectElement.innerHTML = `<option value="">${defaultText}</option>`;
+    itemsList.forEach(item => {
+        const option = document.createElement('option');
+        option.value = item;
+        option.textContent = item;
+        selectElement.appendChild(option);
+    });
+}
+
+function resetDropdown(selectElement, defaultText) {
+    selectElement.innerHTML = `<option value="">${defaultText}</option>`;
+    selectElement.disabled = true;
 }
 
 function removeAccents(str) {

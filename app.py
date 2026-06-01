@@ -245,6 +245,8 @@ def validate_input(data):
     for field in categorical:
         sanitized[field] = data.get(field, 'Unknown')
 
+    sanitized['property_type'] = data.get('property_type', 'Nhà')
+
     # Địa chỉ (tùy chọn)
     sanitized['address'] = data.get('address', '')
 

@@ -476,7 +476,7 @@ class HousePricePredictor:
         
         # Ordinal features
         legal = input_data.get('legal_status', '')
-        row['Legal_status_ordinal'] = float(LEGAL_STATUS_ORDINAL.get(legal, 3))
+        row['Legal_status_ordinal'] = float(LEGAL_STATUS_ORDINAL.get(legal, 0))
         
         furniture = input_data.get('furniture_state', '')
         row['Furniture_state_ordinal'] = float(FURNITURE_STATE_ORDINAL.get(furniture, 2))
@@ -525,6 +525,19 @@ class HousePricePredictor:
         """Dự đoán giá."""
         features_df = self.preprocess_single(input_data)
         prediction = float(self.model.predict(features_df)[0])
+        
+        # Apply standard Real Estate Legal Status Multiplier
+        legal_status = input_data.get('legal_status', 'Have certificate')
+        legal_multipliers = {
+            'Have certificate': 1.00,     # Full market value (Sổ đỏ / Sổ hồng)
+            'Sale contract': 0.90,       # 10% discount (Hợp đồng mua bán)
+            'In progress': 0.85,         # 15% discount (Đang chờ cấp sổ)
+            'Pending': 0.70,             # 30% discount (Chưa có sổ / Giấy viết tay)
+            'Unknown': 0.85              # 15% discount default
+        }
+        multiplier = legal_multipliers.get(legal_status, 1.0)
+        prediction = prediction * multiplier
+        
         prediction = max(0.1, prediction)
         
         price_billion = round(prediction, 2)
@@ -781,7 +794,7 @@ class EnsemblePredictor:
         
         # Ordinal
         legal = input_data.get('legal_status', '')
-        row['Legal_status_ordinal'] = float(LEGAL_STATUS_ORDINAL.get(legal, 3))
+        row['Legal_status_ordinal'] = float(LEGAL_STATUS_ORDINAL.get(legal, 0))
         
         furniture = input_data.get('furniture_state', '')
         row['Furniture_state_ordinal'] = float(FURNITURE_STATE_ORDINAL.get(furniture, 2))
@@ -841,11 +854,22 @@ class EnsemblePredictor:
         floors = float(input_data.get('floors', 1))
         construction_value = (area * floors * 6) / 1000  # tỷ VNĐ
         
-        # Tổng giá trị theo chuẩn nhà nước
-        state_price = land_value + construction_value
+        # Apply standard Real Estate Legal Status Multiplier
+        legal_status = input_data.get('legal_status', 'Have certificate')
+        legal_multipliers = {
+            'Have certificate': 1.00,     # Full market value (Sổ đỏ / Sổ hồng)
+            'Sale contract': 0.90,       # 10% discount (Hợp đồng mua bán)
+            'In progress': 0.85,         # 15% discount (Đang chờ cấp sổ)
+            'Pending': 0.70,             # 30% discount (Chưa có sổ / Giấy viết tay)
+            'Unknown': 0.85              # 15% discount default
+        }
+        multiplier = legal_multipliers.get(legal_status, 1.0)
         
-        # Thay thế hoàn toàn dự đoán của AI bằng bảng giá nhà nước
-        ensemble_pred = state_price
+        xgb_pred = xgb_pred * multiplier
+        rf_pred = rf_pred * multiplier
+
+        # Ensemble prediction (Weighted average of XGBoost and Random Forest)
+        ensemble_pred = self.weights['xgboost'] * xgb_pred + self.weights['random_forest'] * rf_pred
         
         pred_diff = abs(xgb_pred - rf_pred)
         confidence_margin = pred_diff * 0.5
